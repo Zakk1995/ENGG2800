@@ -1,0 +1,1174 @@
+
+ENGG2800_Project.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000002  00800100  000007b0  00000844  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000007b0  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000008  00800102  00800102  00000846  2**0
+                  ALLOC
+  3 .stab         000006cc  00000000  00000000  00000848  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  4 .stabstr      00000097  00000000  00000000  00000f14  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .comment      0000002f  00000000  00000000  00000fab  2**0
+                  CONTENTS, READONLY
+  6 .debug_aranges 00000088  00000000  00000000  00000fda  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_info   000003c3  00000000  00000000  00001062  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_abbrev 0000012d  00000000  00000000  00001425  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_line   000003b7  00000000  00000000  00001552  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_frame  00000128  00000000  00000000  0000190c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_str    00000228  00000000  00000000  00001a34  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_loc    0000036d  00000000  00000000  00001c5c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_ranges 00000078  00000000  00000000  00001fc9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 34 00 	jmp	0x68	; 0x68 <__ctors_end>
+   4:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+   8:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+   c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  10:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  14:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  18:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  1c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  20:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  24:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  28:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  2c:	0c 94 c0 03 	jmp	0x780	; 0x780 <__vector_11>
+  30:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  34:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  38:	0c 94 a2 03 	jmp	0x744	; 0x744 <__vector_14>
+  3c:	0c 94 b1 03 	jmp	0x762	; 0x762 <__vector_15>
+  40:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  44:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  48:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  4c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  50:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  54:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  58:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  5c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  60:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  64:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+
+00000068 <__ctors_end>:
+  68:	11 24       	eor	r1, r1
+  6a:	1f be       	out	0x3f, r1	; 63
+  6c:	cf ef       	ldi	r28, 0xFF	; 255
+  6e:	d8 e0       	ldi	r29, 0x08	; 8
+  70:	de bf       	out	0x3e, r29	; 62
+  72:	cd bf       	out	0x3d, r28	; 61
+
+00000074 <__do_copy_data>:
+  74:	11 e0       	ldi	r17, 0x01	; 1
+  76:	a0 e0       	ldi	r26, 0x00	; 0
+  78:	b1 e0       	ldi	r27, 0x01	; 1
+  7a:	e0 eb       	ldi	r30, 0xB0	; 176
+  7c:	f7 e0       	ldi	r31, 0x07	; 7
+  7e:	02 c0       	rjmp	.+4      	; 0x84 <__do_copy_data+0x10>
+  80:	05 90       	lpm	r0, Z+
+  82:	0d 92       	st	X+, r0
+  84:	a2 30       	cpi	r26, 0x02	; 2
+  86:	b1 07       	cpc	r27, r17
+  88:	d9 f7       	brne	.-10     	; 0x80 <__do_copy_data+0xc>
+
+0000008a <__do_clear_bss>:
+  8a:	21 e0       	ldi	r18, 0x01	; 1
+  8c:	a2 e0       	ldi	r26, 0x02	; 2
+  8e:	b1 e0       	ldi	r27, 0x01	; 1
+  90:	01 c0       	rjmp	.+2      	; 0x94 <.do_clear_bss_start>
+
+00000092 <.do_clear_bss_loop>:
+  92:	1d 92       	st	X+, r1
+
+00000094 <.do_clear_bss_start>:
+  94:	aa 30       	cpi	r26, 0x0A	; 10
+  96:	b2 07       	cpc	r27, r18
+  98:	e1 f7       	brne	.-8      	; 0x92 <.do_clear_bss_loop>
+  9a:	0e 94 17 02 	call	0x42e	; 0x42e <main>
+  9e:	0c 94 d6 03 	jmp	0x7ac	; 0x7ac <_exit>
+
+000000a2 <__bad_interrupt>:
+  a2:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000a6 <fadeinoutblue>:
+void changeMode2(){
+	mode=1;
+}
+
+void fadeinoutblue(){
+	if(dutyCycleBlue<=255&&incrementing){
+  a6:	80 91 06 01 	lds	r24, 0x0106
+  aa:	90 91 07 01 	lds	r25, 0x0107
+  ae:	8f 3f       	cpi	r24, 0xFF	; 255
+  b0:	91 05       	cpc	r25, r1
+  b2:	09 f0       	breq	.+2      	; 0xb6 <fadeinoutblue+0x10>
+  b4:	5c f4       	brge	.+22     	; 0xcc <fadeinoutblue+0x26>
+  b6:	20 91 00 01 	lds	r18, 0x0100
+  ba:	30 91 01 01 	lds	r19, 0x0101
+  be:	23 2b       	or	r18, r19
+  c0:	29 f0       	breq	.+10     	; 0xcc <fadeinoutblue+0x26>
+		dutyCycleBlue++;
+  c2:	01 96       	adiw	r24, 0x01	; 1
+  c4:	90 93 07 01 	sts	0x0107, r25
+  c8:	80 93 06 01 	sts	0x0106, r24
+	}
+	if(dutyCycleBlue>=255&&incrementing){
+  cc:	80 91 06 01 	lds	r24, 0x0106
+  d0:	90 91 07 01 	lds	r25, 0x0107
+  d4:	8f 3f       	cpi	r24, 0xFF	; 255
+  d6:	91 05       	cpc	r25, r1
+  d8:	5c f0       	brlt	.+22     	; 0xf0 <fadeinoutblue+0x4a>
+  da:	20 91 00 01 	lds	r18, 0x0100
+  de:	30 91 01 01 	lds	r19, 0x0101
+  e2:	23 2b       	or	r18, r19
+  e4:	59 f0       	breq	.+22     	; 0xfc <fadeinoutblue+0x56>
+		incrementing=0;
+  e6:	10 92 01 01 	sts	0x0101, r1
+  ea:	10 92 00 01 	sts	0x0100, r1
+  ee:	06 c0       	rjmp	.+12     	; 0xfc <fadeinoutblue+0x56>
+	}
+	if(incrementing==0){
+  f0:	20 91 00 01 	lds	r18, 0x0100
+  f4:	30 91 01 01 	lds	r19, 0x0101
+  f8:	23 2b       	or	r18, r19
+  fa:	29 f4       	brne	.+10     	; 0x106 <fadeinoutblue+0x60>
+		dutyCycleBlue--;
+  fc:	01 97       	sbiw	r24, 0x01	; 1
+  fe:	90 93 07 01 	sts	0x0107, r25
+ 102:	80 93 06 01 	sts	0x0106, r24
+ 106:	08 95       	ret
+
+00000108 <fadeinoutcyan>:
+	}
+}
+
+void fadeinoutcyan(){
+	if(dutyCycleBlue<=255&&incrementing){
+ 108:	80 91 06 01 	lds	r24, 0x0106
+ 10c:	90 91 07 01 	lds	r25, 0x0107
+ 110:	8f 3f       	cpi	r24, 0xFF	; 255
+ 112:	91 05       	cpc	r25, r1
+ 114:	09 f0       	breq	.+2      	; 0x118 <fadeinoutcyan+0x10>
+ 116:	a4 f4       	brge	.+40     	; 0x140 <fadeinoutcyan+0x38>
+ 118:	20 91 00 01 	lds	r18, 0x0100
+ 11c:	30 91 01 01 	lds	r19, 0x0101
+ 120:	23 2b       	or	r18, r19
+ 122:	71 f0       	breq	.+28     	; 0x140 <fadeinoutcyan+0x38>
+		dutyCycleBlue++;
+ 124:	01 96       	adiw	r24, 0x01	; 1
+ 126:	90 93 07 01 	sts	0x0107, r25
+ 12a:	80 93 06 01 	sts	0x0106, r24
+		dutyCycleGreen++;
+ 12e:	80 91 08 01 	lds	r24, 0x0108
+ 132:	90 91 09 01 	lds	r25, 0x0109
+ 136:	01 96       	adiw	r24, 0x01	; 1
+ 138:	90 93 09 01 	sts	0x0109, r25
+ 13c:	80 93 08 01 	sts	0x0108, r24
+	}
+	if(dutyCycleBlue>=255&&incrementing){
+ 140:	80 91 06 01 	lds	r24, 0x0106
+ 144:	90 91 07 01 	lds	r25, 0x0107
+ 148:	8f 3f       	cpi	r24, 0xFF	; 255
+ 14a:	91 05       	cpc	r25, r1
+ 14c:	5c f0       	brlt	.+22     	; 0x164 <fadeinoutcyan+0x5c>
+ 14e:	20 91 00 01 	lds	r18, 0x0100
+ 152:	30 91 01 01 	lds	r19, 0x0101
+ 156:	23 2b       	or	r18, r19
+ 158:	59 f0       	breq	.+22     	; 0x170 <fadeinoutcyan+0x68>
+		incrementing=0;
+ 15a:	10 92 01 01 	sts	0x0101, r1
+ 15e:	10 92 00 01 	sts	0x0100, r1
+ 162:	06 c0       	rjmp	.+12     	; 0x170 <fadeinoutcyan+0x68>
+	}
+	if(incrementing==0){
+ 164:	20 91 00 01 	lds	r18, 0x0100
+ 168:	30 91 01 01 	lds	r19, 0x0101
+ 16c:	23 2b       	or	r18, r19
+ 16e:	71 f4       	brne	.+28     	; 0x18c <fadeinoutcyan+0x84>
+		dutyCycleBlue--;
+ 170:	01 97       	sbiw	r24, 0x01	; 1
+ 172:	90 93 07 01 	sts	0x0107, r25
+ 176:	80 93 06 01 	sts	0x0106, r24
+		dutyCycleGreen--;
+ 17a:	80 91 08 01 	lds	r24, 0x0108
+ 17e:	90 91 09 01 	lds	r25, 0x0109
+ 182:	01 97       	sbiw	r24, 0x01	; 1
+ 184:	90 93 09 01 	sts	0x0109, r25
+ 188:	80 93 08 01 	sts	0x0108, r24
+ 18c:	08 95       	ret
+
+0000018e <fadeinoutyellow>:
+	}
+}
+
+void fadeinoutyellow(){
+	if(dutyCycleRed<=255&&incrementing){
+ 18e:	80 91 04 01 	lds	r24, 0x0104
+ 192:	90 91 05 01 	lds	r25, 0x0105
+ 196:	8f 3f       	cpi	r24, 0xFF	; 255
+ 198:	91 05       	cpc	r25, r1
+ 19a:	09 f0       	breq	.+2      	; 0x19e <fadeinoutyellow+0x10>
+ 19c:	a4 f4       	brge	.+40     	; 0x1c6 <fadeinoutyellow+0x38>
+ 19e:	20 91 00 01 	lds	r18, 0x0100
+ 1a2:	30 91 01 01 	lds	r19, 0x0101
+ 1a6:	23 2b       	or	r18, r19
+ 1a8:	71 f0       	breq	.+28     	; 0x1c6 <fadeinoutyellow+0x38>
+		dutyCycleRed++;
+ 1aa:	01 96       	adiw	r24, 0x01	; 1
+ 1ac:	90 93 05 01 	sts	0x0105, r25
+ 1b0:	80 93 04 01 	sts	0x0104, r24
+		dutyCycleGreen++;
+ 1b4:	80 91 08 01 	lds	r24, 0x0108
+ 1b8:	90 91 09 01 	lds	r25, 0x0109
+ 1bc:	01 96       	adiw	r24, 0x01	; 1
+ 1be:	90 93 09 01 	sts	0x0109, r25
+ 1c2:	80 93 08 01 	sts	0x0108, r24
+	}
+	if(dutyCycleRed>=255&&incrementing){
+ 1c6:	80 91 04 01 	lds	r24, 0x0104
+ 1ca:	90 91 05 01 	lds	r25, 0x0105
+ 1ce:	8f 3f       	cpi	r24, 0xFF	; 255
+ 1d0:	91 05       	cpc	r25, r1
+ 1d2:	5c f0       	brlt	.+22     	; 0x1ea <fadeinoutyellow+0x5c>
+ 1d4:	20 91 00 01 	lds	r18, 0x0100
+ 1d8:	30 91 01 01 	lds	r19, 0x0101
+ 1dc:	23 2b       	or	r18, r19
+ 1de:	59 f0       	breq	.+22     	; 0x1f6 <fadeinoutyellow+0x68>
+		incrementing=0;
+ 1e0:	10 92 01 01 	sts	0x0101, r1
+ 1e4:	10 92 00 01 	sts	0x0100, r1
+ 1e8:	06 c0       	rjmp	.+12     	; 0x1f6 <fadeinoutyellow+0x68>
+	}
+	if(incrementing==0){
+ 1ea:	20 91 00 01 	lds	r18, 0x0100
+ 1ee:	30 91 01 01 	lds	r19, 0x0101
+ 1f2:	23 2b       	or	r18, r19
+ 1f4:	71 f4       	brne	.+28     	; 0x212 <fadeinoutyellow+0x84>
+		dutyCycleRed--;
+ 1f6:	01 97       	sbiw	r24, 0x01	; 1
+ 1f8:	90 93 05 01 	sts	0x0105, r25
+ 1fc:	80 93 04 01 	sts	0x0104, r24
+		dutyCycleGreen--;
+ 200:	80 91 08 01 	lds	r24, 0x0108
+ 204:	90 91 09 01 	lds	r25, 0x0109
+ 208:	01 97       	sbiw	r24, 0x01	; 1
+ 20a:	90 93 09 01 	sts	0x0109, r25
+ 20e:	80 93 08 01 	sts	0x0108, r24
+ 212:	08 95       	ret
+
+00000214 <fadeinoutgreen>:
+	}	
+}
+
+void fadeinoutgreen(){
+	if(dutyCycleGreen<=255&&incrementing){
+ 214:	80 91 08 01 	lds	r24, 0x0108
+ 218:	90 91 09 01 	lds	r25, 0x0109
+ 21c:	8f 3f       	cpi	r24, 0xFF	; 255
+ 21e:	91 05       	cpc	r25, r1
+ 220:	09 f0       	breq	.+2      	; 0x224 <fadeinoutgreen+0x10>
+ 222:	5c f4       	brge	.+22     	; 0x23a <fadeinoutgreen+0x26>
+ 224:	20 91 00 01 	lds	r18, 0x0100
+ 228:	30 91 01 01 	lds	r19, 0x0101
+ 22c:	23 2b       	or	r18, r19
+ 22e:	29 f0       	breq	.+10     	; 0x23a <fadeinoutgreen+0x26>
+		dutyCycleGreen++;
+ 230:	01 96       	adiw	r24, 0x01	; 1
+ 232:	90 93 09 01 	sts	0x0109, r25
+ 236:	80 93 08 01 	sts	0x0108, r24
+	}
+	if(dutyCycleGreen>=255&&incrementing){
+ 23a:	80 91 08 01 	lds	r24, 0x0108
+ 23e:	90 91 09 01 	lds	r25, 0x0109
+ 242:	8f 3f       	cpi	r24, 0xFF	; 255
+ 244:	91 05       	cpc	r25, r1
+ 246:	5c f0       	brlt	.+22     	; 0x25e <fadeinoutgreen+0x4a>
+ 248:	20 91 00 01 	lds	r18, 0x0100
+ 24c:	30 91 01 01 	lds	r19, 0x0101
+ 250:	23 2b       	or	r18, r19
+ 252:	59 f0       	breq	.+22     	; 0x26a <fadeinoutgreen+0x56>
+		incrementing=0;
+ 254:	10 92 01 01 	sts	0x0101, r1
+ 258:	10 92 00 01 	sts	0x0100, r1
+ 25c:	06 c0       	rjmp	.+12     	; 0x26a <fadeinoutgreen+0x56>
+	}
+	if(incrementing==0){
+ 25e:	20 91 00 01 	lds	r18, 0x0100
+ 262:	30 91 01 01 	lds	r19, 0x0101
+ 266:	23 2b       	or	r18, r19
+ 268:	29 f4       	brne	.+10     	; 0x274 <fadeinoutgreen+0x60>
+		dutyCycleGreen--;
+ 26a:	01 97       	sbiw	r24, 0x01	; 1
+ 26c:	90 93 09 01 	sts	0x0109, r25
+ 270:	80 93 08 01 	sts	0x0108, r24
+ 274:	08 95       	ret
+
+00000276 <fadeinoutwhite>:
+	}
+}
+
+void fadeinoutwhite(){
+	if(dutyCycleBlue<=255&&incrementing){
+ 276:	80 91 06 01 	lds	r24, 0x0106
+ 27a:	90 91 07 01 	lds	r25, 0x0107
+ 27e:	8f 3f       	cpi	r24, 0xFF	; 255
+ 280:	91 05       	cpc	r25, r1
+ 282:	09 f0       	breq	.+2      	; 0x286 <fadeinoutwhite+0x10>
+ 284:	ec f4       	brge	.+58     	; 0x2c0 <fadeinoutwhite+0x4a>
+ 286:	20 91 00 01 	lds	r18, 0x0100
+ 28a:	30 91 01 01 	lds	r19, 0x0101
+ 28e:	23 2b       	or	r18, r19
+ 290:	b9 f0       	breq	.+46     	; 0x2c0 <fadeinoutwhite+0x4a>
+		dutyCycleBlue++;
+ 292:	01 96       	adiw	r24, 0x01	; 1
+ 294:	90 93 07 01 	sts	0x0107, r25
+ 298:	80 93 06 01 	sts	0x0106, r24
+		dutyCycleGreen++;
+ 29c:	80 91 08 01 	lds	r24, 0x0108
+ 2a0:	90 91 09 01 	lds	r25, 0x0109
+ 2a4:	01 96       	adiw	r24, 0x01	; 1
+ 2a6:	90 93 09 01 	sts	0x0109, r25
+ 2aa:	80 93 08 01 	sts	0x0108, r24
+		dutyCycleRed++;
+ 2ae:	80 91 04 01 	lds	r24, 0x0104
+ 2b2:	90 91 05 01 	lds	r25, 0x0105
+ 2b6:	01 96       	adiw	r24, 0x01	; 1
+ 2b8:	90 93 05 01 	sts	0x0105, r25
+ 2bc:	80 93 04 01 	sts	0x0104, r24
+	}
+	if(dutyCycleBlue>=255&&incrementing){
+ 2c0:	80 91 06 01 	lds	r24, 0x0106
+ 2c4:	90 91 07 01 	lds	r25, 0x0107
+ 2c8:	8f 3f       	cpi	r24, 0xFF	; 255
+ 2ca:	91 05       	cpc	r25, r1
+ 2cc:	5c f0       	brlt	.+22     	; 0x2e4 <fadeinoutwhite+0x6e>
+ 2ce:	20 91 00 01 	lds	r18, 0x0100
+ 2d2:	30 91 01 01 	lds	r19, 0x0101
+ 2d6:	23 2b       	or	r18, r19
+ 2d8:	59 f0       	breq	.+22     	; 0x2f0 <fadeinoutwhite+0x7a>
+		incrementing=0;
+ 2da:	10 92 01 01 	sts	0x0101, r1
+ 2de:	10 92 00 01 	sts	0x0100, r1
+ 2e2:	06 c0       	rjmp	.+12     	; 0x2f0 <fadeinoutwhite+0x7a>
+	}
+	if(incrementing==0){
+ 2e4:	20 91 00 01 	lds	r18, 0x0100
+ 2e8:	30 91 01 01 	lds	r19, 0x0101
+ 2ec:	23 2b       	or	r18, r19
+ 2ee:	b9 f4       	brne	.+46     	; 0x31e <fadeinoutwhite+0xa8>
+		dutyCycleBlue--;
+ 2f0:	01 97       	sbiw	r24, 0x01	; 1
+ 2f2:	90 93 07 01 	sts	0x0107, r25
+ 2f6:	80 93 06 01 	sts	0x0106, r24
+		dutyCycleGreen--;
+ 2fa:	80 91 08 01 	lds	r24, 0x0108
+ 2fe:	90 91 09 01 	lds	r25, 0x0109
+ 302:	01 97       	sbiw	r24, 0x01	; 1
+ 304:	90 93 09 01 	sts	0x0109, r25
+ 308:	80 93 08 01 	sts	0x0108, r24
+		dutyCycleRed--;
+ 30c:	80 91 04 01 	lds	r24, 0x0104
+ 310:	90 91 05 01 	lds	r25, 0x0105
+ 314:	01 97       	sbiw	r24, 0x01	; 1
+ 316:	90 93 05 01 	sts	0x0105, r25
+ 31a:	80 93 04 01 	sts	0x0104, r24
+ 31e:	08 95       	ret
+
+00000320 <fadeinoutmagenta>:
+	}
+}
+
+void fadeinoutmagenta(){
+	if(dutyCycleBlue<=255&&incrementing){
+ 320:	80 91 06 01 	lds	r24, 0x0106
+ 324:	90 91 07 01 	lds	r25, 0x0107
+ 328:	8f 3f       	cpi	r24, 0xFF	; 255
+ 32a:	91 05       	cpc	r25, r1
+ 32c:	09 f0       	breq	.+2      	; 0x330 <fadeinoutmagenta+0x10>
+ 32e:	a4 f4       	brge	.+40     	; 0x358 <fadeinoutmagenta+0x38>
+ 330:	20 91 00 01 	lds	r18, 0x0100
+ 334:	30 91 01 01 	lds	r19, 0x0101
+ 338:	23 2b       	or	r18, r19
+ 33a:	71 f0       	breq	.+28     	; 0x358 <fadeinoutmagenta+0x38>
+		dutyCycleBlue++;
+ 33c:	01 96       	adiw	r24, 0x01	; 1
+ 33e:	90 93 07 01 	sts	0x0107, r25
+ 342:	80 93 06 01 	sts	0x0106, r24
+		dutyCycleRed++;
+ 346:	80 91 04 01 	lds	r24, 0x0104
+ 34a:	90 91 05 01 	lds	r25, 0x0105
+ 34e:	01 96       	adiw	r24, 0x01	; 1
+ 350:	90 93 05 01 	sts	0x0105, r25
+ 354:	80 93 04 01 	sts	0x0104, r24
+	}
+	if(dutyCycleBlue>=255&&incrementing){
+ 358:	80 91 06 01 	lds	r24, 0x0106
+ 35c:	90 91 07 01 	lds	r25, 0x0107
+ 360:	8f 3f       	cpi	r24, 0xFF	; 255
+ 362:	91 05       	cpc	r25, r1
+ 364:	5c f0       	brlt	.+22     	; 0x37c <fadeinoutmagenta+0x5c>
+ 366:	20 91 00 01 	lds	r18, 0x0100
+ 36a:	30 91 01 01 	lds	r19, 0x0101
+ 36e:	23 2b       	or	r18, r19
+ 370:	59 f0       	breq	.+22     	; 0x388 <fadeinoutmagenta+0x68>
+		incrementing=0;
+ 372:	10 92 01 01 	sts	0x0101, r1
+ 376:	10 92 00 01 	sts	0x0100, r1
+ 37a:	06 c0       	rjmp	.+12     	; 0x388 <fadeinoutmagenta+0x68>
+	}
+	if(incrementing==0){
+ 37c:	20 91 00 01 	lds	r18, 0x0100
+ 380:	30 91 01 01 	lds	r19, 0x0101
+ 384:	23 2b       	or	r18, r19
+ 386:	71 f4       	brne	.+28     	; 0x3a4 <fadeinoutmagenta+0x84>
+		dutyCycleBlue--;
+ 388:	01 97       	sbiw	r24, 0x01	; 1
+ 38a:	90 93 07 01 	sts	0x0107, r25
+ 38e:	80 93 06 01 	sts	0x0106, r24
+		dutyCycleRed--;
+ 392:	80 91 04 01 	lds	r24, 0x0104
+ 396:	90 91 05 01 	lds	r25, 0x0105
+ 39a:	01 97       	sbiw	r24, 0x01	; 1
+ 39c:	90 93 05 01 	sts	0x0105, r25
+ 3a0:	80 93 04 01 	sts	0x0104, r24
+ 3a4:	08 95       	ret
+
+000003a6 <fadeinoutred>:
+	}
+}
+
+void fadeinoutred(){
+	if(dutyCycleRed<=255&&incrementing){
+ 3a6:	80 91 04 01 	lds	r24, 0x0104
+ 3aa:	90 91 05 01 	lds	r25, 0x0105
+ 3ae:	8f 3f       	cpi	r24, 0xFF	; 255
+ 3b0:	91 05       	cpc	r25, r1
+ 3b2:	09 f0       	breq	.+2      	; 0x3b6 <fadeinoutred+0x10>
+ 3b4:	5c f4       	brge	.+22     	; 0x3cc <fadeinoutred+0x26>
+ 3b6:	20 91 00 01 	lds	r18, 0x0100
+ 3ba:	30 91 01 01 	lds	r19, 0x0101
+ 3be:	23 2b       	or	r18, r19
+ 3c0:	29 f0       	breq	.+10     	; 0x3cc <fadeinoutred+0x26>
+		dutyCycleRed++;
+ 3c2:	01 96       	adiw	r24, 0x01	; 1
+ 3c4:	90 93 05 01 	sts	0x0105, r25
+ 3c8:	80 93 04 01 	sts	0x0104, r24
+	}
+	if(dutyCycleRed>=255&&incrementing){
+ 3cc:	80 91 04 01 	lds	r24, 0x0104
+ 3d0:	90 91 05 01 	lds	r25, 0x0105
+ 3d4:	8f 3f       	cpi	r24, 0xFF	; 255
+ 3d6:	91 05       	cpc	r25, r1
+ 3d8:	5c f0       	brlt	.+22     	; 0x3f0 <fadeinoutred+0x4a>
+ 3da:	20 91 00 01 	lds	r18, 0x0100
+ 3de:	30 91 01 01 	lds	r19, 0x0101
+ 3e2:	23 2b       	or	r18, r19
+ 3e4:	59 f0       	breq	.+22     	; 0x3fc <fadeinoutred+0x56>
+		incrementing=0;
+ 3e6:	10 92 01 01 	sts	0x0101, r1
+ 3ea:	10 92 00 01 	sts	0x0100, r1
+ 3ee:	06 c0       	rjmp	.+12     	; 0x3fc <fadeinoutred+0x56>
+	}
+	if(incrementing==0){
+ 3f0:	20 91 00 01 	lds	r18, 0x0100
+ 3f4:	30 91 01 01 	lds	r19, 0x0101
+ 3f8:	23 2b       	or	r18, r19
+ 3fa:	29 f4       	brne	.+10     	; 0x406 <fadeinoutred+0x60>
+		dutyCycleRed--;
+ 3fc:	01 97       	sbiw	r24, 0x01	; 1
+ 3fe:	90 93 05 01 	sts	0x0105, r25
+ 402:	80 93 04 01 	sts	0x0104, r24
+ 406:	08 95       	ret
+
+00000408 <initialise>:
+	}
+}
+
+void initialise(){
+	dutyCycleRed=0;
+ 408:	10 92 05 01 	sts	0x0105, r1
+ 40c:	10 92 04 01 	sts	0x0104, r1
+	dutyCycleGreen=0;
+ 410:	10 92 09 01 	sts	0x0109, r1
+ 414:	10 92 08 01 	sts	0x0108, r1
+	dutyCycleBlue=0;
+ 418:	10 92 07 01 	sts	0x0107, r1
+ 41c:	10 92 06 01 	sts	0x0106, r1
+	incrementing=1;
+ 420:	81 e0       	ldi	r24, 0x01	; 1
+ 422:	90 e0       	ldi	r25, 0x00	; 0
+ 424:	90 93 01 01 	sts	0x0101, r25
+ 428:	80 93 00 01 	sts	0x0100, r24
+ 42c:	08 95       	ret
+
+0000042e <main>:
+}
+
+int main(void){
+	incrementing = 1;
+ 42e:	81 e0       	ldi	r24, 0x01	; 1
+ 430:	90 e0       	ldi	r25, 0x00	; 0
+ 432:	90 93 01 01 	sts	0x0101, r25
+ 436:	80 93 00 01 	sts	0x0100, r24
+	int isred=0;
+	int iscyan=0;
+	int ismagenta=0;
+	int isyellow=0;
+	int iswhite=0;
+	mode=0;
+ 43a:	10 92 03 01 	sts	0x0103, r1
+ 43e:	10 92 02 01 	sts	0x0102, r1
+	DDRD = (1<<PORTD6)|(1<<PORTD5); // for OC0A enabled pin (Pin D6)
+ 442:	80 e6       	ldi	r24, 0x60	; 96
+ 444:	8a b9       	out	0x0a, r24	; 10
+	DDRC = 0;
+ 446:	17 b8       	out	0x07, r1	; 7
+	DDRB=(1<<PORTB1);
+ 448:	82 e0       	ldi	r24, 0x02	; 2
+ 44a:	84 b9       	out	0x04, r24	; 4
+	DDRB &= (1<<PORTB1);
+ 44c:	84 b1       	in	r24, 0x04	; 4
+ 44e:	82 70       	andi	r24, 0x02	; 2
+ 450:	84 b9       	out	0x04, r24	; 4
+	TCCR0A |= (1<<COM0A1)|(1<<COM0B1)|(1<<WGM01)|(1<<WGM00); // timer0 control register A set for output compare match
+ 452:	84 b5       	in	r24, 0x24	; 36
+ 454:	83 6a       	ori	r24, 0xA3	; 163
+ 456:	84 bd       	out	0x24, r24	; 36
+	TCCR1A |= (1<<COM1A1)|(1<<WGM10); //TIMER 1 control register a set to output compare match
+ 458:	e0 e8       	ldi	r30, 0x80	; 128
+ 45a:	f0 e0       	ldi	r31, 0x00	; 0
+ 45c:	80 81       	ld	r24, Z
+ 45e:	81 68       	ori	r24, 0x81	; 129
+ 460:	80 83       	st	Z, r24
+	TIMSK0 |= (1<<OCIE0A)|(1<<OCIE0B); // interrupt enabled on compare
+ 462:	ee e6       	ldi	r30, 0x6E	; 110
+ 464:	f0 e0       	ldi	r31, 0x00	; 0
+ 466:	80 81       	ld	r24, Z
+ 468:	86 60       	ori	r24, 0x06	; 6
+ 46a:	80 83       	st	Z, r24
+	TIMSK1 |= (1<<OCIE1A); // interrupt enabled on compare
+ 46c:	ef e6       	ldi	r30, 0x6F	; 111
+ 46e:	f0 e0       	ldi	r31, 0x00	; 0
+ 470:	80 81       	ld	r24, Z
+ 472:	82 60       	ori	r24, 0x02	; 2
+ 474:	80 83       	st	Z, r24
+	OCR0A=255; // represents amount of time to be on
+ 476:	8f ef       	ldi	r24, 0xFF	; 255
+ 478:	87 bd       	out	0x27, r24	; 39
+	OCR0B=255;
+ 47a:	88 bd       	out	0x28, r24	; 40
+	OCR1A=255;
+ 47c:	8f ef       	ldi	r24, 0xFF	; 255
+ 47e:	90 e0       	ldi	r25, 0x00	; 0
+ 480:	90 93 89 00 	sts	0x0089, r25
+ 484:	80 93 88 00 	sts	0x0088, r24
+	sei();
+ 488:	78 94       	sei
+	TCCR0B |= (1<<CS00); // set prescaler to be 1. starts timer
+ 48a:	85 b5       	in	r24, 0x25	; 37
+ 48c:	81 60       	ori	r24, 0x01	; 1
+ 48e:	85 bd       	out	0x25, r24	; 37
+	TCCR1B |= (1<<WGM12)|(1<<CS10); // prescaler 1
+ 490:	e1 e8       	ldi	r30, 0x81	; 129
+ 492:	f0 e0       	ldi	r31, 0x00	; 0
+ 494:	80 81       	ld	r24, Z
+ 496:	89 60       	ori	r24, 0x09	; 9
+ 498:	80 83       	st	Z, r24
+	int isgreen=0;
+	int isred=0;
+	int iscyan=0;
+	int ismagenta=0;
+	int isyellow=0;
+	int iswhite=0;
+ 49a:	a1 2c       	mov	r10, r1
+ 49c:	b1 2c       	mov	r11, r1
+	int isblue=1;
+	int isgreen=0;
+	int isred=0;
+	int iscyan=0;
+	int ismagenta=0;
+	int isyellow=0;
+ 49e:	81 2c       	mov	r8, r1
+ 4a0:	91 2c       	mov	r9, r1
+	int first = 0;
+	int isblue=1;
+	int isgreen=0;
+	int isred=0;
+	int iscyan=0;
+	int ismagenta=0;
+ 4a2:	61 2c       	mov	r6, r1
+ 4a4:	71 2c       	mov	r7, r1
+	incrementing = 1;
+	int first = 0;
+	int isblue=1;
+	int isgreen=0;
+	int isred=0;
+	int iscyan=0;
+ 4a6:	41 2c       	mov	r4, r1
+ 4a8:	51 2c       	mov	r5, r1
+int main(void){
+	incrementing = 1;
+	int first = 0;
+	int isblue=1;
+	int isgreen=0;
+	int isred=0;
+ 4aa:	00 e0       	ldi	r16, 0x00	; 0
+ 4ac:	10 e0       	ldi	r17, 0x00	; 0
+
+int main(void){
+	incrementing = 1;
+	int first = 0;
+	int isblue=1;
+	int isgreen=0;
+ 4ae:	21 2c       	mov	r2, r1
+ 4b0:	31 2c       	mov	r3, r1
+}
+
+int main(void){
+	incrementing = 1;
+	int first = 0;
+	int isblue=1;
+ 4b2:	cc 24       	eor	r12, r12
+ 4b4:	c3 94       	inc	r12
+ 4b6:	d1 2c       	mov	r13, r1
+	TCCR1B |= (1<<WGM12)|(1<<CS10); // prescaler 1
+	while(1){
+		
+		
+		if(PINC&&(1<<PINC5)){
+			mode=1;
+ 4b8:	ee 24       	eor	r14, r14
+ 4ba:	e3 94       	inc	r14
+ 4bc:	f1 2c       	mov	r15, r1
+			if(ismagenta&&(dutyCycleBlue!=255)){
+				dutyCycleBlue=255;
+				dutyCycleRed=255;
+			}
+			if(iswhite&&(dutyCycleBlue!=255)){
+				dutyCycleBlue=255;
+ 4be:	cf ef       	ldi	r28, 0xFF	; 255
+ 4c0:	d0 e0       	ldi	r29, 0x00	; 0
+	TCCR0B |= (1<<CS00); // set prescaler to be 1. starts timer
+	TCCR1B |= (1<<WGM12)|(1<<CS10); // prescaler 1
+	while(1){
+		
+		
+		if(PINC&&(1<<PINC5)){
+ 4c2:	86 b1       	in	r24, 0x06	; 6
+ 4c4:	88 23       	and	r24, r24
+ 4c6:	29 f0       	breq	.+10     	; 0x4d2 <main+0xa4>
+			mode=1;
+ 4c8:	f0 92 03 01 	sts	0x0103, r15
+ 4cc:	e0 92 02 01 	sts	0x0102, r14
+ 4d0:	13 c0       	rjmp	.+38     	; 0x4f8 <main+0xca>
+		}
+		else if(PINB&&(1<<PINB2)){
+ 4d2:	83 b1       	in	r24, 0x03	; 3
+ 4d4:	88 23       	and	r24, r24
+ 4d6:	61 f0       	breq	.+24     	; 0x4f0 <main+0xc2>
+			mode=2;
+ 4d8:	82 e0       	ldi	r24, 0x02	; 2
+ 4da:	90 e0       	ldi	r25, 0x00	; 0
+ 4dc:	90 93 03 01 	sts	0x0103, r25
+ 4e0:	80 93 02 01 	sts	0x0102, r24
+			mode=0;
+		}
+		
+		if(mode==2){
+			if(first){
+				initialise();
+ 4e4:	0e 94 04 02 	call	0x408	; 0x408 <initialise>
+			}
+			first=0;
+			isred=1;
+			fadeinoutred();
+ 4e8:	0e 94 d3 01 	call	0x3a6	; 0x3a6 <fadeinoutred>
+		if(mode==2){
+			if(first){
+				initialise();
+			}
+			first=0;
+			isred=1;
+ 4ec:	87 01       	movw	r16, r14
+ 4ee:	04 c0       	rjmp	.+8      	; 0x4f8 <main+0xca>
+		else if(PINB&&(1<<PINB2)){
+			mode=2;
+			first=1;
+		}
+		else{
+			mode=0;
+ 4f0:	10 92 03 01 	sts	0x0103, r1
+ 4f4:	10 92 02 01 	sts	0x0102, r1
+			first=0;
+			isred=1;
+			fadeinoutred();
+		}
+		
+		if(mode==0){
+ 4f8:	80 91 02 01 	lds	r24, 0x0102
+ 4fc:	90 91 03 01 	lds	r25, 0x0103
+ 500:	00 97       	sbiw	r24, 0x00	; 0
+ 502:	09 f0       	breq	.+2      	; 0x506 <main+0xd8>
+ 504:	6b c0       	rjmp	.+214    	; 0x5dc <main+0x1ae>
+			if(isblue){
+ 506:	c1 14       	cp	r12, r1
+ 508:	d1 04       	cpc	r13, r1
+ 50a:	21 f0       	breq	.+8      	; 0x514 <main+0xe6>
+				dutyCycleBlue=255;
+ 50c:	d0 93 07 01 	sts	0x0107, r29
+ 510:	c0 93 06 01 	sts	0x0106, r28
+			}
+			if(isred){
+ 514:	01 15       	cp	r16, r1
+ 516:	11 05       	cpc	r17, r1
+ 518:	21 f0       	breq	.+8      	; 0x522 <main+0xf4>
+				dutyCycleRed=255;
+ 51a:	d0 93 05 01 	sts	0x0105, r29
+ 51e:	c0 93 04 01 	sts	0x0104, r28
+			}
+			if(isgreen&&(dutyCycleGreen!=255)){
+ 522:	21 14       	cp	r2, r1
+ 524:	31 04       	cpc	r3, r1
+ 526:	59 f0       	breq	.+22     	; 0x53e <main+0x110>
+ 528:	80 91 08 01 	lds	r24, 0x0108
+ 52c:	90 91 09 01 	lds	r25, 0x0109
+ 530:	8f 3f       	cpi	r24, 0xFF	; 255
+ 532:	91 05       	cpc	r25, r1
+ 534:	21 f0       	breq	.+8      	; 0x53e <main+0x110>
+				dutyCycleGreen=255;
+ 536:	d0 93 09 01 	sts	0x0109, r29
+ 53a:	c0 93 08 01 	sts	0x0108, r28
+			}
+			if(iscyan&&(dutyCycleBlue!=255)){
+ 53e:	41 14       	cp	r4, r1
+ 540:	51 04       	cpc	r5, r1
+ 542:	79 f0       	breq	.+30     	; 0x562 <main+0x134>
+ 544:	80 91 06 01 	lds	r24, 0x0106
+ 548:	90 91 07 01 	lds	r25, 0x0107
+ 54c:	8f 3f       	cpi	r24, 0xFF	; 255
+ 54e:	91 05       	cpc	r25, r1
+ 550:	41 f0       	breq	.+16     	; 0x562 <main+0x134>
+				dutyCycleBlue=255;
+ 552:	d0 93 07 01 	sts	0x0107, r29
+ 556:	c0 93 06 01 	sts	0x0106, r28
+				dutyCycleGreen=255;
+ 55a:	d0 93 09 01 	sts	0x0109, r29
+ 55e:	c0 93 08 01 	sts	0x0108, r28
+			}
+			if(isyellow&&(dutyCycleRed!=255)){
+ 562:	81 14       	cp	r8, r1
+ 564:	91 04       	cpc	r9, r1
+ 566:	79 f0       	breq	.+30     	; 0x586 <main+0x158>
+ 568:	80 91 04 01 	lds	r24, 0x0104
+ 56c:	90 91 05 01 	lds	r25, 0x0105
+ 570:	8f 3f       	cpi	r24, 0xFF	; 255
+ 572:	91 05       	cpc	r25, r1
+ 574:	41 f0       	breq	.+16     	; 0x586 <main+0x158>
+				dutyCycleRed=255;
+ 576:	d0 93 05 01 	sts	0x0105, r29
+ 57a:	c0 93 04 01 	sts	0x0104, r28
+				dutyCycleGreen=255;
+ 57e:	d0 93 09 01 	sts	0x0109, r29
+ 582:	c0 93 08 01 	sts	0x0108, r28
+			}
+			if(ismagenta&&(dutyCycleBlue!=255)){
+ 586:	61 14       	cp	r6, r1
+ 588:	71 04       	cpc	r7, r1
+ 58a:	79 f0       	breq	.+30     	; 0x5aa <main+0x17c>
+ 58c:	80 91 06 01 	lds	r24, 0x0106
+ 590:	90 91 07 01 	lds	r25, 0x0107
+ 594:	8f 3f       	cpi	r24, 0xFF	; 255
+ 596:	91 05       	cpc	r25, r1
+ 598:	41 f0       	breq	.+16     	; 0x5aa <main+0x17c>
+				dutyCycleBlue=255;
+ 59a:	d0 93 07 01 	sts	0x0107, r29
+ 59e:	c0 93 06 01 	sts	0x0106, r28
+				dutyCycleRed=255;
+ 5a2:	d0 93 05 01 	sts	0x0105, r29
+ 5a6:	c0 93 04 01 	sts	0x0104, r28
+			}
+			if(iswhite&&(dutyCycleBlue!=255)){
+ 5aa:	a1 14       	cp	r10, r1
+ 5ac:	b1 04       	cpc	r11, r1
+ 5ae:	09 f4       	brne	.+2      	; 0x5b2 <main+0x184>
+ 5b0:	88 cf       	rjmp	.-240    	; 0x4c2 <main+0x94>
+ 5b2:	80 91 06 01 	lds	r24, 0x0106
+ 5b6:	90 91 07 01 	lds	r25, 0x0107
+ 5ba:	8f 3f       	cpi	r24, 0xFF	; 255
+ 5bc:	91 05       	cpc	r25, r1
+ 5be:	09 f4       	brne	.+2      	; 0x5c2 <main+0x194>
+ 5c0:	80 cf       	rjmp	.-256    	; 0x4c2 <main+0x94>
+				dutyCycleBlue=255;
+ 5c2:	d0 93 07 01 	sts	0x0107, r29
+ 5c6:	c0 93 06 01 	sts	0x0106, r28
+				dutyCycleGreen=255;
+ 5ca:	d0 93 09 01 	sts	0x0109, r29
+ 5ce:	c0 93 08 01 	sts	0x0108, r28
+				dutyCycleRed=255;
+ 5d2:	d0 93 05 01 	sts	0x0105, r29
+ 5d6:	c0 93 04 01 	sts	0x0104, r28
+ 5da:	73 cf       	rjmp	.-282    	; 0x4c2 <main+0x94>
+		//dutyCycleBlue=255;
+		//dutyCycleRed=255;
+		
+		//blue->cyan->yellow->green->white->magenta->red->blue:
+		
+		if(mode==1){
+ 5dc:	01 97       	sbiw	r24, 0x01	; 1
+ 5de:	09 f0       	breq	.+2      	; 0x5e2 <main+0x1b4>
+ 5e0:	70 cf       	rjmp	.-288    	; 0x4c2 <main+0x94>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 5e2:	8f ec       	ldi	r24, 0xCF	; 207
+ 5e4:	97 e0       	ldi	r25, 0x07	; 7
+ 5e6:	01 97       	sbiw	r24, 0x01	; 1
+ 5e8:	f1 f7       	brne	.-4      	; 0x5e6 <main+0x1b8>
+ 5ea:	00 c0       	rjmp	.+0      	; 0x5ec <main+0x1be>
+ 5ec:	00 00       	nop
+			_delay_ms(1);
+			if(isblue){
+ 5ee:	c1 14       	cp	r12, r1
+ 5f0:	d1 04       	cpc	r13, r1
+ 5f2:	a9 f0       	breq	.+42     	; 0x61e <main+0x1f0>
+				fadeinoutblue();
+ 5f4:	0e 94 53 00 	call	0xa6	; 0xa6 <fadeinoutblue>
+				if(dutyCycleBlue<=0&&incrementing==0){
+ 5f8:	80 91 06 01 	lds	r24, 0x0106
+ 5fc:	90 91 07 01 	lds	r25, 0x0107
+ 600:	18 16       	cp	r1, r24
+ 602:	19 06       	cpc	r1, r25
+ 604:	64 f0       	brlt	.+24     	; 0x61e <main+0x1f0>
+ 606:	80 91 00 01 	lds	r24, 0x0100
+ 60a:	90 91 01 01 	lds	r25, 0x0101
+ 60e:	89 2b       	or	r24, r25
+ 610:	31 f4       	brne	.+12     	; 0x61e <main+0x1f0>
+					isblue=0;
+					iscyan=1;
+					initialise();
+ 612:	0e 94 04 02 	call	0x408	; 0x408 <initialise>
+			_delay_ms(1);
+			if(isblue){
+				fadeinoutblue();
+				if(dutyCycleBlue<=0&&incrementing==0){
+					isblue=0;
+					iscyan=1;
+ 616:	27 01       	movw	r4, r14
+		if(mode==1){
+			_delay_ms(1);
+			if(isblue){
+				fadeinoutblue();
+				if(dutyCycleBlue<=0&&incrementing==0){
+					isblue=0;
+ 618:	c1 2c       	mov	r12, r1
+ 61a:	d1 2c       	mov	r13, r1
+ 61c:	03 c0       	rjmp	.+6      	; 0x624 <main+0x1f6>
+					iscyan=1;
+					initialise();
+				}
+			}
+			if(iscyan){
+ 61e:	41 14       	cp	r4, r1
+ 620:	51 04       	cpc	r5, r1
+ 622:	a9 f0       	breq	.+42     	; 0x64e <main+0x220>
+				fadeinoutcyan();
+ 624:	0e 94 84 00 	call	0x108	; 0x108 <fadeinoutcyan>
+				if(dutyCycleBlue<=0&&incrementing==0){
+ 628:	80 91 06 01 	lds	r24, 0x0106
+ 62c:	90 91 07 01 	lds	r25, 0x0107
+ 630:	18 16       	cp	r1, r24
+ 632:	19 06       	cpc	r1, r25
+ 634:	64 f0       	brlt	.+24     	; 0x64e <main+0x220>
+ 636:	80 91 00 01 	lds	r24, 0x0100
+ 63a:	90 91 01 01 	lds	r25, 0x0101
+ 63e:	89 2b       	or	r24, r25
+ 640:	31 f4       	brne	.+12     	; 0x64e <main+0x220>
+					iscyan=0;
+					isyellow=1;
+					initialise();
+ 642:	0e 94 04 02 	call	0x408	; 0x408 <initialise>
+			}
+			if(iscyan){
+				fadeinoutcyan();
+				if(dutyCycleBlue<=0&&incrementing==0){
+					iscyan=0;
+					isyellow=1;
+ 646:	47 01       	movw	r8, r14
+				}
+			}
+			if(iscyan){
+				fadeinoutcyan();
+				if(dutyCycleBlue<=0&&incrementing==0){
+					iscyan=0;
+ 648:	41 2c       	mov	r4, r1
+ 64a:	51 2c       	mov	r5, r1
+ 64c:	03 c0       	rjmp	.+6      	; 0x654 <main+0x226>
+					isyellow=1;
+					initialise();
+				}
+			}
+			if(isyellow){
+ 64e:	81 14       	cp	r8, r1
+ 650:	91 04       	cpc	r9, r1
+ 652:	a9 f0       	breq	.+42     	; 0x67e <main+0x250>
+				fadeinoutyellow();
+ 654:	0e 94 c7 00 	call	0x18e	; 0x18e <fadeinoutyellow>
+				if(dutyCycleRed<=0&&incrementing==0){
+ 658:	80 91 04 01 	lds	r24, 0x0104
+ 65c:	90 91 05 01 	lds	r25, 0x0105
+ 660:	18 16       	cp	r1, r24
+ 662:	19 06       	cpc	r1, r25
+ 664:	64 f0       	brlt	.+24     	; 0x67e <main+0x250>
+ 666:	80 91 00 01 	lds	r24, 0x0100
+ 66a:	90 91 01 01 	lds	r25, 0x0101
+ 66e:	89 2b       	or	r24, r25
+ 670:	31 f4       	brne	.+12     	; 0x67e <main+0x250>
+					isyellow=0;
+					isgreen=1;
+					initialise();
+ 672:	0e 94 04 02 	call	0x408	; 0x408 <initialise>
+				}
+			}
+			if(isyellow){
+				fadeinoutyellow();
+				if(dutyCycleRed<=0&&incrementing==0){
+					isyellow=0;
+ 676:	81 2c       	mov	r8, r1
+ 678:	91 2c       	mov	r9, r1
+					isgreen=1;
+ 67a:	17 01       	movw	r2, r14
+ 67c:	03 c0       	rjmp	.+6      	; 0x684 <main+0x256>
+					initialise();
+				}
+			}
+			if(isgreen){
+ 67e:	21 14       	cp	r2, r1
+ 680:	31 04       	cpc	r3, r1
+ 682:	a9 f0       	breq	.+42     	; 0x6ae <main+0x280>
+				fadeinoutgreen();
+ 684:	0e 94 0a 01 	call	0x214	; 0x214 <fadeinoutgreen>
+				if(dutyCycleGreen<=0&&incrementing==0){
+ 688:	80 91 08 01 	lds	r24, 0x0108
+ 68c:	90 91 09 01 	lds	r25, 0x0109
+ 690:	18 16       	cp	r1, r24
+ 692:	19 06       	cpc	r1, r25
+ 694:	64 f0       	brlt	.+24     	; 0x6ae <main+0x280>
+ 696:	80 91 00 01 	lds	r24, 0x0100
+ 69a:	90 91 01 01 	lds	r25, 0x0101
+ 69e:	89 2b       	or	r24, r25
+ 6a0:	31 f4       	brne	.+12     	; 0x6ae <main+0x280>
+					isgreen=0;
+					iswhite=1;
+					initialise();
+ 6a2:	0e 94 04 02 	call	0x408	; 0x408 <initialise>
+			}
+			if(isgreen){
+				fadeinoutgreen();
+				if(dutyCycleGreen<=0&&incrementing==0){
+					isgreen=0;
+					iswhite=1;
+ 6a6:	57 01       	movw	r10, r14
+				}
+			}
+			if(isgreen){
+				fadeinoutgreen();
+				if(dutyCycleGreen<=0&&incrementing==0){
+					isgreen=0;
+ 6a8:	21 2c       	mov	r2, r1
+ 6aa:	31 2c       	mov	r3, r1
+ 6ac:	03 c0       	rjmp	.+6      	; 0x6b4 <main+0x286>
+					iswhite=1;
+					initialise();
+				}
+			}
+			if(iswhite){
+ 6ae:	a1 14       	cp	r10, r1
+ 6b0:	b1 04       	cpc	r11, r1
+ 6b2:	a9 f0       	breq	.+42     	; 0x6de <main+0x2b0>
+				fadeinoutwhite();
+ 6b4:	0e 94 3b 01 	call	0x276	; 0x276 <fadeinoutwhite>
+				if(dutyCycleBlue<=0&&incrementing==0){
+ 6b8:	80 91 06 01 	lds	r24, 0x0106
+ 6bc:	90 91 07 01 	lds	r25, 0x0107
+ 6c0:	18 16       	cp	r1, r24
+ 6c2:	19 06       	cpc	r1, r25
+ 6c4:	64 f0       	brlt	.+24     	; 0x6de <main+0x2b0>
+ 6c6:	80 91 00 01 	lds	r24, 0x0100
+ 6ca:	90 91 01 01 	lds	r25, 0x0101
+ 6ce:	89 2b       	or	r24, r25
+ 6d0:	31 f4       	brne	.+12     	; 0x6de <main+0x2b0>
+					iswhite=0;
+					ismagenta=1;
+					initialise();
+ 6d2:	0e 94 04 02 	call	0x408	; 0x408 <initialise>
+				}
+			}
+			if(iswhite){
+				fadeinoutwhite();
+				if(dutyCycleBlue<=0&&incrementing==0){
+					iswhite=0;
+ 6d6:	a1 2c       	mov	r10, r1
+ 6d8:	b1 2c       	mov	r11, r1
+					ismagenta=1;
+ 6da:	37 01       	movw	r6, r14
+ 6dc:	03 c0       	rjmp	.+6      	; 0x6e4 <main+0x2b6>
+					initialise();
+				}
+			}
+			if(ismagenta){
+ 6de:	61 14       	cp	r6, r1
+ 6e0:	71 04       	cpc	r7, r1
+ 6e2:	a9 f0       	breq	.+42     	; 0x70e <main+0x2e0>
+				fadeinoutmagenta();
+ 6e4:	0e 94 90 01 	call	0x320	; 0x320 <fadeinoutmagenta>
+				if(dutyCycleBlue<=0&&incrementing==0){
+ 6e8:	80 91 06 01 	lds	r24, 0x0106
+ 6ec:	90 91 07 01 	lds	r25, 0x0107
+ 6f0:	18 16       	cp	r1, r24
+ 6f2:	19 06       	cpc	r1, r25
+ 6f4:	64 f0       	brlt	.+24     	; 0x70e <main+0x2e0>
+ 6f6:	80 91 00 01 	lds	r24, 0x0100
+ 6fa:	90 91 01 01 	lds	r25, 0x0101
+ 6fe:	89 2b       	or	r24, r25
+ 700:	31 f4       	brne	.+12     	; 0x70e <main+0x2e0>
+					ismagenta=0;
+					isred=1;
+					initialise();
+ 702:	0e 94 04 02 	call	0x408	; 0x408 <initialise>
+				}
+			}
+			if(ismagenta){
+				fadeinoutmagenta();
+				if(dutyCycleBlue<=0&&incrementing==0){
+					ismagenta=0;
+ 706:	61 2c       	mov	r6, r1
+ 708:	71 2c       	mov	r7, r1
+					isred=1;
+ 70a:	87 01       	movw	r16, r14
+ 70c:	04 c0       	rjmp	.+8      	; 0x716 <main+0x2e8>
+					initialise();
+				}
+			}
+			if(isred){
+ 70e:	01 15       	cp	r16, r1
+ 710:	11 05       	cpc	r17, r1
+ 712:	09 f4       	brne	.+2      	; 0x716 <main+0x2e8>
+ 714:	d6 ce       	rjmp	.-596    	; 0x4c2 <main+0x94>
+				fadeinoutred();
+ 716:	0e 94 d3 01 	call	0x3a6	; 0x3a6 <fadeinoutred>
+				if(dutyCycleRed<=0&&incrementing==0){
+ 71a:	80 91 04 01 	lds	r24, 0x0104
+ 71e:	90 91 05 01 	lds	r25, 0x0105
+ 722:	18 16       	cp	r1, r24
+ 724:	19 06       	cpc	r1, r25
+ 726:	0c f4       	brge	.+2      	; 0x72a <main+0x2fc>
+ 728:	cc ce       	rjmp	.-616    	; 0x4c2 <main+0x94>
+ 72a:	80 91 00 01 	lds	r24, 0x0100
+ 72e:	90 91 01 01 	lds	r25, 0x0101
+ 732:	89 2b       	or	r24, r25
+ 734:	09 f0       	breq	.+2      	; 0x738 <main+0x30a>
+ 736:	c5 ce       	rjmp	.-630    	; 0x4c2 <main+0x94>
+					isred=0;
+					isblue=1;
+					initialise();
+ 738:	0e 94 04 02 	call	0x408	; 0x408 <initialise>
+				}
+			}
+			if(isred){
+				fadeinoutred();
+				if(dutyCycleRed<=0&&incrementing==0){
+					isred=0;
+ 73c:	00 e0       	ldi	r16, 0x00	; 0
+ 73e:	10 e0       	ldi	r17, 0x00	; 0
+					isblue=1;
+ 740:	67 01       	movw	r12, r14
+ 742:	bf ce       	rjmp	.-642    	; 0x4c2 <main+0x94>
+
+00000744 <__vector_14>:
+// 		}
+	}
+	return 0;
+}
+
+ISR(TIMER0_COMPA_vect){
+ 744:	1f 92       	push	r1
+ 746:	0f 92       	push	r0
+ 748:	0f b6       	in	r0, 0x3f	; 63
+ 74a:	0f 92       	push	r0
+ 74c:	11 24       	eor	r1, r1
+ 74e:	8f 93       	push	r24
+	OCR0A=dutyCycleGreen;
+ 750:	80 91 08 01 	lds	r24, 0x0108
+ 754:	87 bd       	out	0x27, r24	; 39
+}
+ 756:	8f 91       	pop	r24
+ 758:	0f 90       	pop	r0
+ 75a:	0f be       	out	0x3f, r0	; 63
+ 75c:	0f 90       	pop	r0
+ 75e:	1f 90       	pop	r1
+ 760:	18 95       	reti
+
+00000762 <__vector_15>:
+
+ISR(TIMER0_COMPB_vect){
+ 762:	1f 92       	push	r1
+ 764:	0f 92       	push	r0
+ 766:	0f b6       	in	r0, 0x3f	; 63
+ 768:	0f 92       	push	r0
+ 76a:	11 24       	eor	r1, r1
+ 76c:	8f 93       	push	r24
+	OCR0B=dutyCycleRed;
+ 76e:	80 91 04 01 	lds	r24, 0x0104
+ 772:	88 bd       	out	0x28, r24	; 40
+}
+ 774:	8f 91       	pop	r24
+ 776:	0f 90       	pop	r0
+ 778:	0f be       	out	0x3f, r0	; 63
+ 77a:	0f 90       	pop	r0
+ 77c:	1f 90       	pop	r1
+ 77e:	18 95       	reti
+
+00000780 <__vector_11>:
+
+ISR(TIMER1_COMPA_vect){
+ 780:	1f 92       	push	r1
+ 782:	0f 92       	push	r0
+ 784:	0f b6       	in	r0, 0x3f	; 63
+ 786:	0f 92       	push	r0
+ 788:	11 24       	eor	r1, r1
+ 78a:	8f 93       	push	r24
+ 78c:	9f 93       	push	r25
+	OCR1A=dutyCycleBlue;
+ 78e:	80 91 06 01 	lds	r24, 0x0106
+ 792:	90 91 07 01 	lds	r25, 0x0107
+ 796:	90 93 89 00 	sts	0x0089, r25
+ 79a:	80 93 88 00 	sts	0x0088, r24
+}
+ 79e:	9f 91       	pop	r25
+ 7a0:	8f 91       	pop	r24
+ 7a2:	0f 90       	pop	r0
+ 7a4:	0f be       	out	0x3f, r0	; 63
+ 7a6:	0f 90       	pop	r0
+ 7a8:	1f 90       	pop	r1
+ 7aa:	18 95       	reti
+
+000007ac <_exit>:
+ 7ac:	f8 94       	cli
+
+000007ae <__stop_program>:
+ 7ae:	ff cf       	rjmp	.-2      	; 0x7ae <__stop_program>

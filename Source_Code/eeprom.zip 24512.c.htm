@@ -1,0 +1,103 @@
+
+<!-- saved from url=(0071)http://read.pudn.com/downloads154/sourcecode/embed/680196/24512.c__.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>eeprom.zip 24512.c</title>
+<link href="./eeprom.zip 24512.c_files/read_style.css" type="text/css" rel="stylesheet"><style type="text/css">.dp-cpp .datatypes { color: #2E8B57; font-weight: bold; }</style></head>
+<body>
+<p><a href="http://www.pudn.com/">www.pudn.com</a> &gt; <a href="http://www.pudn.com/downloads154/sourcecode/embed/detail680196.html">eeprom.zip</a> &gt; 24512.c, change:2009-03-09,size:2636b</p><!-- saved from http://www.pudn.com -->
+<script async="" type="text/javascript" src="./eeprom.zip 24512.c_files/ca-pub-8055710228382273.js"></script><script src="./eeprom.zip 24512.c_files/gg_read1.js"></script><form action="http://www.pudn.com/search_db.asp" method="get" target="_blank">
+
+&nbsp;<input maxlength="50" size="20" name="keyword">
+
+<input type="submit" value="Search codes">
+
+<br>
+<script type="text/javascript" src="./eeprom.zip 24512.c_files/show_ads.js">
+</script><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe></ins></ins>
+<br>
+<div class="dp-highlighter"><div class="bar"><div class="tools"></div></div><ol start="1" class="dp-cpp"><li><span><span class="comment">///////////////////////////////////////////////////////////////////////////&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li><span><span class="comment">////&nbsp;&nbsp;&nbsp;Library&nbsp;for&nbsp;a&nbsp;24LC512&nbsp;serial&nbsp;EEPROM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;////&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li><span><span class="comment">////&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;////&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li><span><span class="comment">////&nbsp;&nbsp;&nbsp;init_ext_eeprom();&nbsp;&nbsp;&nbsp;&nbsp;Call&nbsp;before&nbsp;the&nbsp;other&nbsp;functions&nbsp;are&nbsp;used&nbsp;&nbsp;////&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li><span><span class="comment">////&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;////&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li><span><span class="comment">////&nbsp;&nbsp;&nbsp;write_ext_eeprom(a,&nbsp;d);&nbsp;&nbsp;Write&nbsp;the&nbsp;byte&nbsp;d&nbsp;to&nbsp;the&nbsp;address&nbsp;a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;////&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li><span><span class="comment">////&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;////&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li><span><span class="comment">////&nbsp;&nbsp;&nbsp;d&nbsp;=&nbsp;read_ext_eeprom(a);&nbsp;&nbsp;&nbsp;Read&nbsp;the&nbsp;byte&nbsp;d&nbsp;from&nbsp;the&nbsp;address&nbsp;a&nbsp;&nbsp;&nbsp;&nbsp;////&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li><span><span class="comment">////&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;////&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li><span><span class="comment">////&nbsp;&nbsp;&nbsp;The&nbsp;main&nbsp;program&nbsp;may&nbsp;define&nbsp;eeprom_sda&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;////&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li><span><span class="comment">////&nbsp;&nbsp;&nbsp;and&nbsp;eeprom_scl&nbsp;to&nbsp;override&nbsp;the&nbsp;defaults&nbsp;below.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;////&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li><span><span class="comment">////&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;////&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li><span><span class="comment">///////////////////////////////////////////////////////////////////////////&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li><span><span class="comment">////&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(C)&nbsp;Copyright&nbsp;1996,2003&nbsp;Custom&nbsp;Computer&nbsp;Services&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;////&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li><span><span class="comment">////&nbsp;This&nbsp;source&nbsp;code&nbsp;may&nbsp;only&nbsp;be&nbsp;used&nbsp;by&nbsp;licensed&nbsp;users&nbsp;of&nbsp;the&nbsp;CCS&nbsp;C&nbsp;&nbsp;////&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li><span><span class="comment">////&nbsp;compiler.&nbsp;&nbsp;This&nbsp;source&nbsp;code&nbsp;may&nbsp;only&nbsp;be&nbsp;distributed&nbsp;to&nbsp;other&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;////&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li><span><span class="comment">////&nbsp;licensed&nbsp;users&nbsp;of&nbsp;the&nbsp;CCS&nbsp;C&nbsp;compiler.&nbsp;&nbsp;No&nbsp;other&nbsp;use,&nbsp;reproduction&nbsp;////&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li><span><span class="comment">////&nbsp;or&nbsp;distribution&nbsp;is&nbsp;permitted&nbsp;without&nbsp;written&nbsp;permission.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;////&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li><span><span class="comment">////&nbsp;Derivative&nbsp;programs&nbsp;created&nbsp;using&nbsp;this&nbsp;software&nbsp;in&nbsp;object&nbsp;code&nbsp;&nbsp;&nbsp;&nbsp;////&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li><span><span class="comment">////&nbsp;form&nbsp;are&nbsp;not&nbsp;restricted&nbsp;in&nbsp;any&nbsp;way.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;////&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li><span><span class="comment">///////////////////////////////////////////////////////////////////////////&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;</span></li><li><span><span class="comment">//#ifndef&nbsp;EEPROM_SDA&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;</span></li><li><span><span class="comment">//#define&nbsp;EEPROM_SDA&nbsp;&nbsp;PIN_B1&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li><span><span class="comment">//#define&nbsp;EEPROM_SCL&nbsp;&nbsp;PIN_B0&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li><span><span class="preprocessor">#define&nbsp;EEPROM_SDA&nbsp;&nbsp;PIN_B0&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li><span><span class="preprocessor">#define&nbsp;EEPROM_SCL&nbsp;&nbsp;PIN_B1&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;</span></li><li><span><span class="comment">//#endif&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;</span></li><li><span><span class="preprocessor">#use&nbsp;i2c(master,&nbsp;sda=EEPROM_SDA,&nbsp;scl=EEPROM_SCL)&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;</span></li><li><span><span class="preprocessor">#define&nbsp;EEPROM_ADDRESS&nbsp;long&nbsp;int&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li><span><span class="preprocessor">#define&nbsp;EEPROM_SIZE&nbsp;&nbsp;&nbsp;65535&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;</span></li><li><span><span class="keyword">void</span><span>&nbsp;init_ext_eeprom()&nbsp;&nbsp;&nbsp;</span></span></li><li><span>{&nbsp;&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;output_float(EEPROM_SCL);&nbsp;&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;output_float(EEPROM_SDA);&nbsp;&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;</span></li><li><span>}&nbsp;&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;</span></li><li><span><span class="keyword">void</span><span>&nbsp;write_ext_eeprom(</span><span class="datatypes">long</span><span>&nbsp;</span><span class="datatypes">int</span><span>&nbsp;address,&nbsp;</span><span class="datatypes">BYTE</span><span>&nbsp;data)&nbsp;&nbsp;&nbsp;</span></span></li><li><span>{&nbsp;&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;<span class="datatypes">short</span><span>&nbsp;</span><span class="datatypes">int</span><span>&nbsp;status;&nbsp;&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;lcd_putc(<span class="string">'1'</span><span>);&nbsp;&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;i2c_start();&nbsp;&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;lcd_putc(<span class="string">'a'</span><span>);&nbsp;&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;i2c_write(0xa0);&nbsp;&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;lcd_putc(<span class="string">'b'</span><span>);&nbsp;&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;i2c_write(address&gt;&gt;8);&nbsp;&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;i2c_write(address);&nbsp;&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;i2c_write(data);&nbsp;&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;i2c_stop();&nbsp;&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;i2c_start();&nbsp;&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;status=i2c_write(0xa0);&nbsp;&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;<span class="keyword">while</span><span>(status==1)&nbsp;&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i2c_start();&nbsp;&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;status=i2c_write(0xa0);&nbsp;&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;i2c_stop();&nbsp;&nbsp;&nbsp;</span></li><li><span>}&nbsp;&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;</span></li><li><span><span class="datatypes">BYTE</span><span>&nbsp;read_ext_eeprom(</span><span class="datatypes">long</span><span>&nbsp;</span><span class="datatypes">int</span><span>&nbsp;address)&nbsp;{&nbsp;&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;<span class="datatypes">BYTE</span><span>&nbsp;data;&nbsp;&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;i2c_start();&nbsp;&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;i2c_write(0xa0);&nbsp;&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;i2c_write(address&gt;&gt;8);&nbsp;&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;i2c_write(address);&nbsp;&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;i2c_start();&nbsp;&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;i2c_write(0xa1);&nbsp;&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;data=i2c_read(0);&nbsp;&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;i2c_stop();&nbsp;&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>(data);&nbsp;&nbsp;&nbsp;</span></span></li><li><span>}&nbsp;&nbsp;&nbsp;</span></li></ol></div><pre name="code" class="c" style="display: none;">/////////////////////////////////////////////////////////////////////////// 
+////   Library for a 24LC512 serial EEPROM                             //// 
+////                                                                   //// 
+////   init_ext_eeprom();    Call before the other functions are used  //// 
+////                                                                   //// 
+////   write_ext_eeprom(a, d);  Write the byte d to the address a      //// 
+////                                                                   //// 
+////   d = read_ext_eeprom(a);   Read the byte d from the address a    //// 
+////                                                                   //// 
+////   The main program may define eeprom_sda                          //// 
+////   and eeprom_scl to override the defaults below.                  //// 
+////                                                                   //// 
+/////////////////////////////////////////////////////////////////////////// 
+////        (C) Copyright 1996,2003 Custom Computer Services           //// 
+//// This source code may only be used by licensed users of the CCS C  //// 
+//// compiler.  This source code may only be distributed to other      //// 
+//// licensed users of the CCS C compiler.  No other use, reproduction //// 
+//// or distribution is permitted without written permission.          //// 
+//// Derivative programs created using this software in object code    //// 
+//// form are not restricted in any way.                               //// 
+/////////////////////////////////////////////////////////////////////////// 
+ 
+//#ifndef EEPROM_SDA 
+ 
+//#define EEPROM_SDA  PIN_B1 
+//#define EEPROM_SCL  PIN_B0 
+#define EEPROM_SDA  PIN_B0 
+#define EEPROM_SCL  PIN_B1 
+ 
+//#endif 
+ 
+#use i2c(master, sda=EEPROM_SDA, scl=EEPROM_SCL) 
+ 
+#define EEPROM_ADDRESS long int 
+#define EEPROM_SIZE   65535 
+ 
+void init_ext_eeprom() 
+{ 
+   output_float(EEPROM_SCL); 
+   output_float(EEPROM_SDA); 
+ 
+} 
+ 
+void write_ext_eeprom(long int address, BYTE data) 
+{ 
+   short int status; 
+   lcd_putc('1'); 
+   i2c_start(); 
+   lcd_putc('a'); 
+   i2c_write(0xa0); 
+   lcd_putc('b'); 
+   i2c_write(address&gt;&gt;8); 
+   i2c_write(address); 
+   i2c_write(data); 
+   i2c_stop(); 
+   i2c_start(); 
+   status=i2c_write(0xa0); 
+   while(status==1) 
+   { 
+      i2c_start(); 
+      status=i2c_write(0xa0); 
+   } 
+   i2c_stop(); 
+} 
+ 
+BYTE read_ext_eeprom(long int address) { 
+   BYTE data; 
+   i2c_start(); 
+   i2c_write(0xa0); 
+   i2c_write(address&gt;&gt;8); 
+   i2c_write(address); 
+   i2c_start(); 
+   i2c_write(0xa1); 
+   data=i2c_read(0); 
+   i2c_stop(); 
+   return(data); 
+} 
+</pre>
+<script src="./eeprom.zip 24512.c_files/gg_read2.js"></script>
+<div id="Javascript.gg_div" class="gg_div" style="width: 728; height:90;" align="center">
+<script type="text/javascript" src="./eeprom.zip 24512.c_files/show_ads.js">
+</script><ins id="aswift_1_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_1_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;"></iframe></ins></ins>
+</div>
+<br>
+<script src="./eeprom.zip 24512.c_files/stat.php" language="JavaScript" charset="gb2312"></script><script src="./eeprom.zip 24512.c_files/core.php" charset="utf-8" type="text/javascript"></script><a href="http://www.cnzz.com/stat/website.php?web_id=1236358" target="_blank" title="&#31449;&#38271;&#32479;&#35745;"><img border="0" hspace="0" vspace="0" src="./eeprom.zip 24512.c_files/pic.gif"></a>
+
+</form></body></html>

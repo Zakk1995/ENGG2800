@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "ENGG2800_Porject_leddrivers", "ENGG2800_Porject_leddrivers\ENGG2800_Porject_leddrivers.cproj", "{CA60141A-9F92-4FD4-AFFE-75E60224C3AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA60141A-9F92-4FD4-AFFE-75E60224C3AB}.Debug|AVR.ActiveCfg = Debug|AVR
+		{CA60141A-9F92-4FD4-AFFE-75E60224C3AB}.Debug|AVR.Build.0 = Debug|AVR
+		{CA60141A-9F92-4FD4-AFFE-75E60224C3AB}.Release|AVR.ActiveCfg = Release|AVR
+		{CA60141A-9F92-4FD4-AFFE-75E60224C3AB}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

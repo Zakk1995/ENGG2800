@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)https://www.youtube.com/watch?v=RDedl-FtfcU -->
+<html lang="en" data-cast-api-enabled="true" class="" data-player-size="small"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/cb=gapi.loaded_2" async=""></script><script async="" type="text/javascript" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/show_companion_ad.js"></script><script class="js-httpswwwgooglecomjsbgVvtx4nI8SHe_WYPalc1ijRUNJ9GZaWikvdqm7tI20js" async="" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/-Vvtx4nI8SHe_WYPalc1ijR-UNJ9GZaWikvdqm7tI20.js"></script><script class="js-httpssytimgcomytsjsbinwwwen_USvflkBnX2Rwatch_speedygjs" async="" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/watch_speedyg.js" name="www/watch_speedyg"></script><script class="js-httpswwwgooglecomjsapiautoload7B22modules223A5B7B22name223A22ads222C22version223A221222C22callback223A22function7B7D222C22packages223A5B22content225D7D5D7D" async="" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/jsapi"></script><script class="js-httpspagead2googlesyndicationcompageadshow_companion_adjs" async="" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/show_companion_ad.js"></script><script class="js-httpswwwgoogletagservicescomtagjsgptjs" async="" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/gpt.js"></script><script src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/cb=gapi.loaded_1" async=""></script><script src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/cb=gapi.loaded_0" async=""></script><script class="js-httpssytimgcomytsjsbinwwwen_USvflkBnX2Rcommonjs" async="" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/common.js" name="www/common"></script><script class="js-httpssytimgcomytsjsbinwwwpageframevflcTxAJ2wwwpageframejs" async="" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/www-pageframe.js" name="www-pageframe/www-pageframe"></script><script>var ytcsi = {gt: function(n) {n = (n || '') + 'data_';return ytcsi[n] || (ytcsi[n] = {tick: {},span: {},info: {}});},tick: function(l, t, n) {ytcsi.gt(n).tick[l] = t || +new Date();},span: function(l, s, n) {ytcsi.gt(n).span[l] = (typeof s == 'number') ? s :+new Date() - ytcsi.data_.tick[l];},info: function(k, v, n) {ytcsi.gt(n).info[k] = v;}};(function(w, d) {ytcsi.perf = w.performance || w.mozPerformance ||w.msPerformance || w.webkitPerformance;ytcsi.tick('_start', ytcsi.perf ? ytcsi.perf.timing.responseStart : null);var isPrerender = (d.visibilityState || d.webkitVisibilityState) == 'prerender';var vName = d.webkitVisibilityState ? 'webkitvisibilitychange' : 'visibilitychange';if (isPrerender) {ytcsi.info('prerender', 1);var startTick = function() {ytcsi.tick('_start');d.removeEventListener(vName, startTick);};d.addEventListener(vName, startTick, false);}})(window, document);</script>  <script>
+    try {window.ytbuffer = {};ytbuffer.handleClick = function(e) {var element = e.target || e.srcElement;while (element.parentElement) {if (element.className.match(/(^| )yt-can-buffer( |$)/)) {window.ytbuffer = {bufferedClick: e};element.className += ' yt-is-buffered';break;}element = element.parentElement;}};if (document.addEventListener) {document.addEventListener('click', ytbuffer.handleClick);} else {document.attachEvent('onclick', ytbuffer.handleClick);}} catch(e) {}
+    (function(){function a(g,h,b){var k=document.getElementsByTagName("html")[0],e=[k.className];g&&1251<=(window.innerWidth||document.documentElement.clientWidth)&&(e.push("guide-pinned"),h&&e.push("show-guide"));b&&(b=(window.innerWidth||document.documentElement.clientWidth)-21-50,1251<=(window.innerWidth||document.documentElement.clientWidth)&&g&&h&&(b-=230),e.push(" ",1262<=b?"content-snap-width-3":1056<=b?"content-snap-width-2":"content-snap-width-1"));k.className=e.join(" ")}
+var c=["yt","www","masthead","sizing","runBeforeBodyIsReady"],d=this;c[0]in d||!d.execScript||d.execScript("var "+c[0]);for(var f;c.length&&(f=c.shift());)c.length||void 0===a?d[f]?d=d[f]:d=d[f]={}:d[f]=a;})();
+yt.www.masthead.sizing.runBeforeBodyIsReady(false,true,false);
+  </script>
+
+
+
+        <script src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/www-scheduler.js" type="text/javascript" name="www-scheduler" class="js-httpssytimgcomytsjsbinwwwschedulervflI_bIbqwwwschedulerjs"></script>
+
+
+    <script>var ytimg = {};ytimg.count = 1;ytimg.preload = function(src) {var img = new Image();var count = ++ytimg.count;ytimg[count] = img;img.onload = img.onerror = function() {delete ytimg[count];};img.src = src;};</script>
+
+
+
+  <link rel="stylesheet" href="https://s.ytimg.com/yts/cssbin/www-core-webp-vflWOGPB6.css" name="www-core" class="css-httpssytimgcomytscssbinwwwcorewebpvflWOGPB6css">
+  
+      <script>ytimg.preload("https:\/\/r3---sn-09-coxe.googlevideo.com\/crossdomain.xml");ytimg.preload("https:\/\/r3---sn-09-coxe.googlevideo.com\/generate_204");</script>
+
+            <script src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/html5player.js" type="text/javascript" name="html5player" class="js-httpssytimgcomytsjsbinhtml5playeren_USvfll1XmaEhtml5playerjs"></script>
+
+  <script>
+    if (window.ytcsi && ytcsi.perf) {
+      ytcsi.info('h5jse', ytcsi.perf.now());
+    }
+  </script>
+
+      <link rel="stylesheet" href="https://s.ytimg.com/yts/cssbin/www-player-webp-vfl0H026n.css" name="www-player" class="css-httpssytimgcomytscssbinwwwplayerwebpvfl0H026ncss">
+
+
+<title>Lesson 12 I2C External EEPROM Part 2 - YouTube</title><link rel="search" type="application/opensearchdescription+xml" href="http://www.youtube.com/opensearch?locale=en_US" title="YouTube Video Search"><link rel="shortcut icon" href="https://s.ytimg.com/yts/img/favicon-vfldLzJxy.ico" type="image/x-icon">     <link rel="icon" href="https://s.ytimg.com/yts/img/favicon_32-vflWoMFGx.png" sizes="32x32"><link rel="canonical" href="http://www.youtube.com/watch?v=RDedl-FtfcU"><link rel="alternate" media="handheld" href="http://m.youtube.com/watch?v=RDedl-FtfcU"><link rel="alternate" media="only screen and (max-width: 640px)" href="http://m.youtube.com/watch?v=RDedl-FtfcU"><link rel="shortlink" href="http://youtu.be/RDedl-FtfcU">      <meta name="title" content="Lesson 12 I2C External EEPROM Part 2">
+
+      <meta name="description" content="In this video we will be looking at how to code this with the CCS C compiler.">
+
+      <meta name="keywords" content="Tutorials, programs, electronics, technology, howto, computers, software, tips &amp;amp; tricks, PIC, Microchip, Microcontroller, tutorial">
+
+      <link rel="alternate" href="android-app://com.google.android.youtube/http/youtube.com/watch/RDedl-FtfcU">
+
+
+      <link rel="alternate" type="application/json+oembed" href="http://www.youtube.com/oembed?url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DRDedl-FtfcU&format=json" title="Lesson 12 I2C External EEPROM Part 2">
+  <link rel="alternate" type="text/xml+oembed" href="http://www.youtube.com/oembed?url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DRDedl-FtfcU&format=xml" title="Lesson 12 I2C External EEPROM Part 2">
+
+        <meta property="og:site_name" content="YouTube">
+      <meta property="og:url" content="http://www.youtube.com/watch?v=RDedl-FtfcU">
+    <meta property="og:title" content="Lesson 12 I2C External EEPROM Part 2">
+    <meta property="og:image" content="https://i.ytimg.com/vi/RDedl-FtfcU/maxresdefault.jpg">
+
+      <meta property="og:description" content="In this video we will be looking at how to code this with the CCS C compiler.">
+
+    <meta property="al:ios:app_store_id" content="544007664">
+    <meta property="al:ios:app_name" content="YouTube">
+      <meta property="al:ios:url" content="vnd.youtube://www.youtube.com/watch?v=RDedl-FtfcU&amp;feature=applinks">
+    <meta property="al:android:url" content="http://www.youtube.com/watch?v=RDedl-FtfcU&amp;feature=applinks">
+    <meta property="al:android:app_name" content="YouTube">
+    <meta property="al:android:package" content="com.google.android.youtube">
+    <meta property="al:web:url" content="http://www.youtube.com/watch?v=RDedl-FtfcU&amp;feature=applinks">
+
+    <meta property="og:type" content="video">
+        <meta property="og:video" content="http://www.youtube.com/v/RDedl-FtfcU?version=3&amp;autohide=1">
+        <meta property="og:video:secure_url" content="https://www.youtube.com/v/RDedl-FtfcU?version=3&amp;autohide=1">
+      <meta property="og:video:type" content="application/x-shockwave-flash">
+      <meta property="og:video:width" content="960">
+      <meta property="og:video:height" content="720">
+
+        <meta property="og:video:tag" content="Tutorials">
+        <meta property="og:video:tag" content="programs">
+        <meta property="og:video:tag" content="electronics">
+        <meta property="og:video:tag" content="technology">
+        <meta property="og:video:tag" content="howto">
+        <meta property="og:video:tag" content="computers">
+        <meta property="og:video:tag" content="software">
+        <meta property="og:video:tag" content="tips &amp;amp; tricks">
+        <meta property="og:video:tag" content="PIC">
+        <meta property="og:video:tag" content="Microchip">
+        <meta property="og:video:tag" content="Microcontroller">
+        <meta property="og:video:tag" content="tutorial">
+
+    <meta property="fb:app_id" content="87741124305">
+
+        <meta name="twitter:card" content="player">
+    <meta name="twitter:site" content="@youtube">
+    <meta name="twitter:url" content="http://www.youtube.com/watch?v=RDedl-FtfcU">
+    <meta name="twitter:title" content="Lesson 12 I2C External EEPROM Part 2">
+    <meta name="twitter:description" content="In this video we will be looking at how to code this with the CCS C compiler.">
+    <meta name="twitter:image" content="https://i.ytimg.com/vi/RDedl-FtfcU/maxresdefault.jpg">
+    <meta name="twitter:app:name:iphone" content="YouTube">
+    <meta name="twitter:app:id:iphone" content="544007664">
+    <meta name="twitter:app:name:ipad" content="YouTube">
+    <meta name="twitter:app:id:ipad" content="544007664">
+      <meta name="twitter:app:url:iphone" content="vnd.youtube://www.youtube.com/watch?v=RDedl-FtfcU&amp;feature=applinks">
+      <meta name="twitter:app:url:ipad" content="vnd.youtube://www.youtube.com/watch?v=RDedl-FtfcU&amp;feature=applinks">
+    <meta name="twitter:app:name:googleplay" content="YouTube">
+    <meta name="twitter:app:id:googleplay" content="com.google.android.youtube">
+    <meta name="twitter:app:url:googleplay" content="http://www.youtube.com/watch?v=RDedl-FtfcU">
+      <meta name="twitter:player" content="https://www.youtube.com/embed/RDedl-FtfcU">
+      <meta name="twitter:player:width" content="960">
+      <meta name="twitter:player:height" content="720">
+
+      <meta name="attribution" content="misperry%2Buser/">  
+  <link rel="stylesheet" href="https://s.ytimg.com/yts/cssbin/www-pageframe-webp-vflaQ7CBE.css" name="www-pageframe" class="css-httpssytimgcomytscssbinwwwpageframewebpvflaQ7CBEcss">
+<style>.yt-ui-menu-item,.yt-ui-menu-item.has-icon{padding:0 15px}.yt-ui-menu-item-icon{margin:0 10px 0 0}</style><script type="text/javascript" charset="UTF-8" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/lidar.js" class="js-httpspagead2googlesyndicationcompageadjslidarjs"></script><link class="css-httpssytimgcomytscssbinwwwguidewebpvflmjiplJcss" rel="stylesheet" href="https://s.ytimg.com/yts/cssbin/www-guide-webp-vflmjiplJ.css" name="www-guide"><script type="text/javascript" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/content.I.js"></script><script type="text/javascript" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/osd.js"></script><link class="css-httpssytimgcomytscssbinwwwpageframedelayloadedwebpvfl5mjFblcss" rel="stylesheet" href="https://s.ytimg.com/yts/cssbin/www-pageframedelayloaded-webp-vfl5mjFbl.css" name="www-pageframedelayloaded"></head>    <body dir="ltr" class="  ltr  webkit webkit-537     site-center-aligned site-as-giant-card appbar-hidden     not-nirvana-dogfood nirvana-playlist  not-yt-legacy-css  not-watch8 page-loaded" id="body">
+
+  <div id="early-body"></div>
+  <div id="body-container"><form name="logoutForm" method="POST" action="https://www.youtube.com/logout"><input type="hidden" name="action_logout" value="1"><input name="session_token" type="hidden" value="QUFFLUhqbkh0VjFPSXBsV2NQVXZ4ckJtQldoM0ZRMHBBQXxBQ3Jtc0ttMWdpbGpsNVIzYzZNMGJFX0V5Y2w3dnd5YktCckQ0TW1yVmIzdUJFZWgzZ3lRRkp6YUppNG8ya09DOUF6MndtQ2ZLYTMtekRnQXhNSXFMOFcwbV8tQ1lINm95Yzl3R1BLVUpYMXgwSmpGOElHT2JsZ0pCTlNmaGZhQXU1TDBMVGdpOUUwYnpHMm4yb0laQUhQay1xQW1qME43QlE="></form><div id="masthead-positioner">  
+  <div id="yt-masthead-container" class="yt-grid-box yt-base-gutter"><div id="yt-masthead" class=""><div class="yt-masthead-logo-container ">    <a id="logo-container" href="https://www.youtube.com/" title="YouTube home" class="     spf-link 
+"><img id="logo" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" alt="YouTube home"><span class="content-region">AU</span></a>
+  <div id="appbar-guide-button-container">
+    <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-text yt-uix-button-empty yt-uix-button-has-icon appbar-guide-toggle appbar-guide-clickable-ancestor" type="button" onclick=";return false;" aria-controls="appbar-guide-menu" id="appbar-guide-button" aria-label="Guide" aria-pressed="false" aria-expanded="false"><span class="yt-uix-button-icon-wrapper"><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" class="yt-uix-button-icon yt-uix-button-icon-appbar-guide yt-sprite"></span><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" class="yt-uix-button-arrow yt-sprite"></button>
+    <div id="appbar-guide-button-notification-check" class="yt-valign">
+      <img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" class="appbar-guide-notification-icon yt-valign-content yt-sprite">
+    </div>
+  </div>
+  <div id="appbar-main-guide-notification-container"></div>
+</div><div id="yt-masthead-signin"><span id="appbar-onebar-upload-group"><a href="https://www.youtube.com/upload" class="yt-uix-button   yt-uix-sessionlink yt-uix-button-default yt-uix-button-size-default" data-sessionlink="ei=v-L6U5epMJPk4QKL64C4BQ&amp;feature=mhsb" id="upload-btn"><span class="yt-uix-button-content">Upload </span></a></span><button class="yt-uix-button yt-uix-button-size-default yt-uix-button-primary" type="button" onclick=";window.location.href=this.getAttribute(&#39;href&#39;);return false;" href="https://accounts.google.com/ServiceLogin?hl=en&amp;continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Fapp%3Ddesktop%26action_handle_signin%3Dtrue%26hl%3Den%26next%3D%252Fwatch%253Fv%253DRDedl-FtfcU%26feature%3Dsign_in_button&amp;passive=true&amp;service=youtube&amp;uilel=3"><span class="yt-uix-button-content">Sign in </span></button></div><div id="yt-masthead-content"><form id="masthead-search" class="search-form consolidated-form" action="https://www.youtube.com/results" onsubmit="if (_gel(&#39;masthead-search-term&#39;).value == &#39;&#39;) return false;"><button class="yt-uix-button yt-uix-button-size-default yt-uix-button-default search-btn-component search-button" type="submit" onclick="if (_gel(&#39;masthead-search-term&#39;).value == &#39;&#39;) return false; _gel(&#39;masthead-search&#39;).submit(); return false;;return true;" dir="ltr" tabindex="2" id="search-btn"><span class="yt-uix-button-content">Search </span></button><div id="masthead-search-terms" class="masthead-search-terms-border" dir="ltr"><label><input id="masthead-search-term" autocomplete="off" class="search-term yt-uix-form-input-bidi" name="search_query" value="" type="text" tabindex="1" title="Search"></label></div></form></div></div></div>
+    <div id="masthead-appbar-container" class="clearfix"><div id="masthead-appbar"><div id="appbar-content" class=""></div></div></div>
+
+</div><div id="masthead-positioner-height-offset"></div><div id="page-container"><div id="page" class="  watch      watch-non-stage-mode   clearfix"><div id="guide" class="yt-scrollbar">    <div id="appbar-guide-menu" class="appbar-menu appbar-guide-menu-layout appbar-guide-clickable-ancestor yt-uix-scroller" role="navigation">
+    <div id="guide-container" class="vve-check" data-sessionlink="ei=xOL6U4LRKqC_4ALk3IEI&amp;ved=CAAQ_h4">
+        <div class="guide-module-content yt-scrollbar">
+    <ul class="guide-toplevel">
+            <li class="guide-section vve-check" data-sessionlink="ei=xOL6U4LRKqC_4ALk3IEI&amp;ved=CAEQ5isoAA" data-visibility-tracking="">
+    <div class="guide-item-container personal-item">
+      
+      <ul class="guide-user-links yt-uix-tdl yt-box" role="menu" data-fold="-22,91">
+              <li class="vve-check guide-channel guide-notification-item overflowable-list-item " id="what_to_watch-guide-item" data-visibility-tracking="" aria-role="menuitem">
+      
+  <a class="guide-item yt-uix-sessionlink yt-valign spf-link   " href="https://www.youtube.com/" title="What to Watch" data-sessionlink="ei=xOL6U4LRKqC_4ALk3IEI&amp;feature=g-system&amp;ved=CAIQtSwoAA" data-visibility-tracking="" data-external-id="what_to_watch" data-serialized-endpoint="0qDduQEREg9GRXdoYXRfdG9fd2F0Y2g%3D">
+    <span class="yt-valign-container">
+        <img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" class="thumb guide-what-to-watch-icon yt-sprite">
+        <span class="display-name  no-count">
+          <span>
+            What to Watch
+          </span>
+        </span>
+    </span>
+  </a>
+
+  </li>
+
+      </ul>
+    </div>
+      <hr class="guide-section-separator">
+  </li>
+
+            <li class="guide-section vve-check" data-sessionlink="ei=xOL6U4LRKqC_4ALk3IEI&amp;ved=CAMQ5isoAQ" data-visibility-tracking="">
+    <div class="guide-item-container personal-item">
+          <h3>
+      Best of YouTube
+    </h3>
+
+      <ul class="guide-user-links yt-uix-tdl yt-box" role="menu" data-fold="-22,326">
+              <li class="vve-check guide-channel guide-notification-item overflowable-list-item " id="UCL2dVYeD8YGfMWPXDV-QjUQ-guide-item" data-visibility-tracking="" aria-role="menuitem">
+      
+  <a class="guide-item yt-uix-sessionlink yt-valign spf-link   " href="https://www.youtube.com/channel/UCL2dVYeD8YGfMWPXDV-QjUQ" title="Popular on YouTube" data-sessionlink="ei=xOL6U4LRKqC_4ALk3IEI&amp;feature=g-channel&amp;ved=CAQQtSwoAA" data-visibility-tracking="" data-external-id="UCL2dVYeD8YGfMWPXDV-QjUQ" data-serialized-endpoint="0qDduQEaEhhVQ0wyZFZZZUQ4WUdmTVdQWERWLVFqVVE%3D">
+    <span class="yt-valign-container">
+        <span class="thumb">    <span class="video-thumb  yt-thumb yt-thumb-20">
+      <span class="yt-thumb-square">
+        <span class="yt-thumb-clip">
+          <img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/1.jpg" aria-hidden="true" alt="" width="20" height="20">
+          <span class="vertical-align"></span>
+        </span>
+      </span>
+    </span>
+</span>
+        <span class="display-name  no-count">
+          <span>
+            Popular on YouTube
+          </span>
+        </span>
+    </span>
+  </a>
+
+  </li>
+
+              <li class="vve-check guide-channel guide-notification-item overflowable-list-item " id="UC-9-kyTW8ZkZNDHQJ6FgpwQ-guide-item" data-visibility-tracking="" aria-role="menuitem">
+      
+  <a class="guide-item yt-uix-sessionlink yt-valign spf-link   " href="https://www.youtube.com/channel/UC-9-kyTW8ZkZNDHQJ6FgpwQ" title="Music" data-sessionlink="ei=xOL6U4LRKqC_4ALk3IEI&amp;feature=g-channel&amp;ved=CAUQtSwoAQ" data-visibility-tracking="" data-external-id="UC-9-kyTW8ZkZNDHQJ6FgpwQ" data-serialized-endpoint="0qDduQEaEhhVQy05LWt5VFc4WmtaTkRIUUo2Rmdwd1E%3D">
+    <span class="yt-valign-container">
+        <span class="thumb">    <span class="video-thumb  yt-thumb yt-thumb-20">
+      <span class="yt-thumb-square">
+        <span class="yt-thumb-clip">
+          <img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/1(1).jpg" aria-hidden="true" alt="" width="20" height="20">
+          <span class="vertical-align"></span>
+        </span>
+      </span>
+    </span>
+</span>
+        <span class="display-name  no-count">
+          <span>
+            Music
+          </span>
+        </span>
+    </span>
+  </a>
+
+  </li>
+
+              <li class="vve-check guide-channel guide-notification-item overflowable-list-item " id="UCEgdi0XIXXZ-qJOFPf4JSKw-guide-item" data-visibility-tracking="" aria-role="menuitem">
+      
+  <a class="guide-item yt-uix-sessionlink yt-valign spf-link   " href="https://www.youtube.com/channel/UCEgdi0XIXXZ-qJOFPf4JSKw" title="Sports" data-sessionlink="ei=xOL6U4LRKqC_4ALk3IEI&amp;feature=g-channel&amp;ved=CAYQtSwoAg" data-visibility-tracking="" data-external-id="UCEgdi0XIXXZ-qJOFPf4JSKw" data-serialized-endpoint="0qDduQEaEhhVQ0VnZGkwWElYWFotcUpPRlBmNEpTS3c%3D">
+    <span class="yt-valign-container">
+        <span class="thumb">    <span class="video-thumb  yt-thumb yt-thumb-20">
+      <span class="yt-thumb-square">
+        <span class="yt-thumb-clip">
+          <img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/1(2).jpg" aria-hidden="true" alt="" width="20" height="20">
+          <span class="vertical-align"></span>
+        </span>
+      </span>
+    </span>
+</span>
+        <span class="display-name  no-count">
+          <span>
+            Sports
+          </span>
+        </span>
+    </span>
+  </a>
+
+  </li>
+
+              <li class="vve-check guide-channel guide-notification-item overflowable-list-item " id="UCOpNcN46UbXVtpKMrmU4Abg-guide-item" data-visibility-tracking="" aria-role="menuitem">
+      
+  <a class="guide-item yt-uix-sessionlink yt-valign spf-link   " href="https://www.youtube.com/channel/UCOpNcN46UbXVtpKMrmU4Abg" title="Gaming" data-sessionlink="ei=xOL6U4LRKqC_4ALk3IEI&amp;feature=g-channel&amp;ved=CAcQtSwoAw" data-visibility-tracking="" data-external-id="UCOpNcN46UbXVtpKMrmU4Abg" data-serialized-endpoint="0qDduQEaEhhVQ09wTmNONDZVYlhWdHBLTXJtVTRBYmc%3D">
+    <span class="yt-valign-container">
+        <span class="thumb">    <span class="video-thumb  yt-thumb yt-thumb-20">
+      <span class="yt-thumb-square">
+        <span class="yt-thumb-clip">
+          <img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/1(3).jpg" aria-hidden="true" alt="" width="20" height="20">
+          <span class="vertical-align"></span>
+        </span>
+      </span>
+    </span>
+</span>
+        <span class="display-name  no-count">
+          <span>
+            Gaming
+          </span>
+        </span>
+    </span>
+  </a>
+
+  </li>
+
+              <li class="vve-check guide-channel guide-notification-item overflowable-list-item " id="UC3yA8nDwraeOfnYfBWun83g-guide-item" data-visibility-tracking="" aria-role="menuitem">
+      
+  <a class="guide-item yt-uix-sessionlink yt-valign spf-link   " href="https://www.youtube.com/channel/UC3yA8nDwraeOfnYfBWun83g" title="Education" data-sessionlink="ei=xOL6U4LRKqC_4ALk3IEI&amp;feature=g-channel&amp;ved=CAgQtSwoBA" data-visibility-tracking="" data-external-id="UC3yA8nDwraeOfnYfBWun83g" data-serialized-endpoint="0qDduQEaEhhVQzN5QThuRHdyYWVPZm5ZZkJXdW44M2c%3D">
+    <span class="yt-valign-container">
+        <span class="thumb">    <span class="video-thumb  yt-thumb yt-thumb-20">
+      <span class="yt-thumb-square">
+        <span class="yt-thumb-clip">
+          <img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/1(4).jpg" aria-hidden="true" alt="" width="20" height="20">
+          <span class="vertical-align"></span>
+        </span>
+      </span>
+    </span>
+</span>
+        <span class="display-name  no-count">
+          <span>
+            Education
+          </span>
+        </span>
+    </span>
+  </a>
+
+  </li>
+
+              <li class="vve-check guide-channel guide-notification-item overflowable-list-item " id="UCiMgB5NliYd3_Z2ynGR54Qw-guide-item" data-visibility-tracking="" aria-role="menuitem">
+      
+  <a class="guide-item yt-uix-sessionlink yt-valign spf-link   " href="https://www.youtube.com/channel/UCiMgB5NliYd3_Z2ynGR54Qw" title="Movies" data-sessionlink="ei=xOL6U4LRKqC_4ALk3IEI&amp;feature=g-channel&amp;ved=CAkQtSwoBQ" data-visibility-tracking="" data-external-id="UCiMgB5NliYd3_Z2ynGR54Qw" data-serialized-endpoint="0qDduQEaEhhVQ2lNZ0I1TmxpWWQzX1oyeW5HUjU0UXc%3D">
+    <span class="yt-valign-container">
+        <span class="thumb">    <span class="video-thumb  yt-thumb yt-thumb-20">
+      <span class="yt-thumb-square">
+        <span class="yt-thumb-clip">
+          <img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/photo.jpg" aria-hidden="true" alt="" width="20" height="20">
+          <span class="vertical-align"></span>
+        </span>
+      </span>
+    </span>
+</span>
+        <span class="display-name  no-count">
+          <span>
+            Movies
+          </span>
+        </span>
+    </span>
+  </a>
+
+  </li>
+
+              <li class="vve-check guide-channel guide-notification-item overflowable-list-item " id="UCkGWmFjZQQDwqotmbstoWDA-guide-item" data-visibility-tracking="" aria-role="menuitem">
+      
+  <a class="guide-item yt-uix-sessionlink yt-valign spf-link   " href="https://www.youtube.com/channel/UCkGWmFjZQQDwqotmbstoWDA" title="TV Shows" data-sessionlink="ei=xOL6U4LRKqC_4ALk3IEI&amp;feature=g-channel&amp;ved=CAoQtSwoBg" data-visibility-tracking="" data-external-id="UCkGWmFjZQQDwqotmbstoWDA" data-serialized-endpoint="0qDduQEaEhhVQ2tHV21GalpRUUR3cW90bWJzdG9XREE%3D">
+    <span class="yt-valign-container">
+        <span class="thumb">    <span class="video-thumb  yt-thumb yt-thumb-20">
+      <span class="yt-thumb-square">
+        <span class="yt-thumb-clip">
+          <img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/photo(1).jpg" aria-hidden="true" alt="" width="20" height="20">
+          <span class="vertical-align"></span>
+        </span>
+      </span>
+    </span>
+</span>
+        <span class="display-name  no-count">
+          <span>
+            TV Shows
+          </span>
+        </span>
+    </span>
+  </a>
+
+  </li>
+
+      </ul>
+    </div>
+      <hr class="guide-section-separator">
+  </li>
+
+            <li class="guide-section vve-check" data-sessionlink="ei=xOL6U4LRKqC_4ALk3IEI&amp;ved=CAsQ5isoAg" data-visibility-tracking="">
+    <div class="guide-item-container personal-item">
+      
+      <ul class="guide-user-links yt-uix-tdl yt-box" role="menu" data-fold="-22,371">
+              <li class="vve-check guide-channel guide-notification-item overflowable-list-item " id="guide_builder-guide-item" data-visibility-tracking="" aria-role="menuitem">
+      
+  <a class="guide-item yt-uix-sessionlink yt-valign spf-nolink   " href="https://www.youtube.com/channels" title="Browse channels" data-sessionlink="ei=xOL6U4LRKqC_4ALk3IEI&amp;feature=g-manage&amp;ved=CAwQtSwoAA" data-visibility-tracking="" data-external-id="guide_builder" data-serialized-endpoint="0qPduQECCAE%3D">
+    <span class="yt-valign-container">
+        <img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" class="thumb guide-builder-icon yt-sprite">
+        <span class="display-name  no-count">
+          <span>
+            Browse channels
+          </span>
+        </span>
+    </span>
+  </a>
+
+  </li>
+
+      </ul>
+    </div>
+      <hr class="guide-section-separator">
+  </li>
+
+            <li class="guide-section guide-header signup-promo ">
+    <p>
+      Sign in now to see your channels and recommendations!
+    </p>
+    <div id="guide-builder-promo-buttons" class="signed-out clearfix">
+      <a href="https://accounts.google.com/ServiceLogin?continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Fhl%3Den%26feature%3Dsign_in_promo%26app%3Ddesktop%26next%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DRDedl-FtfcU%26action_handle_signin%3Dtrue&hl=en&service=youtube&passive=true&uilel=3" class="yt-uix-button   yt-uix-sessionlink yt-uix-button-primary yt-uix-button-size-default" data-sessionlink="ei=xOL6U4LRKqC_4ALk3IEI"><span class="yt-uix-button-content">Sign In </span></a>
+    </div>
+  </li>
+
+    </ul>
+  </div>
+
+    </div>
+  </div>
+  <div id="appbar-guide-notifications" class="hid">
+        <div id="appbar-guide-notification-watch-later-video-added">
+    <!--
+    <div class="appbar-guide-notification "><span class="appbar-guide-notification-content-wrapper yt-valign"><img src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" class="appbar-guide-notification-icon yt-sprite"><span class="appbar-guide-notification-text-content">Added to Watch Later</span></span></div>
+    -->
+  </div>
+
+
+    <div id="appbar-guide-notification-watch-later-video-removed">
+    <!--
+    <div class="appbar-guide-notification "><span class="appbar-guide-notification-content-wrapper yt-valign"><img src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" class="appbar-guide-notification-icon yt-sprite"><span class="appbar-guide-notification-text-content">Removed from Watch Later</span></span></div>
+    -->
+  </div>
+
+
+    <div id="appbar-guide-notification-subscription">
+    <!--
+    <div class="appbar-guide-notification "><span class="appbar-guide-notification-content-wrapper yt-valign"><img src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" class="appbar-guide-notification-icon yt-sprite"><span class="appbar-guide-notification-text-content">Subscription added</span></span></div>
+    -->
+  </div>
+
+
+    <div id="appbar-guide-notification-unsubscription">
+    <!--
+    <div class="appbar-guide-notification "><span class="appbar-guide-notification-content-wrapper yt-valign"><img src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" class="appbar-guide-notification-icon yt-sprite"><span class="appbar-guide-notification-text-content">Subscription removed</span></span></div>
+    -->
+  </div>
+
+
+
+      <div id="appbar-guide-notification-playlist-like">
+    <!--
+    <div class="appbar-guide-notification "><span class="appbar-guide-notification-content-wrapper yt-valign"><img src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" class="appbar-guide-notification-icon yt-sprite"><span class="appbar-guide-notification-text-content">Saved to Playlists</span></span></div>
+    -->
+  </div>
+
+
+      <div id="appbar-guide-notification-playlist-unlike">
+    <!--
+    <div class="appbar-guide-notification "><span class="appbar-guide-notification-content-wrapper yt-valign"><img src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" class="appbar-guide-notification-icon yt-sprite"><span class="appbar-guide-notification-text-content">Removed from Playlists</span></span></div>
+    -->
+  </div>
+
+
+    <div id="appbar-guide-notification-playlist-video-added">
+    <!--
+    <div class="appbar-guide-notification "><span class="appbar-guide-notification-content-wrapper yt-valign"><img src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" class="appbar-guide-notification-icon yt-sprite"><span class="appbar-guide-notification-text-content">Added to playlist</span></span></div>
+    -->
+  </div>
+
+
+    <div id="appbar-guide-notification-playlist-video-removed">
+    <!--
+    <div class="appbar-guide-notification "><span class="appbar-guide-notification-content-wrapper yt-valign"><img src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" class="appbar-guide-notification-icon yt-sprite"><span class="appbar-guide-notification-text-content">Removed from playlist</span></span></div>
+    -->
+  </div>
+
+
+    <div id="appbar-guide-notification-video-like">
+    <!--
+    <div class="appbar-guide-notification "><span class="appbar-guide-notification-content-wrapper yt-valign"><img src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" class="appbar-guide-notification-icon yt-sprite"><span class="appbar-guide-notification-text-content">Added to Liked videos</span></span></div>
+    -->
+  </div>
+
+
+    <div id="appbar-guide-notification-video-unlike">
+    <!--
+    <div class="appbar-guide-notification "><span class="appbar-guide-notification-content-wrapper yt-valign"><img src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" class="appbar-guide-notification-icon yt-sprite"><span class="appbar-guide-notification-text-content">Removed from Liked videos</span></span></div>
+    -->
+  </div>
+
+
+    <div id="appbar-guide-notification-event-reminder-set">
+    <!--
+    <div class="appbar-guide-notification "><span class="appbar-guide-notification-content-wrapper yt-valign"><img src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" class="appbar-guide-notification-icon yt-sprite"><span class="appbar-guide-notification-text-content">You&#39;ll be reminded about this event</span></span></div>
+    -->
+  </div>
+
+
+    <div id="appbar-guide-notification-event-reminder-removed">
+    <!--
+    <div class="appbar-guide-notification "><span class="appbar-guide-notification-content-wrapper yt-valign"><img src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" class="appbar-guide-notification-icon yt-sprite"><span class="appbar-guide-notification-text-content">Event reminder removed</span></span></div>
+    -->
+  </div>
+
+
+  </div>
+  <div id="appbar-guide-item-templates" class="hid">
+        <div id="appbar-guide-item-template-playlist">
+      <!--
+          <li class="vve-check guide-channel guide-notification-item overflowable-list-item show-insertion-notification " id="__ID__-guide-item"
+      data-visibility-tracking="" aria-role="menuitem">
+      
+  <a class="guide-item yt-uix-sessionlink yt-valign spf-nolink   "
+    href="__URL__"
+    title="__TITLE__"
+    data-sessionlink="feature=g-playlists&amp;ei=xOL6U4LRKqC_4ALk3IEI"
+    data-visibility-tracking=""
+    data-external-id="__ID__"
+    data-serialized-endpoint=""
+  >
+    <span class="yt-valign-container">
+        <img src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" class="thumb guide-playlists-icon yt-sprite">
+        <span class="display-name  no-count">
+          <span>
+            __TITLE__
+          </span>
+        </span>
+    </span>
+  </a>
+
+      <div class="appbar-guide-notification guide-item-insertion-notification"><span class="appbar-guide-notification-content-wrapper yt-valign"><img src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" class="appbar-guide-notification-icon yt-sprite"><span class="appbar-guide-notification-text-content">__NOTIFICATION_OVERLAY_MESSAGE__</span></span></div>
+  </li>
+
+      -->
+    </div>
+    <div id="appbar-guide-item-template-mix">
+      <!--
+          <li class="vve-check guide-channel guide-notification-item overflowable-list-item show-insertion-notification " id="__ID__-guide-item"
+      data-visibility-tracking="" aria-role="menuitem">
+      
+  <a class="guide-item yt-uix-sessionlink yt-valign spf-nolink   "
+    href="__URL__"
+    title="__TITLE__"
+    data-sessionlink="feature=g-playlists&amp;ei=xOL6U4LRKqC_4ALk3IEI"
+    data-visibility-tracking=""
+    data-external-id="__ID__"
+    data-serialized-endpoint=""
+  >
+    <span class="yt-valign-container">
+        <img src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" class="thumb guide-mix-icon yt-sprite">
+        <span class="display-name  no-count">
+          <span>
+            __TITLE__
+          </span>
+        </span>
+    </span>
+  </a>
+
+      <div class="appbar-guide-notification guide-item-insertion-notification"><span class="appbar-guide-notification-content-wrapper yt-valign"><img src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" class="appbar-guide-notification-icon yt-sprite"><span class="appbar-guide-notification-text-content">__NOTIFICATION_OVERLAY_MESSAGE__</span></span></div>
+  </li>
+
+      -->
+    </div>
+    <div id="appbar-guide-item-template-channel">
+      <!--
+          <li class="vve-check guide-channel guide-notification-item overflowable-list-item show-insertion-notification " id="__ID__-guide-item"
+      data-visibility-tracking="" aria-role="menuitem">
+      
+  <a class="guide-item yt-uix-sessionlink yt-valign spf-nolink   "
+    href="__URL__"
+    title="__TITLE__"
+    data-sessionlink="feature=g-channel&amp;ei=xOL6U4LRKqC_4ALk3IEI"
+    data-visibility-tracking=""
+    data-external-id="__ID__"
+    data-serialized-endpoint=""
+  >
+    <span class="yt-valign-container">
+        <span class="thumb">    <span class="video-thumb  yt-thumb yt-thumb-20"
+      >
+      <span class="yt-thumb-square">
+        <span class="yt-thumb-clip">
+          <img src="__THUMBNAIL_URL__" aria-hidden="true" alt="" width="20"  height="20" >
+          <span class="vertical-align"></span>
+        </span>
+      </span>
+    </span>
+</span>
+        <span class="display-name  no-count">
+          <span>
+            __TITLE__
+          </span>
+        </span>
+    </span>
+  </a>
+
+      <div class="appbar-guide-notification guide-item-insertion-notification"><span class="appbar-guide-notification-content-wrapper yt-valign"><img src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" class="appbar-guide-notification-icon yt-sprite"><span class="appbar-guide-notification-text-content">__NOTIFICATION_OVERLAY_MESSAGE__</span></span></div>
+  </li>
+
+      -->
+    </div>
+
+  </div>
+
+</div><div id="alerts" class="content-alignment">      
+
+
+
+</div><div id="header"></div><div id="player" class="      watch-small  "><div id="theater-background"></div>  <div id="player-mole-container">
+
+    <div id="player-unavailable" class="    hid    player-width player-height    player-unavailable ">
+              <img class="icon meh" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" data-icon="//s.ytimg.com/yts/img/meh7-vflGevej7.png" alt="">
+  <div class="content">
+    <h1 id="unavailable-message" class="message">
+            This video is unavailable.
+    </h1>
+    <div id="unavailable-submessage" class="submessage">
+    </div>
+  </div>
+
+
+    </div>
+
+      <div id="player-api" class="player-width player-height off-screen-target player-api" style="overflow: hidden;"><div class="html5-video-player el-detailpage ps-null ad-created endscreen-created ad-showing paused-mode autohide-controls-aspect autohide-controls-fullscreen autominimize-progress-bar-non-aspect ytp-user-idle" tabindex="-1" id="movie_player" data-version="//s.ytimg.com/yts/jsbin/html5player-en_US-vfll1XmaE/html5player.js"><div class="html5-video-container"><div class="html5-video-content" style="width: 768px; height: 480px; left: 43px; top: 0px;"></div><div class="ytp-large-play-button html5-center-overlay ytp-scalable-icon-shrink"><svg><path fill-rule="evenodd" clip-rule="evenodd" fill="#1F1F1F" class="ytp-large-play-button-svg" d="M84.15,26.4v6.35c0,2.833-0.15,5.967-0.45,9.4c-0.133,1.7-0.267,3.117-0.4,4.25l-0.15,0.95c-0.167,0.767-0.367,1.517-0.6,2.25c-0.667,2.367-1.533,4.083-2.6,5.15c-1.367,1.4-2.967,2.383-4.8,2.95c-0.633,0.2-1.316,0.333-2.05,0.4c-0.767,0.1-1.3,0.167-1.6,0.2c-4.9,0.367-11.283,0.617-19.15,0.75c-2.434,0.034-4.883,0.067-7.35,0.1h-2.95C38.417,59.117,34.5,59.067,30.3,59c-8.433-0.167-14.05-0.383-16.85-0.65c-0.067-0.033-0.667-0.117-1.8-0.25c-0.9-0.133-1.683-0.283-2.35-0.45c-2.066-0.533-3.783-1.5-5.15-2.9c-1.033-1.067-1.9-2.783-2.6-5.15C1.317,48.867,1.133,48.117,1,47.35L0.8,46.4c-0.133-1.133-0.267-2.55-0.4-4.25C0.133,38.717,0,35.583,0,32.75V26.4c0-2.833,0.133-5.95,0.4-9.35l0.4-4.25c0.167-0.966,0.417-2.05,0.75-3.25c0.7-2.333,1.567-4.033,2.6-5.1c1.367-1.434,2.967-2.434,4.8-3c0.633-0.167,1.333-0.3,2.1-0.4c0.4-0.066,0.917-0.133,1.55-0.2c4.9-0.333,11.283-0.567,19.15-0.7C35.65,0.05,39.083,0,42.05,0L45,0.05c2.467,0,4.933,0.034,7.4,0.1c7.833,0.133,14.2,0.367,19.1,0.7c0.3,0.033,0.833,0.1,1.6,0.2c0.733,0.1,1.417,0.233,2.05,0.4c1.833,0.566,3.434,1.566,4.8,3c1.066,1.066,1.933,2.767,2.6,5.1c0.367,1.2,0.617,2.284,0.75,3.25l0.4,4.25C84,20.45,84.15,23.567,84.15,26.4z M33.3,41.4L56,29.6L33.3,17.75V41.4z"></path><polygon fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" points="33.3,41.4 33.3,17.75 56,29.6"></polygon></svg></div><canvas width="60" height="60" class="html5-video-loader html5-center-overlay ytp-scalable-icon-grow" style="display: none; transform: scale(0.5);" aria-hidden="true"></canvas><div class="ytp-thumbnail" aria-hidden="true" style="display: none;"></div><div class="html5-bezel html5-center-overlay" aria-hidden="true" style="display: none;"><div></div></div><video class="video-stream html5-main-video" x-webkit-airplay="allow" data-youtube-id="RDedl-FtfcU" src="blob:https%3A//www.youtube.com/547d81ff-afc1-40bb-ae71-fc92113ba999" style="width: 768px; height: 480px; left: 43px; top: 0px; transform: none;"></video><div class="video-ads html5-stop-propagation"><div class="video-ad-interstitial"><span>Your video will resume after the following ad.</span></div><div class="video-ad-status-bar"><div class="video-ad-label">Advertisement</div><div class="video-ad-time-left"></div><div class="html5-progress-bar html5-stop-propagation"><div class="html5-ad-progress-list html5-progress-list"></div></div></div><div class="ad-container ad-container-single-media-element-annotations ad-overlay" style="height: 63px;"><div class="container yt-text-overlay autoalign" style="transition: opacity 0.4s; -webkit-transition: opacity 0.4s; opacity: 0.3;"><div class="controls scalable"><div class="text-container " id="AdSense" style="height: 63px;"><div class="text-inner-container"><a class="text-title" href="http://www.googleadservices.com/pagead/aclk?sa=L&ai=CEzaUwOL6U8TuG8PO9AWi14DQDJnLpqoI0eOnyN0BiOTezTQQASDj-5MDUNDo04n______wFgpaCVgJgBoAHn9qngA8gBAeACAKgDAcgDE5gEBaoE3QFP0C2-qfIAZLXdWmPVBXqh_Bn6csTN_2b6_pKuSv4ZLIeX0IofMGOULEtenIxIwwKsEIvK7lRHq9wr6LEBS8q430dTF39HhBXAPHJCBgC04uTVGnS4QG_GVhHBvkhHqVKwA4vV7gDKpOFspG4THYqXG0pppVwrs4awcL-1Nz4BNWs6viHZI70uGO4cMF3WZHZbEcuN-vjd0MhNicv2TSzEWaTugZqdK6Kn8zcRTP2YT17ntykUg_rJE2HeuTp2_LSmP_EH_KFbwh6Ibgb27jnb1rNPpGXHqqHqwOx_HuAEAYgGAYAHgYnWHw&num=1&cid=5GgM923-JkNll2qQ5WMi9Wi1&sig=AOD64_1NAC46WpuuPrDUKLKcFAgBWhF_Iw&client=ca-pub-6219811747049371&adurl=http://alphaflightguru.com/%3Futm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_term%3Dwww.youtube.com%26utm_content%3Dinterest%2B-%2Bair%2Btravel%2B%26%2Bbusiness%26utm_campaign%3DFrom%2BAustralia%2B-%2BNetwork%26adpos%3Dnone%26mkwid%3Dc8RQGi3J3_dc%26pcrid%3D59383298609%26pkw%3D%26pmt%3D%26plc%3Dwww.youtube.com%26mkwid%3Dc8RQGi3J3_dc%26pcrid%3D59383298609%26pkw%3D%26pmt%3D%26plc%3Dwww.youtube.com" target="_blank" dir="ltr">70% Off Business Class</a><div class="text-description" dir="ltr">Our experts have special Discounts and access to the top Airlines.</div><a target="_blank" href="http://www.googleadservices.com/pagead/aclk?sa=L&ai=CEzaUwOL6U8TuG8PO9AWi14DQDJnLpqoI0eOnyN0BiOTezTQQASDj-5MDUNDo04n______wFgpaCVgJgBoAHn9qngA8gBAeACAKgDAcgDE5gEBaoE3QFP0C2-qfIAZLXdWmPVBXqh_Bn6csTN_2b6_pKuSv4ZLIeX0IofMGOULEtenIxIwwKsEIvK7lRHq9wr6LEBS8q430dTF39HhBXAPHJCBgC04uTVGnS4QG_GVhHBvkhHqVKwA4vV7gDKpOFspG4THYqXG0pppVwrs4awcL-1Nz4BNWs6viHZI70uGO4cMF3WZHZbEcuN-vjd0MhNicv2TSzEWaTugZqdK6Kn8zcRTP2YT17ntykUg_rJE2HeuTp2_LSmP_EH_KFbwh6Ibgb27jnb1rNPpGXHqqHqwOx_HuAEAYgGAYAHgYnWHw&num=1&cid=5GgM923-JkNll2qQ5WMi9Wi1&sig=AOD64_1NAC46WpuuPrDUKLKcFAgBWhF_Iw&client=ca-pub-6219811747049371&adurl=http://alphaflightguru.com/%3Futm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_term%3Dwww.youtube.com%26utm_content%3Dinterest%2B-%2Bair%2Btravel%2B%26%2Bbusiness%26utm_campaign%3DFrom%2BAustralia%2B-%2BNetwork%26adpos%3Dnone%26mkwid%3Dc8RQGi3J3_dc%26pcrid%3D59383298609%26pkw%3D%26pmt%3D%26plc%3Dwww.youtube.com%26mkwid%3Dc8RQGi3J3_dc%26pcrid%3D59383298609%26pkw%3D%26pmt%3D%26plc%3Dwww.youtube.com" class="text-ad-channel">www.alphaflightguru.com</a></div></div><div class="close-padding"><div class="close-button"></div></div><a target="_blank" href="https://www.google.com/url?ct=abg&q=https://www.google.com/adsense/support/bin/request.py%3Fcontact_type%3Dafv_violation%26url%3Dhttps://www.youtube.com/watch%253Fv%253DRDedl-FtfcU%26client%3Dca-pub-6219811747049371%26videoid%3Dyt_RDedl-FtfcU&usg=AFQjCNHKYdtjOgP2JPyL7HkVDwgLvERg7Q" class="attribution-button">Ads by Google</a></div><style type="text/css">.close-padding{color:#fff;cursor:pointer;margin:0;padding-bottom:10px;padding-left:10px;position:absolute;right:0;top:0;z-index:1001}.close-button{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAQAAACR313BAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAJiS0dEAP+Hj8y/AAAACXBIWXMAAAsTAAALEwEAmpwYAAAACXZwQWcAAAAPAAAADwBjHBMTAAAAt0lEQVQY03XQMW7CQBAAwLmTlSp9JFpHiCYfiFzkCZbfkqfwjshPoEART6BwWmRQ5IrqikDB4QQFb7V7o7vd2/CiPr26F5/aEJan0lR8KUos7uJWKV6LTvcvo7gercHzn2zk6ADW+nzzYO4iKDS5vOBck5+NkAwas9xvpjFIv0yyscu8s8k4cmcFHsFqnD1zDxbe8w76249ViGrfah9+VLdM5cEgSd7GzhR7T7YTO9+LbThO4FEbzuewMmr11FxHAAAAAElFTkSuQmCC);float:right;height:15px;margin:5px 4px 0 0;width:15px}.yt-text-overlay .close-button{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAQAAAAnOwc2AAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAACYktHRAD/h4/MvwAAAAlwSFlzAAAASAAAAEgARslrPgAAAAl2cEFnAAAACgAAAAoATqZ25QAAAN1JREFUCNcB0gAt/wDbutvr23TbBAAA2wXbeNvs27UAAAHb9QAK+v3CoyBzJGAAhAAJ9vsvjgNuAftABgMUKvtBDlEBDvv9ouLGAAEAAJunMVIPBgAAAADx+aXjj90AoAAAAAAAwM/b/9v/2/+k6wCtAFUAAAIAANtxGxcAAAAAAAAlDX8LAKsAAAPbdgCDABH1+dDwEAUPBiggNCGxsQHb9AAL+/2c4KPZdQlNPwQC9vsvWwIAzff8ouGU3euhs1TJrvj82vQAXQEAAACRACMApwCpAPwABABaAFcA1sKJVOsU6fRuAAAAAElFTkSuQmCC);height:10px;margin:9px 9px 0 0;width:10px}.close-padding:hover .close-button{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAQAAACR313BAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAJiS0dEAP+Hj8y/AAAACXBIWXMAAAsTAAALEwEAmpwYAAAACXZwQWcAAAAPAAAADwBjHBMTAAAAs0lEQVQY03XQLc7CQBAA0LdQjf8UQSCBcIHvAHgM6Wm4CB4kAk96g+IQhECCJATbUMy2NIGO2Mzs298JU/Py36/Y24SwKofa4ihkJYOfeEKnKnL5V0ZSTe3AqJHVHFzBzsUBXI2pDu9K4+pD3JnqfrjwkOrH+/pSD8WHKWTOkc+yiDXntqAHtvXbI1/AxNKkUdcfmyFYuFt4Kc0iN7qWoIhj1bXk5s+ppec3nXV4tuDTOrwBYQs0jH6JoccAAAAASUVORK5CYII=)}.yt-text-overlay .close-padding:hover .close-button{background-color:rgba(0,0,0,0.15);background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAQAAAAnOwc2AAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAACYktHRAD/h4/MvwAAAAlwSFlzAAAASAAAAEgARslrPgAAAAl2cEFnAAAACgAAAAoATqZ25QAAALpJREFUCNclyL1Kw1AAgNFPqLh3cu/D+ARV8S0UEcFVoYOL4Kw4FSmClBZiB38WHZ10sQUnB6MR2hruTVI/h5zx4MjUXRvgsvt+OQT81VBdn7803THXWUEHD+JCf+L48e9bY9WZ0AcG3SyqahYO30jYBOD9uc67lCvaALjtR52f4TSpa89cp+E+nRYayuQMcK6xOhqvDi9ui4XOCtr4MC+PJys3rK81R728fMroLwEntOhySUWDLTZ4/QdyroIjdfxoFwAAAABJRU5ErkJggg==);background-position:center center;background-repeat:no-repeat;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;box-shadow:inset 0 -1px 3px rgba(0,0,0,0.3),0 1px 0 rgba(255,255,255,0.5);height:20px;margin:4px 4px 0 0;width:20px}.recall-button{background:rgba(200,200,200,0.2) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAAASAAAAEgARslrPgAAAAl2cEFnAAAACgAAAAgAfJAUZwAAAURJREFUGNMFwb1LAmEAB+Dfe+/daZ3aWX6k1WFmSElQUBYUVIsguTQ0BUm4VtDYFLT4b7hkYLQGDg5BtERkUIRDgX1oWg6deKl359vzEFZO0mwWJgAUjgr88fe7R/2BkVonXVOGOQRQAJSwcp4CWWhKhnI6Vg0TkWYbnc8G7hbCjlLM3SQOBZQDAPgyk3wP+/Vf2Oyu4JV/NHDf1CG/1NREdZuZVRUCeiaLal12iETBQ4E1iN4QaNLqAafMptlw6Yvtwh4cI5CiIm09BAh06fbDbEx7saXp0M9vkDtJELQ5jPQAK1i5Irb+mGwYbEfV2AHiZz7M7YVLNZZ6rLDYACac8xAkwjp6ROf4ePEV19EZmaCrdQXwbzq19V8W68qUH+Hx4OYFnp6ZjJWck4NlUYLVf5pOgpXzdAOCOIg+N1zLIQuPpX9L/XzfXOCrFgAAAABJRU5ErkJggg==) no-repeat center;border:1px solid rgba(255,255,255,0.498039);box-shadow:rgba(0,0,0,0.701961) 0 4px 3px;color:#fff;cursor:pointer;height:11px;width:26px;z-index:1001}.yt-text-overlay .recall-button{background:rgba(0,0,0,0.15) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAGCAQAAAC7znxOAAAKPWlDQ1BpY2MAAHjanVNnVFPpFj333vRCS4iAlEtvUhUIIFJCi4BUaaISkgChhBgSQOyIqMCIoiKCFRkUccDREZCxIoqFQbH3AXkIKOPgKDZU3g/eGn2z5r03b/avvfY5Z53vnH0+AEZgsESahaoBZEoV8ogAHzw2Lh4ndwMKVCCBA4BAmC0LifSPAgDg+/Hw7IgAH/gCBODNbUAAAG7YBIbhOPx/UBfK5AoAJAwApovE2UIApBAAMnIVMgUAMgoA7KR0mQIAJQAAWx4bFw+AagEAO2WSTwMAdtIk9wIAtihTKgJAowBAJsoUiQDQDgBYl6MUiwCwYAAoypGIcwGwmwBgkqHMlABg7wCAnSkWZAMQGABgohALUwEI9gDAkEdF8AAIMwEojJSveNJXXCHOUwAA8LJki+WSlFQFbiG0xB1cXbl4oDg3Q6xQ2IQJhOkCuQjnZWXKBNLFAJMzAwCARnZEgA/O9+M5O7g6O9s42jp8taj/GvyLiI2L/5c/r8IBAQCE0/VF+7O8rBoA7hgAtvGLlrQdoGUNgNb9L5rJHgDVQoDmq1/Nw+H78fBUhULmZmeXm5trKxELbYWpX/X5nwl/AV/1s+X78fDf14P7ipMFygwFHhHggwuzMrKUcjxbJhCKcZs/HvHfLvzzd0yLECeL5WKpUIxHS8S5EmkKzsuSiiQKSZYUl0j/k4l/s+wPmLxrAGDVfgb2QltQu8oG7JcuILDogCXsAgDkd9+CqdEQBgAxBoOTdw8AMPmb/x1oGQCg2ZIUHACAFxGFC5XynMkYAQCACDRQBTZogz4YgwXYgCO4gDt4gR/MhlCIgjhYAEJIhUyQQy4shVVQBCWwEbZCFeyGWqiHRjgCLXACzsIFuALX4BY8gF4YgOcwCm9gHEEQMsJEWIg2YoCYItaII8JFZiF+SDASgcQhiUgKIkWUyFJkNVKClCNVyF6kHvkeOY6cRS4hPcg9pA8ZRn5DPqAYykDZqB5qhtqhXNQbDUKj0PloCroIzUcL0Q1oJVqDHkKb0bPoFfQW2os+R8cwwOgYBzPEbDAuxsNCsXgsGZNjy7FirAKrwRqxNqwTu4H1YiPYewKJwCLgBBuCOyGQMJcgJCwiLCeUEqoIBwjNhA7CDUIfYZTwmcgk6hKtiW5EPjGWmELMJRYRK4h1xGPE88RbxAHiGxKJxCGZk1xIgaQ4UhppCamUtJPURDpD6iH1k8bIZLI22ZrsQQ4lC8gKchF5O/kQ+TT5OnmA/I5CpxhQHCn+lHiKlFJAqaAcpJyiXKcMUsapalRTqhs1lCqiLqaWUWupbdSr1AHqOE2dZk7zoEXR0miraJW0Rtp52kPaKzqdbkR3pYfTJfSV9Er6YfpFeh/9PUODYcXgMRIYSsYGxn7GGcY9xismk2nG9GLGMxXMDcx65jnmY+Y7FZaKrQpfRaSyQqVapVnlusoLVaqqqaq36gLVfNUK1aOqV1VH1KhqZmo8NYHacrVqteNqd9TG1FnqDuqh6pnqpeoH1S+pD2mQNcw0/DREGoUa+zTOafSzMJYxi8cSslazalnnWQNsEtuczWensUvY37G72aOaGpozNKM18zSrNU9q9nIwjhmHz8nglHGOcG5zPkzRm+I9RTxl/ZTGKdenvNWaquWlJdYq1mrSuqX1QRvX9tNO196k3aL9SIegY6UTrpOrs0vnvM7IVPZU96nCqcVTj0y9r4vqWulG6C7R3afbpTump68XoCfT2653Tm9En6PvpZ+mv0X/lP6wActgloHEYIvBaYNnuCbujWfglXgHPmqoaxhoqDTca9htOG5kbjTXqMCoyeiRMc2Ya5xsvMW43XjUxMAkxGSpSYPJfVOqKdc01XSbaafpWzNzsxiztWYtZkPmWuZ883zzBvOHFkwLT4tFFjUWNy1JllzLdMudltesUCsnq1Sraqur1qi1s7XEeqd1zzTiNNdp0mk10+7YMGy8bXJsGmz6bDm2wbYFti22L+xM7OLtNtl12n22d7LPsK+1f+Cg4TDbocChzeE3RytHoWO1483pzOn+01dMb53+cob1DPGMXTPuOrGcQpzWOrU7fXJ2cZY7NzoPu5i4JLrscLnDZXPDuKXci65EVx/XFa4nXN+7Obsp3I64/epu457uftB9aKb5TPHM2pn9HkYeAo+9Hr2z8FmJs/bM6vU09BR41ng+8TL2EnnVeQ16W3qneR/yfuFj7yP3OebzlufGW8Y744v5BvgW+3b7afjN9avye+xv5J/i3+A/GuAUsCTgTCAxMChwU+Advh5fyK/nj852mb1sdkcQIygyqCroSbBVsDy4LQQNmR2yOeThHNM50jktoRDKD90c+ijMPGxR2I/hpPCw8OrwpxEOEUsjOiNZkQsjD0a+ifKJKot6MNdirnJue7RqdEJ0ffTbGN+Y8pjeWLvYZbFX4nTiJHGt8eT46Pi6+LF5fvO2zhtIcEooSrg933x+3vxLC3QWZCw4uVB1oWDh0URiYkziwcSPglBBjWAsiZ+0I2lUyBNuEz4XeYm2iIbFHuJy8WCyR3J58lCKR8rmlOFUz9SK1BEJT1IleZkWmLY77W16aPr+9ImMmIymTEpmYuZxqYY0XdqRpZ+Vl9Ujs5YVyXoXuS3aumhUHiSvy0ay52e3KtgKmaJLaaFco+zLmZVTnfMuNzr3aJ56njSva7HV4vWLB/P9879dQlgiXNK+1HDpqqV9y7yX7V2OLE9a3r7CeEXhioGVASsPrKKtSl/1U4F9QXnB69Uxq9sK9QpXFvavCVjTUKRSJC+6s9Z97e51hHWSdd3rp6/fvv5zsaj4col9SUXJx1Jh6eVvHL6p/GZiQ/KG7jLnsl0bSRulG29v8tx0oFy9PL+8f3PI5uYt+JbiLa+3Ltx6qWJGxe5ttG3Kbb2VwZWt2022b9z+sSq16la1T3XTDt0d63e83SnaeX2X167G3Xq7S3Z/2CPZc3dvwN7mGrOain2kfTn7ntZG13Z+y/22vk6nrqTu037p/t4DEQc66l3q6w/qHixrQBuUDcOHEg5d+873u9ZGm8a9TZymksNwWHn42feJ398+EnSk/Sj3aOMPpj/sOMY6VtyMNC9uHm1JbeltjWvtOT77eHube9uxH21/3H/C8ET1Sc2TZadopwpPTZzOPz12RnZm5GzK2f72he0PzsWeu9kR3tF9Puj8xQv+F851eneevuhx8cQlt0vHL3Mvt1xxvtLc5dR17Cenn451O3c3X3W52nrN9Vpbz8yeU9c9r5+94Xvjwk3+zSu35tzquT339t07CXd674ruDt3LuPfyfs798QcrHxIfFj9Se1TxWPdxzc+WPzf1Ovee7PPt63oS+eRBv7D/+T+y//FxoPAp82nFoMFg/ZDj0Ilh/+Frz+Y9G3guez4+UvSL+i87Xli8+OFXr1+7RmNHB17KX078VvpK+9X+1zNet4+FjT1+k/lm/G3xO+13B95z33d+iPkwOJ77kfyx8pPlp7bPQZ8fTmROTPwTA5jz/CVjM6IAAAAgY0hSTQAAeiUAAICDAAD5/wAAgOkAAHUwAADqYAAAOpgAABdvkl/FRgAAAAJiS0dEAP+Hj8y/AAAACXBIWXMAAAsTAAALEwEAmpwYAAAACXZwQWcAAAAJAAAABgBkh0tHAAAALElEQVQI12P4zwCBv9JgLLjAr/8wQYTAf5ggsgBUEFXg/6//v9IYf/1nQAMAapVB10c/DEAAAAAASUVORK5CYII=) no-repeat center;border:1px solid rgba(0,0,0,0);box-shadow:none;height:17px;width:29px}.autoalign .recall-button{margin:auto}.yt-text-overlay.autoalign .recall-button{margin:auto auto 6px}.recall-button:hover{background:#fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAAAAAAUx4O/AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAl2cEFnAAAACgAAAAcA+wgIqAAAAEtJREFUCNcVi1kRwEAIQ3GAhEpAAhJWChKQsBIqBQlIQAIS0jQ/OeZFAIz70ARIjdDL2GYF1OMrxZ6JvUugjGoCG5rcJSHv+d/oMx893S/cqF2DpwAAAABJRU5ErkJggg==) no-repeat center}.yt-text-overlay .recall-button:hover{background:rgba(0,0,0,0.15) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAGCAQAAAC7znxOAAAKPWlDQ1BpY2MAAHjanVNnVFPpFj333vRCS4iAlEtvUhUIIFJCi4BUaaISkgChhBgSQOyIqMCIoiKCFRkUccDREZCxIoqFQbH3AXkIKOPgKDZU3g/eGn2z5r03b/avvfY5Z53vnH0+AEZgsESahaoBZEoV8ogAHzw2Lh4ndwMKVCCBA4BAmC0LifSPAgDg+/Hw7IgAH/gCBODNbUAAAG7YBIbhOPx/UBfK5AoAJAwApovE2UIApBAAMnIVMgUAMgoA7KR0mQIAJQAAWx4bFw+AagEAO2WSTwMAdtIk9wIAtihTKgJAowBAJsoUiQDQDgBYl6MUiwCwYAAoypGIcwGwmwBgkqHMlABg7wCAnSkWZAMQGABgohALUwEI9gDAkEdF8AAIMwEojJSveNJXXCHOUwAA8LJki+WSlFQFbiG0xB1cXbl4oDg3Q6xQ2IQJhOkCuQjnZWXKBNLFAJMzAwCARnZEgA/O9+M5O7g6O9s42jp8taj/GvyLiI2L/5c/r8IBAQCE0/VF+7O8rBoA7hgAtvGLlrQdoGUNgNb9L5rJHgDVQoDmq1/Nw+H78fBUhULmZmeXm5trKxELbYWpX/X5nwl/AV/1s+X78fDf14P7ipMFygwFHhHggwuzMrKUcjxbJhCKcZs/HvHfLvzzd0yLECeL5WKpUIxHS8S5EmkKzsuSiiQKSZYUl0j/k4l/s+wPmLxrAGDVfgb2QltQu8oG7JcuILDogCXsAgDkd9+CqdEQBgAxBoOTdw8AMPmb/x1oGQCg2ZIUHACAFxGFC5XynMkYAQCACDRQBTZogz4YgwXYgCO4gDt4gR/MhlCIgjhYAEJIhUyQQy4shVVQBCWwEbZCFeyGWqiHRjgCLXACzsIFuALX4BY8gF4YgOcwCm9gHEEQMsJEWIg2YoCYItaII8JFZiF+SDASgcQhiUgKIkWUyFJkNVKClCNVyF6kHvkeOY6cRS4hPcg9pA8ZRn5DPqAYykDZqB5qhtqhXNQbDUKj0PloCroIzUcL0Q1oJVqDHkKb0bPoFfQW2os+R8cwwOgYBzPEbDAuxsNCsXgsGZNjy7FirAKrwRqxNqwTu4H1YiPYewKJwCLgBBuCOyGQMJcgJCwiLCeUEqoIBwjNhA7CDUIfYZTwmcgk6hKtiW5EPjGWmELMJRYRK4h1xGPE88RbxAHiGxKJxCGZk1xIgaQ4UhppCamUtJPURDpD6iH1k8bIZLI22ZrsQQ4lC8gKchF5O/kQ+TT5OnmA/I5CpxhQHCn+lHiKlFJAqaAcpJyiXKcMUsapalRTqhs1lCqiLqaWUWupbdSr1AHqOE2dZk7zoEXR0miraJW0Rtp52kPaKzqdbkR3pYfTJfSV9Er6YfpFeh/9PUODYcXgMRIYSsYGxn7GGcY9xismk2nG9GLGMxXMDcx65jnmY+Y7FZaKrQpfRaSyQqVapVnlusoLVaqqqaq36gLVfNUK1aOqV1VH1KhqZmo8NYHacrVqteNqd9TG1FnqDuqh6pnqpeoH1S+pD2mQNcw0/DREGoUa+zTOafSzMJYxi8cSslazalnnWQNsEtuczWensUvY37G72aOaGpozNKM18zSrNU9q9nIwjhmHz8nglHGOcG5zPkzRm+I9RTxl/ZTGKdenvNWaquWlJdYq1mrSuqX1QRvX9tNO196k3aL9SIegY6UTrpOrs0vnvM7IVPZU96nCqcVTj0y9r4vqWulG6C7R3afbpTump68XoCfT2653Tm9En6PvpZ+mv0X/lP6wActgloHEYIvBaYNnuCbujWfglXgHPmqoaxhoqDTca9htOG5kbjTXqMCoyeiRMc2Ya5xsvMW43XjUxMAkxGSpSYPJfVOqKdc01XSbaafpWzNzsxiztWYtZkPmWuZ883zzBvOHFkwLT4tFFjUWNy1JllzLdMudltesUCsnq1Sraqur1qi1s7XEeqd1zzTiNNdp0mk10+7YMGy8bXJsGmz6bDm2wbYFti22L+xM7OLtNtl12n22d7LPsK+1f+Cg4TDbocChzeE3RytHoWO1483pzOn+01dMb53+cob1DPGMXTPuOrGcQpzWOrU7fXJ2cZY7NzoPu5i4JLrscLnDZXPDuKXci65EVx/XFa4nXN+7Obsp3I64/epu457uftB9aKb5TPHM2pn9HkYeAo+9Hr2z8FmJs/bM6vU09BR41ng+8TL2EnnVeQ16W3qneR/yfuFj7yP3OebzlufGW8Y744v5BvgW+3b7afjN9avye+xv5J/i3+A/GuAUsCTgTCAxMChwU+Advh5fyK/nj852mb1sdkcQIygyqCroSbBVsDy4LQQNmR2yOeThHNM50jktoRDKD90c+ijMPGxR2I/hpPCw8OrwpxEOEUsjOiNZkQsjD0a+ifKJKot6MNdirnJue7RqdEJ0ffTbGN+Y8pjeWLvYZbFX4nTiJHGt8eT46Pi6+LF5fvO2zhtIcEooSrg933x+3vxLC3QWZCw4uVB1oWDh0URiYkziwcSPglBBjWAsiZ+0I2lUyBNuEz4XeYm2iIbFHuJy8WCyR3J58lCKR8rmlOFUz9SK1BEJT1IleZkWmLY77W16aPr+9ImMmIymTEpmYuZxqYY0XdqRpZ+Vl9Ujs5YVyXoXuS3aumhUHiSvy0ay52e3KtgKmaJLaaFco+zLmZVTnfMuNzr3aJ56njSva7HV4vWLB/P9879dQlgiXNK+1HDpqqV9y7yX7V2OLE9a3r7CeEXhioGVASsPrKKtSl/1U4F9QXnB69Uxq9sK9QpXFvavCVjTUKRSJC+6s9Z97e51hHWSdd3rp6/fvv5zsaj4col9SUXJx1Jh6eVvHL6p/GZiQ/KG7jLnsl0bSRulG29v8tx0oFy9PL+8f3PI5uYt+JbiLa+3Ltx6qWJGxe5ttG3Kbb2VwZWt2022b9z+sSq16la1T3XTDt0d63e83SnaeX2X167G3Xq7S3Z/2CPZc3dvwN7mGrOain2kfTn7ntZG13Z+y/22vk6nrqTu037p/t4DEQc66l3q6w/qHixrQBuUDcOHEg5d+873u9ZGm8a9TZymksNwWHn42feJ398+EnSk/Sj3aOMPpj/sOMY6VtyMNC9uHm1JbeltjWvtOT77eHube9uxH21/3H/C8ET1Sc2TZadopwpPTZzOPz12RnZm5GzK2f72he0PzsWeu9kR3tF9Puj8xQv+F851eneevuhx8cQlt0vHL3Mvt1xxvtLc5dR17Cenn451O3c3X3W52nrN9Vpbz8yeU9c9r5+94Xvjwk3+zSu35tzquT339t07CXd674ruDt3LuPfyfs798QcrHxIfFj9Se1TxWPdxzc+WPzf1Ovee7PPt63oS+eRBv7D/+T+y//FxoPAp82nFoMFg/ZDj0Ilh/+Frz+Y9G3guez4+UvSL+i87Xli8+OFXr1+7RmNHB17KX078VvpK+9X+1zNet4+FjT1+k/lm/G3xO+13B95z33d+iPkwOJ77kfyx8pPlp7bPQZ8fTmROTPwTA5jz/CVjM6IAAAAgY0hSTQAAeiUAAICDAAD5/wAAgOkAAHUwAADqYAAAOpgAABdvkl/FRgAAAAJiS0dEAP+Hj8y/AAAACXBIWXMAAAsTAAALEwEAmpwYAAAACXZwQWcAAAAJAAAABgBkh0tHAAAALElEQVQI12P4zwCBv9JgLLjAr/8wQYTAf5ggsgBUEFXg/6//v9IYf/1nQAMAapVB10c/DEAAAAAASUVORK5CYII=) no-repeat center;border:1px solid rgba(255,255,255,0.5)}.auto-hide{display:none}body:hover .auto-hide{display:block}.attribution-button{bottom:12px;color:#fff;font:11px arial,sans-serif;position:absolute;right:5px;text-decoration:none;text-shadow:rgba(0,0,0,0.7) 0 4px 4px;z-index:1001}.yt-text-overlay .attribution-button{color:#888;text-shadow:none}.viewmode-fullscreen .attribution-button{right:22px;top:5px}.yt-text-overlay.viewmode-fullscreen .attribution-button{right:5px;top:auto}.text-container .attribution-button{bottom:7px}.container{position:absolute;width:100%}.container.autoalign{bottom:0;text-align:center}.container-stack{background-color:#666;border-radius:5px;display:block;padding:3px 0}.container-rotator .attribution-button{bottom:7px}.container-rotator .text-inner-container{left:20px}.container-selector{-webkit-box-shadow:0 4px 3px rgba(0,0,0,.7);-moz-box-shadow:0 4px 3px rgba(0,0,0,.7);box-shadow:0 4px 3px rgba(0,0,0,.7);background:#666;border-radius:2px;cursor:pointer;height:10px;left:5px;position:absolute;width:10px;z-index:1002}.container-selector:hover{background:#fff}.container-rotator .container-highlight:hover{border-color:#fff!important}.container-stack .container-highlight:hover{background-color:#999!important}.container-active{background:#fc0!important}.container-slider .attribution-button{bottom:7px}.container-slider .controls{max-width:100%!important}.container-slider .text-container{background-color:#000;border-radius:5px 5px 0 0;margin-bottom:0}.container-slider .text-title:hover{text-decoration:underline!important}.container-slider.hidden .controls{top:38px}.container-slider.animated .controls{-webkit-transition:top .4s;-moz-transition:top .4s;-o-transition:top .4s;transition:top .4s}.controls{display:inline-block;position:relative}.controls.scalable{display:block;min-width:320px;max-width:450px}.autoalign .controls.scalable{margin:auto}.flash-container,.image-container{display:inline-block;position:relative}.flash-container.click-capture .click-layer{display:block}.click-layer{background:rgba(0,0,0,0.0);bottom:0;left:0;position:absolute;right:0;top:0;z-index:100}.text-container{margin-bottom:5px;position:relative}.yt-text-overlay .text-container{margin-bottom:3px}.text-inner-container{background-image:-webkit-linear-gradient(top,rgba(20,20,20,0.6),rgba(209,209,209,0.6));background-image:-moz-linear-gradient(top,rgba(20,20,20,0.6),rgba(209,209,209,0.6));background-image:-ms-linear-gradient(top,rgba(20,20,20,0.6),rgba(209,209,209,0.6));background-image:-o-linear-gradient(top,rgba(20,20,20,0.6),rgba(209,209,209,0.6));background-image:linear-gradient(top,rgba(20,20,20,0.6),rgba(209,209,209,0.6));border:1px solid rgba(102,102,102,0.7);border-radius:3px;box-shadow:rgba(0,0,0,0.7) 0 5px 5px;padding-left:10px;position:absolute;text-align:left;top:0;bottom:0;left:0;right:0}.afi .text-container .text-inner-container{background-image:none;border:none;border-radius:0;box-shadow:none}.yt-text-overlay .text-container .text-inner-container{background-color:rgba(0,0,0,0.6);background-image:none;border:1px solid rgba(0,0,0,0.6);border-radius:0;box-shadow:none;padding-left:10px}.viewmode-fullscreen .text-inner-container{background-image:none;border:none;box-shadow:none}.yt-text-overlay .controls:hover .text-inner-container{border:1px solid rgba(58,58,58,1.0)}.text-title{text-decoration:underline}.afi .text-title{text-decoration:none}.yt-text-overlay .text-title{text-decoration:none}.viewmode-fullscreen .text-title{text-decoration:none}.yt-text-overlay .controls:hover .text-container .text-title{text-decoration:underline}.text-image-link{float:left;position:relative}.text-image{box-shadow:rgba(0,0,0,0.498039) 0 3px 5px;height:57px;margin:3px 10px 0 0;width:79px}.yt-text-overlay .text-image{margin:2px 10px 0 0}.text-image-duration{background:#000;color:#fff;font:10px arial,sans-serif;padding:2px;position:absolute;right:10px;top:43px}.text-title{color:#fff;display:block;font:bold 14px arial,sans-serif;margin:7px 16px 0 0;overflow:hidden;padding-bottom:4px;text-overflow:ellipsis;text-shadow:rgba(0,0,0,0.7) 0 4px 4px;white-space:nowrap}.yt-text-overlay .text-title{margin-top:7px;text-shadow:#000 0 -1px 0}.text-description{color:#fff;font:12px arial,sans-serif;margin-top:-3px;overflow:hidden;text-overflow:ellipsis;text-shadow:rgba(0,0,0,0.7) 0 4px 4px;white-space:nowrap}.yt-text-overlay .text-description{text-align:left;text-shadow:none}.text-ad-channel{bottom:7px;color:#f9fcc0;font:bold 11px arial,sans-serif;left:10px;position:absolute;text-decoration:none;text-shadow:rgba(0,0,0,0.7) 0 4px 4px}.yt-text-overlay .text-ad-channel{bottom:9px;color:#eade90;font-weight:normal;left:10px;text-shadow:#000 0 -1px 0}.pyv .text-ad-channel{left:99px}.yt-text-overlay .pyv .text-ad-channel{left:99px}.viewmode-fullscreen .text-ad-channel{color:#ccc}.yt-text-overlay.viewmode-fullscreen .text-ad-channel{color:#eade90}.ima-sdk-frame body{background:transparent;height:100%;margin:0;overflow:hidden}.ima-sdk-frame{height:100%}.videoAdUi{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;background-color:rgba(0,0,0,0);bottom:0;cursor:pointer;height:100%;left:0;min-height:100%;position:absolute;right:0;top:0;overflow:hidden}.videoAdUiTopBar{background:#000;border-bottom:1px solid #444;cursor:default;left:0;opacity:.8;padding:0;position:relative;top:0;right:0}.videoAdUiTopBarWithGradients{background-image:-webkit-linear-gradient(top,rgba(0,0,0,0.8),rgba(0,0,0,0.7) 40%,rgba(0,0,0,0) 99%);background-image:-moz-linear-gradient(top,rgba(0,0,0,0.8),rgba(0,0,0,0.7) 40%,rgba(0,0,0,0) 99%);background-image:-ms-linear-gradient(top,rgba(0,0,0,0.8),rgba(0,0,0,0.7) 40%,rgba(0,0,0,0) 99%);background-image:-o-linear-gradient(top,rgba(0,0,0,0.8),rgba(0,0,0,0.7) 40%,rgba(0,0,0,0) 99%);background-image:linear-gradient(top,rgba(0,0,0,0.8),rgba(0,0,0,0.7) 40%,rgba(0,0,0,0) 99%);background-color:rgba(0,0,0,0);border-bottom:none;height:40px}.videoAdUiTopBarTransitions{-webkit-transition:opacity ease-in .5s;-moz-transition:opacity ease-in .5s;-o-transition:opacity ease-in .5s;transition:opacity ease-in .5s;opacity:0}.videoAdUi:hover .videoAdUiTopBarTransitions{-webkit-transition:opacity ease-out .5s;-moz-transition:opacity ease-out .5s;-o-transition:opacity ease-out .5s;transition:opacity ease-out .5s;opacity:.8}.videoAdUiTopBarNoFade{opacity:.8!important}.videoAdUiBottomBar{background-image:-webkit-linear-gradient(bottom,rgba(0,0,0,0.5),rgba(0,0,0,0.4) 60%,rgba(0,0,0,0) 99%);background-image:-moz-linear-gradient(bottom,rgba(0,0,0,0.5),rgba(0,0,0,0.4) 60%,rgba(0,0,0,0) 99%);background-image:-ms-linear-gradient(bottom,rgba(0,0,0,0.5),rgba(0,0,0,0.4) 60%,rgba(0,0,0,0) 99%);background-image:-o-linear-gradient(bottom,rgba(0,0,0,0.5),rgba(0,0,0,0.4) 60%,rgba(0,0,0,0) 99%);background-image:linear-gradient(bottom,rgba(0,0,0,0.5),rgba(0,0,0,0.4) 60%,rgba(0,0,0,0) 99%);bottom:5px;left:0;opacity:.9;padding:0;position:absolute;width:100%}.videoAdUiProgressBar{background-color:#fff;bottom:0;cursor:default;left:0;position:absolute;width:100%}.videoAdUiProgress{background-image:-webkit-linear-gradient(top,#ffec7b,#dea405);background-image:-moz-linear-gradient(top,#ffec7b,#dea405);background-image:-ms-linear-gradient(top,#ffec7b,#dea405);background-image:-o-linear-gradient(top,#ffec7b,#dea405);background-image:linear-gradient(top,#ffec7b,#dea405);border-right:solid 1px #666;height:4px;opacity:.9;width:0%}.videoAdUiAuthorIcon{background:#000;display:inline-block;height:40px;margin:0 10px;position:absolute}.videoAdUiAuthorIconImage{cursor:pointer;width:40px;height:40px}.videoAdUiAuthorIconImage:hover{opacity:.6}.videoAdUiAuthorName{color:#ccc;cursor:pointer;display:inline-block;font:normal 12px arial,sans-serif;margin:10px 5px 5px;text-decoration:none;max-width:20%}.videoAdUiLearnMore{color:#fff;display:inline-block;float:right;font:normal 16px arial,sans-serif;padding:5px}.videoAdUiLearnMoreText{color:#e5bb00;font:normal 13px arial,sans-serif;margin-bottom:5px;text-align:center}.videoAdUiLearnMoreText:hover{text-decoration:underline}.videoAdUiLearnMoreIcon{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAl2cEFnAAAACgAAAAoATqZ25QAAAJdJREFUGNN1j70NwkAMRp+PMAXKBGmgvQWYAOYgMAjMQRZggoiOC0UWQFmAFoEp4EIOzGss+Ud+n2CggTWw6RtC7axFHJf0Ei/aUKH4/njKBEDPLHiwi/0Mxcdhwh0P7BGWryeW44ktI2qZUeJYRfFuEGKugU4Dx1/tlOJdcwBtqD6OQ8YcuAHKNaY1F6WgBVrLO/v2/McTvRgrpKpY5XsAAAAASUVORK5CYII=);display:inline-block;height:10px;margin-left:3px;width:10px}.videoAdUiTitle{color:#fff;cursor:pointer;display:inline-block;font:normal 13px arial,sans-serif;margin:10px 5px 5px;text-decoration:none;max-width:50%}.videoAdUiTitleWithAuthorIcon{margin-left:60px}.videoAdUiAuthorName:hover,.videoAdUiTitle:hover{text-decoration:underline}.ellipsisText{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.videoAdUiAttribution{bottom:0;color:#fff;display:inline-block;font:normal 11px arial,sans-serif;padding:5px;padding-right:10px;position:absolute}.videoAdUiAttribution-gvn{color:#e5bb00;font-size:12px}.videoAdUiShare{color:#fff;display:inline-block;float:right;font:normal 13px arial,sans-serif;margin:10px 10px 5px}.videoAdUiShare:hover{text-decoration:underline;cursor:pointer}.videoAdUiPreSkipContainer{bottom:22px;cursor:default;padding:15px 0 15px 15px;position:absolute;right:0;z-index:1000}.videoAdUi-mobile .videoAdUiPreSkipContainer{bottom:11px;padding:8px 0 8px 8px}.videoAdUiSkipContainer{-webkit-tap-highlight-color:rgba(0,0,0,0);bottom:22px;cursor:pointer;padding:15px 0 15px 15px;position:absolute;right:0;z-index:1000}.videoAdUi-mobile .videoAdUiSkipContainer{bottom:11px;padding:8px 0 8px 8px}.videoAdUiPreSkipButton{background:rgba(0,0,0,0.8);min-width:155px;padding:6px}.videoAdUi-mobile .videoAdUiPreSkipButton{min-width:105px}.videoAdUiPreSkipText{color:#e6e6e6;font:normal 11px arial,helvetica,sans-serif;padding-right:8px;text-align:center;display:inline-block;width:70px;vertical-align:middle}.videoAdUiPreSkipText.videoAdUiPreSkipTextOnly{width:100%;padding-right:0;line-height:21px}.videoAdUiPreSkipThumbnail{cursor:pointer;display:inline-block;vertical-align:middle}.videoAdUiPreSkipThumbnailImage{display:block;max-width:78px;max-height:42px;width:auto;height:auto}.videoAdUiSkipButton{-webkit-tap-highlight-color:rgba(0,0,0,0);background:rgba(0,0,0,0.8);border:1px solid rgba(255,255,255,0.5);border-right:0;color:#fff;font:normal 18px arial,helvetica,sans-serif;min-width:150px;padding:10px 7px;text-align:center}.videoAdUi-mobile .videoAdUiSkipButton{font:normal 16px arial,helvetica,sans-serif;min-width:100px;padding:6px 7px}.videoAdUiSkipButton:hover{border-color:rgba(255,255,255,1)}.videoAdUi-swipeable .videoAdUiSkipButton{background:rgba(255,255,255,0.8);border:1px solid rgba(0,0,0,0.8);color:#000}.videoAdUiSkipIcon{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAQAAADs3AYjAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAJiS0dEAP+Hj8y/AAAACXBIWXMAAAsTAAALEwEAmpwYAAAACXZwQWcAAAAUAAAAFQC6IBuQAAAAUElEQVQoz93QwQkAIAwDwOIirtJNHM3RHCW+CqXG9q15hoNARB7KRAfrAeAoGKaQ4SuMOIUel9CwwZY9oaL8Bp+FUU8bSqFHVxgRhQxR+EM2fqKwh5sgSyYAAAAASUVORK5CYII=);display:inline-block;height:25px;margin-left:2px;vertical-align:middle;width:20px}@media all and (min-width:800px) and (min-height:400px){.videoAdUiTitle{font-size:15px}.videoAdUiAttribution{font-size:13px}.videoAdUiAttribution-gvn{font-size:16px!important}.videoAdUiPreSkipButton{min-width:200px}.videoAdUiPreSkipText{font-size:13px;width:105px;padding-right:6px}.videoAdUiPreSkipText.videoAdUiPreSkipTextOnly{font-size:13px}.videoAdUiPreSkipThumbnailImage{max-width:98px;max-height:52px}.videoAdUiShare{font-size:15px}.videoAdUiSkipButton{font-size:23px;min-width:200px}}</style><div style="display: none; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; z-index: 2000;"></div></div></div></div></div><div class="html5-video-controls ytp-block-autohide"><div class="ytp-video-controls-clickguard" aria-hidden="true" style="display: none;"></div><div class="ytp-progress-bar-container" style="height: 8px;"><div class="html5-storyboard" aria-hidden="true" style="display: none;"><div class="html5-storyboard-filmstrip"></div><div class="html5-storyboard-lens"><img class="html5-storyboard-lens-thumbnail" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><span class="html5-storyboard-lens-timestamp"></span></div></div><div class="html5-progress-bar ytp-force-transform red" tabindex="6250" role="slider" aria-label="Seek slider" aria-valuemin="0" aria-valuemax="688" aria-valuenow="145" aria-valuetext="145 of 688 seconds" draggable="true" style="width: 854px;"><div class="ytp-progress-bar-padding"></div><div class="ytp-progress-list"><div class="ytp-unloaded-progress" style="left: 0%; transform: scaleX(1);"></div><div class="ytp-play-progress" style="left: 0%; transform: scaleX(0.2109503587359076);"></div><div class="ytp-load-progress" style="left: 0%; transform: scaleX(0.6407762571822765);"></div><div class="ytp-spacecast-load-progress"></div><div class="ytp-clip-start-exclude" style="width: 0%;"></div><div class="ytp-clip-end-exclude" style="left: 100%; width: 0%;"></div><div class="html5-ad-progress-list"><div class="ytp-ad-progress" style="width: 6px; left: 12.412790697674419px;"></div></div><div class="ytp-marker-crenellation-list"></div><div class="ytp-marker-progress-list"></div></div><div class="ytp-scrubber-pull-indicator" style="left: 184.98364141860463px;"></div><div class="html5-scrubber-button" style="height: 6px; transform-origin: 21.1% 50% 0px; left: 184.98364141860463px;"></div></div><div class="ytp-bound-time-left">0:00</div><div class="ytp-bound-time-right">11:28</div><div class="ytp-clip-start html5-clip-marker yt-uix-tooltip" draggable="true" style="left: 0%;"></div><div class="ytp-clip-end html5-clip-marker yt-uix-tooltip" draggable="true" style="left: 100%;"></div><div class="ytp-progress-tooltip" style="padding: 2px; width: 50px; left: 78.5px; display: none;" aria-hidden="true"><div class="ytp-progress-tooltip-thumbnail-container"><div class="ytp-progress-tooltip-thumbnail"></div></div><div class="ytp-progress-tooltip-text-container"><div class="ytp-progress-tooltip-text"></div></div><div class="ytp-progress-tooltip-timestamp-container"><div class="ytp-progress-tooltip-timestamp">1:24</div></div><div class="ytp-progress-tooltip-arrow" style="left: 22px;"></div></div></div><div class="html5-player-chrome"><div class="ytp-button ytp-button-play" role="button" tabindex="6000" aria-label="Play"></div><div class="ytp-playlist-controls" aria-hidden="true" style="display: none;"><div class="ytp-button ytp-button-prev" role="button" aria-label="Previous" tabindex="6050"></div><div class="ytp-button ytp-button-next" role="button" aria-label="Next" tabindex="6051"></div></div><span class="ytp-volume-hover-area" draggable="true"><div class="ytp-volume-control" draggable="true"><div class="ytp-button ytp-button-volume" role="button" tabindex="6100" aria-label="mute toggle" data-value="max"></div><div class="ytp-volume-panel" role="slider" aria-valuemin="0" aria-valuemax="100" tabindex="6200" aria-valuenow="100" aria-valuetext="100% volume"><div class="ytp-volume-slider" draggable="true"><div class="ytp-volume-slider-foreground" style="left: 49px;"></div></div></div></div><div class="ytp-time-display html5-control" aria-hidden="true"><span class="ytp-time-current">2:25</span><span class="ytp-time-separator"> / </span><span class="ytp-time-duration">11:28</span><span class="ytp-time-live-badge">Live</span></div></span><div class="ytp-button ytp-button-fullscreen-enter" role="button" tabindex="6900" aria-label="Full screen" style="display: inline-block;"></div><div class="ytp-button ytp-size-toggle-large" role="button" aria-label="Theater mode" tabindex="6800" aria-pressed="false" style="display: inline-block;"></div><div class="ytp-button ytp-button-watch-on-youtube" role="button" aria-label="Watch on YouTube.com" tabindex="6700" aria-hidden="true" style="display: none;"></div><div class="ytp-button ytp-settings-button" role="button" aria-label="Settings" tabindex="6600" aria-haspopup="true"><div class=""></div></div><div class="ytp-button ytp-button-playlist" role="button" aria-label="Playlist" tabindex="6400"></div><div class="ytp-button ytp-button-watch-later" role="button" aria-label="Watch Later" tabindex="6300"></div></div><div class="ytp-menu-container" tabindex="-1" role="menu" aria-hidden="true" style="display: none;"><div class="ytp-menu"><div class="ytp-menu-content"><div class="ytp-menu-row"><div class="ytp-menu-cell ytp-menu-title">Speed</div><div class="ytp-menu-cell"><div class="ytp-drop-down" style="min-width: 100px;"><div class="ytp-drop-down-menu" tabindex="-1" aria-hidden="true" style="display: none; bottom: -1px;"><div class="ytp-drop-down-menu-content"><div class="ytp-button ytp-drop-down-menu-button" role="button" tabindex="2300"><div class="ytp-drop-down-menu-button-check"></div>0.25</div><div class="ytp-button ytp-drop-down-menu-button" role="button" tabindex="2300"><div class="ytp-drop-down-menu-button-check"></div>0.5</div><div class="ytp-button ytp-drop-down-menu-button ytp-drop-down-menu-button-selected ytp-drop-down-menu-button-checked" role="button" tabindex="2300"><div class="ytp-drop-down-menu-button-check"></div>Normal</div><div class="ytp-button ytp-drop-down-menu-button" role="button" tabindex="2300"><div class="ytp-drop-down-menu-button-check"></div>1.25</div><div class="ytp-button ytp-drop-down-menu-button" role="button" tabindex="2300"><div class="ytp-drop-down-menu-button-check"></div>1.5</div><div class="ytp-button ytp-drop-down-menu-button" role="button" tabindex="2300"><div class="ytp-drop-down-menu-button-check"></div>2</div></div></div><div class="ytp-button ytp-drop-down-label" role="button" tabindex="2301"><div class="ytp-drop-down-label-content">Normal</div><div class="ytp-drop-down-arrow"></div></div></div></div></div><div class="ytp-menu-row"><div class="ytp-menu-cell ytp-menu-title">Quality</div><div class="ytp-menu-cell"><div class="ytp-drop-down" style="min-width: 100px;"><div class="ytp-drop-down-menu" tabindex="-1" aria-hidden="true" style="display: none; bottom: -1px;"><div class="ytp-drop-down-menu-content"><div class="ytp-button ytp-drop-down-menu-button" role="button" tabindex="2600"><div class="ytp-drop-down-menu-button-check"></div><span>720p <sup>HD</sup></span></div><div class="ytp-button ytp-drop-down-menu-button ytp-drop-down-menu-button-checked" role="button" tabindex="2600"><div class="ytp-drop-down-menu-button-check"></div><span>480p</span></div><div class="ytp-button ytp-drop-down-menu-button" role="button" tabindex="2600"><div class="ytp-drop-down-menu-button-check"></div><span>360p</span></div><div class="ytp-button ytp-drop-down-menu-button" role="button" tabindex="2600"><div class="ytp-drop-down-menu-button-check"></div><span>240p</span></div><div class="ytp-button ytp-drop-down-menu-button" role="button" tabindex="2600"><div class="ytp-drop-down-menu-button-check"></div><span>144p</span></div><div class="ytp-button ytp-drop-down-menu-button ytp-drop-down-menu-button-selected" role="button" tabindex="2600"><div class="ytp-drop-down-menu-button-check"></div><span>Auto</span></div></div></div><div class="ytp-button ytp-drop-down-label" role="button" tabindex="2601"><div class="ytp-drop-down-label-content"><span>Auto (480p)</span></div><div class="ytp-drop-down-arrow"></div></div></div></div></div></div></div></div><div class="ytp-autonav-widget ytp-suggestion-set" aria-hidden="true" style="display: none;"><img class="ytp-autonav-widget-thumbnail" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/mqdefault.jpg"><div class="ytp-autonav-widget-info"><div class="ytp-autonav-widget-header">Autoplay</div><div class="ytp-autonav-widget-next-video-in">Next video in 543</div></div><div class="ytp-autonav-widget-divider"></div><div class="ytp-autonav-widget-cancel">Cancel</div></div></div><div class="html5-video-info-panel"><span class="html5-video-info-panel-close" role="button" title="close">[x]</span><div class="html5-video-info-panel-content"><table class="html5-video-info-table"><tr><th>Video ID:</th><td></td></tr><tr><th>Dimensions:</th><td></td></tr><tr><th>Resolution:</th><td></td></tr><tr><th>Volume:</th><td></td></tr><tr><th>Stream Type:</th><td></td></tr><tr><th>CPN:</th><td></td></tr><tr><th>Mime Type:</th><td></td></tr><tr><th>DASH:</th><td></td></tr><tr><th>Protected:</th><td></td></tr><tr><th>Bandwidth:</th><td><span><span><span></span></span></span><span></span></td></tr></table><table class="html5-video-info-table html5-video-element-info-table"><tr><th>Decoded Frames</th><th>Dropped Frames</th><th>Parsed Frames</th><th>Presented Frames</th></tr><tr><td></td><td></td><td></td><td></td></tr><tr><th>Video Bytes Decoded</th><th>Audio Bytes Decoded</th><th>Painted Frames</th><th>Paint Delay</th></tr><tr><td></td><td></td><td></td><td></td></tr></table></div></div><div class="ytp-dialog-holder" aria-hidden="true" style="display: none;"></div><img class="html5-watermark ytp-scalable-icon-shrink hid" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Watermark"><div class="html5-info-bar"><div class="html5-title"><div class="html5-like-dislike-buttons hid"></div><div class="ytp-action-buttons"><div class="ytp-button ytp-button-info" role="button" aria-label="More info" tabindex="3500"></div><div class="ytp-button ytp-button-share" role="button" aria-label="share" tabindex="3400"></div></div><a class="html5-title-logo" tabindex="3550" aria-label="Watch on YouTube.com" data-tooltip="Watch on YouTube.com" data-tooltip-below="1" href="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/Lesson 12 I2C External EEPROM Part 2 - YouTube.htm">YouTube</a><div class="html5-title-text-wrapper"><a class="html5-title-text" tabindex="3100" href="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/Lesson 12 I2C External EEPROM Part 2 - YouTube.htm">Lesson 12 I2C External EEPROM Part 2</a></div></div><div class="html5-info-panel"><div class="html5-info-panel-loading-icon"></div><div class="html5-info-panel-content hid"><div><div class="html5-author-img"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></div><div class="html5-author-info"><div class="html5-author-name"></div></div><div class="html5-subscribe-button-container"></div></div><div><div class="html5-video-info"><div class="html5-view-count"></div></div><p class="html5-description-text" dir="auto"></p></div></div></div></div><div class="html5-endscreen videowall-endscreen" aria-hidden="true" style="display: none;"><div class="ytp-endscreen-content"></div></div></div></div>
+
+        <script>if (window.ytcsi) {window.ytcsi.tick("cfg", null, '');}</script>
+    <script>var ytplayer = ytplayer || {};ytplayer.config = {"sts": 16303, "params": {"allowfullscreen": "true", "allowscriptaccess": "always", "bgcolor": "#000000"}, "attrs": {"id": "movie_player"}, "min_version": "8.0.0", "url_v9as2": "https:\/\/s.ytimg.com\/yts\/swfbin\/player-vfleAbWFy\/cps.swf", "assets": {"html": "\/html5_player_template", "css": "\/\/s.ytimg.com\/yts\/cssbin\/www-player-webp-vfl0H026n.css", "js": "\/\/s.ytimg.com\/yts\/jsbin\/html5player-en_US-vfll1XmaE\/html5player.js"}, "html5": true, "url_v8": "https:\/\/s.ytimg.com\/yts\/swfbin\/player-vfleAbWFy\/cps.swf", "args": {"ad_device": 1, "cid": 915150, "ldpj": "-28", "c": "WEB", "eventid": "v-L6U5epMJPk4QKL64C4BQ", "mpvid": "IqCYtHuyPTjawlzj", "no_get_video_log": "1", "cosver": "6.1", "sdetail": "rv:nd2irnS-FU0", "sw": "0.1", "afv_ad_tag": "http:\/\/googleads.g.doubleclick.net\/pagead\/ads?ad_type=text_image_flash\u0026client=ca-pub-6219811747049371\u0026description_url=http%3A%2F%2Fwww.youtube.com%2Fvideo%2FRDedl-FtfcU\u0026hl=en\u0026host=ca-host-pub-7935412804062303\u0026ht_id=3735379\u0026loeid=900504,931331,941376,946023,952805\u0026url=http%3A%2F%2Fwww.youtube.com%2Fvideo%2FRDedl-FtfcU\u0026ytdevice=1\u0026yt_pt=APb3F29qvt00wHiOEV8up3pv8lSHe3qRsQqVknxeSDicq8CgHSrOH7Rxe7uS8W0tWTU1FLj1Xqm2Y5OqNNglzwq-zGJ-itVrRpnurDXjPgKWiUQbY-rRTYjz0LmD1uYYduFD_qfVDMLB6AnVW_bRcGFwMF70r_oACcHHKOxd8Q\u0026channel=yt_mpvid_IqCYtHuyPTjawlzj%2Byt_cid_915150%2Bivp%2Byt_no_ap%2Bytdevice_1%2Byt_no_cp%2Bafv_user_id_WL128ZuBbV8ruKrc0lk7Iw%2Bafv_user_misperry%2Bytel_detailpage%2Bytps_default%2BVertical_5%2BVertical_12%2BVertical_30%2BVertical_434%2BVertical_717%2Bafv_overlay%2Binvideo_overlay_480x70_cat27", "loeid": "900504,931331,941376,946023,952805", "keywords": "Tutorials,programs,electronics,technology,howto,computers,software,tips \u0026amp; tricks,PIC,Microchip,Microcontroller,tutorial", "cr": "AU", "ad_video_pub_id": "ca-pub-6219811747049371", "cl": "73848705", "tmi": "1", "midroll_freqcap": 420.0, "account_playback_token": "QUFFLUhqblBiNEhITTFTM0NnelZCelBUWGdqVk9ramtkZ3xBQ3Jtc0tuM203MEVSUDl4UTNSTmxNV2thSzU3VWs0UVVKZ1ludjVReWdLRzBSaHBuZzVaTl9BMURVa3ZvSGNfeXVXamQzamVzQkU2OFRwNUQ2WTF6VFlrTi02aGJkLW54aTY4V2J3bnpIR3VSZ2prVlFVelB2cw==", "dynamic_allocation_ad_tag": "https:\/\/ad.doubleclick.net\/N4061\/pfadx\/com.ytpwmpu.education\/main_915150;kpeid=WL128ZuBbV8ruKrc0lk7Iw;kpid=915150;kpu=misperry;kvid=RDedl-FtfcU;mpvid=IqCYtHuyPTjawlzj;ssl=1;sz=WIDTHxHEIGHT;afv=1;afvbase=eJxNkcFu3CAQhp9mOe1GYMyyHDg0raJG7aGK0lTJBbF4tnaKDcWDHffpy-42lSWk4f9m5h8x2MbgEkEjvKHpevsTzMnbsSUupATeYkia1fSgBFVyTzkjYDUlrdcwkDaMqJ3dneMu5uNOKi5qVh1oTfcVp5y0xbTRXHLBpSI-QFGKUkHrreKMc7ZVNeNyX8KeVnyrRGkWZMi9sc2oGUETl0lb78NMcvK6RYwb_mFT3ZUzz_PNEjLmI9y40BcydQ2EEh8-QeN3d3hy38mCDUydg-LmWjsM4PWCpo-l1tz__viMn_Py7fHVzv7P66a6LTlXMooJJmjR3RSvdAjGXq9XP8P-c3fm9jSZPEIqLzY_vpYtvOTb49Mh5S_JUf9L3s_ror4bI6S0XDzAmwbQdj6WD7iQOBZystljkU-QsHPWG7EWrForTteq5vVaSib_zQ4TJG_PU7vhsqx3YuoDfZPUOIuV_AskBbIg;dc_backfill=1;dc_output=xml_vast3;dc_yt=1;dc_yt_pt=APb3F29qvt00wHiOEV8up3pv8lSHe3qRsQqVknxeSDicq8CgHSrOH7Rxe7uS8W0tWTU1FLj1Xqm2Y5OqNNglzwq-zGJ-itVrRpnurDXjPgKWiUQbY-rRTYjz0LmD1uYYduFD_qfVDMLB6AnVW_bRcGFwMF70r_oACcHHKOxd8Q;k2=5;k2=12;k2=30;k2=434;k2=717;k5=5_12_30_434_717;kclg=1;kclt=1;kga=-1;kgg=-1;klg=en;ko=p;kr=H;kvlg=en;kvz=203;nlfb=1;yt3pav=1;ytcat=27;ytdevice=1;ytexp=900504,931331,941376,946023,952805;yt_ec=8;!c=915150", "ad_channel_code_overlay": "yt_mpvid_IqCYtHuyPTjawlzj,yt_cid_915150,ivp,yt_no_ap,ytdevice_1,yt_no_cp,afv_user_id_WL128ZuBbV8ruKrc0lk7Iw,afv_user_misperry,ytel_detailpage,ytps_default,Vertical_5,Vertical_12,Vertical_30,Vertical_434,Vertical_717,afv_overlay,invideo_overlay_480x70_cat27", "sourceid": "yw", "ssl": 1, "hl": "en_US", "title": "Lesson 12 I2C External EEPROM Part 2", "pyv_in_related_cafe_experiment_id": "", "ad3_module": "1", "ad_tag": "https:\/\/ad.doubleclick.net\/N4061\/pfadx\/com.ytpwmpu.education\/main_915150;kpeid=WL128ZuBbV8ruKrc0lk7Iw;kpid=915150;kpu=misperry;kvid=RDedl-FtfcU;mpvid=IqCYtHuyPTjawlzj;ssl=1;sz=WIDTHxHEIGHT;afv=1;dc_output=xml_vast3;dc_yt=1;dc_yt_pt=APb3F29qvt00wHiOEV8up3pv8lSHe3qRsQqVknxeSDicq8CgHSrOH7Rxe7uS8W0tWTU1FLj1Xqm2Y5OqNNglzwq-zGJ-itVrRpnurDXjPgKWiUQbY-rRTYjz0LmD1uYYduFD_qfVDMLB6AnVW_bRcGFwMF70r_oACcHHKOxd8Q;k2=5;k2=12;k2=30;k2=434;k2=717;k5=5_12_30_434_717;kclg=1;kclt=1;kga=-1;kgg=-1;klg=en;ko=p;kr=H;kvlg=en;kvz=203;nlfb=1;yt3pav=1;ytcat=27;ytdevice=1;ytexp=900504,931331,941376,946023,952805;yt_ec=8;!c=915150", "cut_ad_for_ypc": false, "loudness": -19.6299991608, "oid": "tLs7ypqpgjPX7eXQoqMXQg", "pltype": "content", "csi_page_type": "watch,watch7ad_html5", "ad_eurl": "http:\/\/www.youtube.com\/video\/RDedl-FtfcU", "dclk": true, "cos": "Windows", "adaptive_fmts": "init=0-709\u0026index=710-2313\u0026type=video%2Fmp4%3B+codecs%3D%22avc1.4d401f%22\u0026itag=136\u0026clen=47623917\u0026lmt=1385131652361615\u0026fps=20\u0026url=https%3A%2F%2Fr3---sn-09-coxe.googlevideo.com%2Fvideoplayback%3Fsparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Clmt%252Cmm%252Cms%252Cmv%252Crequiressl%252Csource%252Cupn%252Cexpire%26mv%3Dm%26mt%3D1408950872%26ms%3Dau%26ip%3D130.102.82.6%26lmt%3D1385131652361615%26expire%3D1408972576%26clen%3D47623917%26dur%3D688.650%26mm%3D31%26ipbits%3D0%26sver%3D3%26id%3Do-AEJTrs9K7XXD5P56NcHTKRzHl8_I9dtr-_i-Ir4wRieb%26upn%3DPhY72zeek8g%26source%3Dyoutube%26key%3Dyt5%26gir%3Dyes%26requiressl%3Dyes%26initcwndbps%3D10557000%26fexp%3D900504%252C902408%252C927622%252C931331%252C931983%252C934024%252C934030%252C941376%252C946023%252C952805%26itag%3D136%26signature%3D62E49DCBA00EF008C7CB8F09CE4E699A2A064D91.CE1128C65E8457962BB275642F83B87004FB3842\u0026size=1152x720\u0026bitrate=1102730,init=0-707\u0026index=708-2311\u0026type=video%2Fmp4%3B+codecs%3D%22avc1.4d401e%22\u0026itag=135\u0026clen=23680405\u0026lmt=1385131648997038\u0026fps=20\u0026url=https%3A%2F%2Fr3---sn-09-coxe.googlevideo.com%2Fvideoplayback%3Fsparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Clmt%252Cmm%252Cms%252Cmv%252Crequiressl%252Csource%252Cupn%252Cexpire%26mv%3Dm%26mt%3D1408950872%26ms%3Dau%26ip%3D130.102.82.6%26lmt%3D1385131648997038%26expire%3D1408972576%26clen%3D23680405%26dur%3D688.650%26mm%3D31%26ipbits%3D0%26sver%3D3%26id%3Do-AEJTrs9K7XXD5P56NcHTKRzHl8_I9dtr-_i-Ir4wRieb%26upn%3DPhY72zeek8g%26source%3Dyoutube%26key%3Dyt5%26gir%3Dyes%26requiressl%3Dyes%26initcwndbps%3D10557000%26fexp%3D900504%252C902408%252C927622%252C931331%252C931983%252C934024%252C934030%252C941376%252C946023%252C952805%26itag%3D135%26signature%3D7536F73E43BCC930489F9CC4249556B07828B8B5.CD55E4F18706605636B9E74004AAFC669AD37C47\u0026size=768x480\u0026bitrate=568828,init=0-708\u0026index=709-2312\u0026type=video%2Fmp4%3B+codecs%3D%22avc1.4d4016%22\u0026itag=134\u0026clen=13240573\u0026lmt=1385131651240952\u0026fps=20\u0026url=https%3A%2F%2Fr3---sn-09-coxe.googlevideo.com%2Fvideoplayback%3Fsparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Clmt%252Cmm%252Cms%252Cmv%252Crequiressl%252Csource%252Cupn%252Cexpire%26mv%3Dm%26mt%3D1408950872%26ms%3Dau%26ip%3D130.102.82.6%26lmt%3D1385131651240952%26expire%3D1408972576%26clen%3D13240573%26dur%3D688.650%26mm%3D31%26ipbits%3D0%26sver%3D3%26id%3Do-AEJTrs9K7XXD5P56NcHTKRzHl8_I9dtr-_i-Ir4wRieb%26upn%3DPhY72zeek8g%26source%3Dyoutube%26key%3Dyt5%26gir%3Dyes%26requiressl%3Dyes%26initcwndbps%3D10557000%26fexp%3D900504%252C902408%252C927622%252C931331%252C931983%252C934024%252C934030%252C941376%252C946023%252C952805%26itag%3D134%26signature%3D7FF4B6273F1019D8FA9DBEC16FA7D85EED95ACB2.D56447F1B65543FD9DD790476A0886C53072763C\u0026size=576x360\u0026bitrate=271911,init=0-672\u0026index=673-2276\u0026type=video%2Fmp4%3B+codecs%3D%22avc1.4d400d%22\u0026itag=133\u0026clen=9321324\u0026lmt=1385131647817298\u0026fps=20\u0026url=https%3A%2F%2Fr3---sn-09-coxe.googlevideo.com%2Fvideoplayback%3Fsparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Clmt%252Cmm%252Cms%252Cmv%252Crequiressl%252Csource%252Cupn%252Cexpire%26mv%3Dm%26mt%3D1408950872%26ms%3Dau%26ip%3D130.102.82.6%26lmt%3D1385131647817298%26expire%3D1408972576%26clen%3D9321324%26dur%3D688.650%26mm%3D31%26ipbits%3D0%26sver%3D3%26id%3Do-AEJTrs9K7XXD5P56NcHTKRzHl8_I9dtr-_i-Ir4wRieb%26upn%3DPhY72zeek8g%26source%3Dyoutube%26key%3Dyt5%26gir%3Dyes%26requiressl%3Dyes%26initcwndbps%3D10557000%26fexp%3D900504%252C902408%252C927622%252C931331%252C931983%252C934024%252C934030%252C941376%252C946023%252C952805%26itag%3D133%26signature%3D5B14E3EB82873BCD0DB9F4BD21526D79E273195E.06F71CAC20809BB93DD32F8866F518A6FB8C9D11\u0026size=384x240\u0026bitrate=279317,init=0-672\u0026index=673-2276\u0026type=video%2Fmp4%3B+codecs%3D%22avc1.42c00c%22\u0026itag=160\u0026clen=4714734\u0026lmt=1385131651231143\u0026fps=15\u0026url=https%3A%2F%2Fr3---sn-09-coxe.googlevideo.com%2Fvideoplayback%3Fsparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Clmt%252Cmm%252Cms%252Cmv%252Crequiressl%252Csource%252Cupn%252Cexpire%26mv%3Dm%26mt%3D1408950872%26ms%3Dau%26ip%3D130.102.82.6%26lmt%3D1385131651231143%26expire%3D1408972576%26clen%3D4714734%26dur%3D688.650%26mm%3D31%26ipbits%3D0%26sver%3D3%26id%3Do-AEJTrs9K7XXD5P56NcHTKRzHl8_I9dtr-_i-Ir4wRieb%26upn%3DPhY72zeek8g%26source%3Dyoutube%26key%3Dyt5%26gir%3Dyes%26requiressl%3Dyes%26initcwndbps%3D10557000%26fexp%3D900504%252C902408%252C927622%252C931331%252C931983%252C934024%252C934030%252C941376%252C946023%252C952805%26itag%3D160%26signature%3DF5E84C145C7323CFB371306538DDF19212BC3EE9.A88F3205D5A979A2EA6CCFE71C14DDCDDF2052B7\u0026size=230x144\u0026bitrate=123561,init=0-591\u0026index=592-1451\u0026type=audio%2Fmp4%3B+codecs%3D%22mp4a.40.2%22\u0026itag=140\u0026clen=8184369\u0026lmt=1385131646704706\u0026url=https%3A%2F%2Fr3---sn-09-coxe.googlevideo.com%2Fvideoplayback%3Fsparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Clmt%252Cmm%252Cms%252Cmv%252Crequiressl%252Csource%252Cupn%252Cexpire%26mv%3Dm%26mt%3D1408950872%26ms%3Dau%26ip%3D130.102.82.6%26lmt%3D1385131646704706%26expire%3D1408972576%26clen%3D8184369%26dur%3D688.750%26mm%3D31%26ipbits%3D0%26sver%3D3%26id%3Do-AEJTrs9K7XXD5P56NcHTKRzHl8_I9dtr-_i-Ir4wRieb%26upn%3DPhY72zeek8g%26source%3Dyoutube%26key%3Dyt5%26gir%3Dyes%26requiressl%3Dyes%26initcwndbps%3D10557000%26fexp%3D900504%252C902408%252C927622%252C931331%252C931983%252C934024%252C934030%252C941376%252C946023%252C952805%26itag%3D140%26signature%3DB7CE757A0E0D590281782E2DA597A70571180AC5.109B1B838B91AD20400BD7620177F0A1BE4B2D2E\u0026bitrate=96204", "ad_logging_flag": 1, "url_encoded_fmt_stream_map": "fallback_host=tc.v11.cache2.googlevideo.com\u0026url=https%3A%2F%2Fr3---sn-09-coxe.googlevideo.com%2Fvideoplayback%3Fsparams%3Did%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Cmm%252Cms%252Cmv%252Cratebypass%252Crequiressl%252Csource%252Cupn%252Cexpire%26mv%3Dm%26mt%3D1408950872%26ms%3Dau%26ip%3D130.102.82.6%26expire%3D1408972576%26mm%3D31%26ipbits%3D0%26sver%3D3%26id%3Do-AEJTrs9K7XXD5P56NcHTKRzHl8_I9dtr-_i-Ir4wRieb%26upn%3DclyBraNA9jc%26source%3Dyoutube%26key%3Dyt5%26requiressl%3Dyes%26initcwndbps%3D10557000%26fexp%3D900504%252C902408%252C927622%252C931331%252C931983%252C934024%252C934030%252C941376%252C946023%252C952805%26ratebypass%3Dyes%26itag%3D22%26signature%3D3C758C3F9616AF37ED3102C159E53518B191B3AF.C8E3C992427EE74672070ECF544CCA98CF40A16C\u0026quality=hd720\u0026itag=22\u0026type=video%2Fmp4%3B+codecs%3D%22avc1.64001F%2C+mp4a.40.2%22,fallback_host=tc.v21.cache7.googlevideo.com\u0026url=https%3A%2F%2Fr3---sn-09-coxe.googlevideo.com%2Fvideoplayback%3Fsparams%3Did%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Cmm%252Cms%252Cmv%252Cratebypass%252Crequiressl%252Csource%252Cupn%252Cexpire%26mv%3Dm%26mt%3D1408950872%26ms%3Dau%26ip%3D130.102.82.6%26expire%3D1408972576%26mm%3D31%26ipbits%3D0%26sver%3D3%26id%3Do-AEJTrs9K7XXD5P56NcHTKRzHl8_I9dtr-_i-Ir4wRieb%26upn%3DclyBraNA9jc%26source%3Dyoutube%26key%3Dyt5%26requiressl%3Dyes%26initcwndbps%3D10557000%26fexp%3D900504%252C902408%252C927622%252C931331%252C931983%252C934024%252C934030%252C941376%252C946023%252C952805%26ratebypass%3Dyes%26itag%3D43%26signature%3D4495E436EFEF1FF1F6CC8AA0D26CA25C684A5E4A.DEB8AEAFBCAE57FD3EC7A1985749638D0DF6F16E\u0026quality=medium\u0026itag=43\u0026type=video%2Fwebm%3B+codecs%3D%22vp8.0%2C+vorbis%22,fallback_host=tc.v20.cache2.googlevideo.com\u0026url=https%3A%2F%2Fr3---sn-09-coxe.googlevideo.com%2Fvideoplayback%3Fsparams%3Did%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Cmm%252Cms%252Cmv%252Cratebypass%252Crequiressl%252Csource%252Cupn%252Cexpire%26mv%3Dm%26mt%3D1408950872%26ms%3Dau%26ip%3D130.102.82.6%26expire%3D1408972576%26mm%3D31%26ipbits%3D0%26sver%3D3%26id%3Do-AEJTrs9K7XXD5P56NcHTKRzHl8_I9dtr-_i-Ir4wRieb%26upn%3DclyBraNA9jc%26source%3Dyoutube%26key%3Dyt5%26requiressl%3Dyes%26initcwndbps%3D10557000%26fexp%3D900504%252C902408%252C927622%252C931331%252C931983%252C934024%252C934030%252C941376%252C946023%252C952805%26ratebypass%3Dyes%26itag%3D18%26signature%3D193188A1F251EB90DF3456B0E4837D975C3839CE.564BFE29EFDCFC389E344E140DE0B3F821C081D6\u0026quality=medium\u0026itag=18\u0026type=video%2Fmp4%3B+codecs%3D%22avc1.42001E%2C+mp4a.40.2%22,fallback_host=tc.v9.cache8.googlevideo.com\u0026url=https%3A%2F%2Fr3---sn-09-coxe.googlevideo.com%2Fvideoplayback%3Fsparams%3Did%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Cmm%252Cms%252Cmv%252Crequiressl%252Csource%252Cupn%252Cexpire%26mv%3Dm%26mt%3D1408950872%26ms%3Dau%26ip%3D130.102.82.6%26expire%3D1408972576%26mm%3D31%26ipbits%3D0%26sver%3D3%26id%3Do-AEJTrs9K7XXD5P56NcHTKRzHl8_I9dtr-_i-Ir4wRieb%26upn%3DclyBraNA9jc%26source%3Dyoutube%26key%3Dyt5%26requiressl%3Dyes%26initcwndbps%3D10557000%26fexp%3D900504%252C902408%252C927622%252C931331%252C931983%252C934024%252C934030%252C941376%252C946023%252C952805%26itag%3D5%26signature%3DC99B0DFC2A8C2A93688D2A78EB5228B2273DAE17.725FF2F839259A0C876EC5AFE0C1D968ECA095EC\u0026quality=small\u0026itag=5\u0026type=video%2Fx-flv,fallback_host=tc.v11.cache1.googlevideo.com\u0026url=https%3A%2F%2Fr3---sn-09-coxe.googlevideo.com%2Fvideoplayback%3Fsparams%3Did%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Cmm%252Cms%252Cmv%252Crequiressl%252Csource%252Cupn%252Cexpire%26mv%3Dm%26mt%3D1408950872%26ms%3Dau%26ip%3D130.102.82.6%26expire%3D1408972576%26mm%3D31%26ipbits%3D0%26sver%3D3%26id%3Do-AEJTrs9K7XXD5P56NcHTKRzHl8_I9dtr-_i-Ir4wRieb%26upn%3DclyBraNA9jc%26source%3Dyoutube%26key%3Dyt5%26requiressl%3Dyes%26initcwndbps%3D10557000%26fexp%3D900504%252C902408%252C927622%252C931331%252C931983%252C934024%252C934030%252C941376%252C946023%252C952805%26itag%3D36%26signature%3DB385A9775056B1D096688F30454238B66127D0D2.4114145ED702CCF49E9723D0F824BB3B60ED0735\u0026quality=small\u0026itag=36\u0026type=video%2F3gpp%3B+codecs%3D%22mp4v.20.3%2C+mp4a.40.2%22,fallback_host=tc.v10.cache5.googlevideo.com\u0026url=https%3A%2F%2Fr3---sn-09-coxe.googlevideo.com%2Fvideoplayback%3Fsparams%3Did%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Cmm%252Cms%252Cmv%252Crequiressl%252Csource%252Cupn%252Cexpire%26mv%3Dm%26mt%3D1408950872%26ms%3Dau%26ip%3D130.102.82.6%26expire%3D1408972576%26mm%3D31%26ipbits%3D0%26sver%3D3%26id%3Do-AEJTrs9K7XXD5P56NcHTKRzHl8_I9dtr-_i-Ir4wRieb%26upn%3DclyBraNA9jc%26source%3Dyoutube%26key%3Dyt5%26requiressl%3Dyes%26initcwndbps%3D10557000%26fexp%3D900504%252C902408%252C927622%252C931331%252C931983%252C934024%252C934030%252C941376%252C946023%252C952805%26itag%3D17%26signature%3DE2A4CEF029EBC04BEF503773E752B6CD4A107EBF.AE53D05B1F17A4192C94FEE23F47AFFE630E7AA1\u0026quality=small\u0026itag=17\u0026type=video%2F3gpp%3B+codecs%3D%22mp4v.20.3%2C+mp4a.40.2%22", "ucid": "UCWL128ZuBbV8ruKrc0lk7Iw", "t": "1", "video_id": "RDedl-FtfcU", "allowed_ads": [8, 1, 2], "instream_long": false, "mpu": true, "midroll_prefetch_size": 1, "watermark": ",https:\/\/s.ytimg.com\/yts\/img\/watermark\/youtube_watermark-vflHX6b6E.png,https:\/\/s.ytimg.com\/yts\/img\/watermark\/youtube_hd_watermark-vflAzLcD6.png", "dash": "1", "timestamp": 1408950976, "length_seconds": 689, "loaderUrl": "https:\/\/www.youtube.com\/watch?v=RDedl-FtfcU", "fmt_list": "22\/1280x720\/9\/0\/115,43\/640x360\/99\/0\/0,18\/640x360\/9\/0\/115,5\/320x240\/7\/0\/0,36\/320x240\/99\/1\/0,17\/176x144\/99\/1\/0", "afv": true, "idpj": "-1", "ad_host_tier": "3735379", "plid": "AAUBbvZrPRhNad2m", "ad_slots": "0", "max_dynamic_allocation_ad_tag_length": 2040, "dashmpd": "https:\/\/manifest.googlevideo.com\/api\/manifest\/dash\/sparams\/as%2Ccmbypass%2Cid%2Cip%2Cipbits%2Citag%2Cmm%2Cms%2Cmv%2Cplayback_host%2Crequiressl%2Csource%2Cexpire\/mv\/m\/upn\/86_qUeHYis0\/source\/youtube\/ms\/au\/fexp\/900504%2C902408%2C927622%2C931331%2C931983%2C934024%2C934030%2C941376%2C946023%2C952805\/signature\/50FE2D543406D5547EFAD75D299A3C638FE5E341.73C7DD919DD4F116F8A9610AD6838908032F1930\/requiressl\/yes\/ip\/130.102.82.6\/cmbypass\/yes\/mt\/1408950872\/as\/fmp4_audio_clear%2Cwebm_audio_clear%2Cfmp4_sd_hd_clear%2Cwebm_sd_hd_clear%2Cwebm2_sd_hd_clear\/expire\/1408972576\/playback_host\/r3---sn-09-coxe.googlevideo.com\/itag\/0\/key\/yt5\/mm\/31\/ipbits\/0\/sver\/3\/id\/o-AEJTrs9K7XXD5P56NcHTKRzHl8_I9dtr-_i-Ir4wRieb", "as_launched_in_country": "1", "referrer": "https:\/\/www.youtube.com\/watch?v=nd2irnS-FU0", "cbr": "Chrome", "vq": "auto", "atc": "a=3\u0026b=ZY1dTb_lm46mVNo4ksrq6rT_jBs\u0026c=1408950976\u0026d=1\u0026e=RDedl-FtfcU\u0026c3a=22\u0026c1a=1\u0026hh=5XhzHNFgqMRB_ymLTYVzmSvzL-o", "allow_html5_ads": 1, "ad_flags": 0, "host_language": "en", "gut_tag": "\/4061\/ytpwmpu\/main_915150", "yt_pt": "APb3F29qvt00wHiOEV8up3pv8lSHe3qRsQqVknxeSDicq8CgHSrOH7Rxe7uS8W0tWTU1FLj1Xqm2Y5OqNNglzwq-zGJ-itVrRpnurDXjPgKWiUQbY-rRTYjz0LmD1uYYduFD_qfVDMLB6AnVW_bRcGFwMF70r_oACcHHKOxd8Q", "cbrver": "36.0.1985.143", "ptk": "misperry%2Buser", "tag_for_child_directed": false, "ad_host": "ca-host-pub-7935412804062303", "fexp": "900504,902408,927622,931331,931983,934024,934030,941376,946023,952805", "adsense_video_doc_id": "yt_RDedl-FtfcU", "sffb": true, "ptchn": "WL128ZuBbV8ruKrc0lk7Iw", "enablecsi": "1", "enablejsapi": 1, "cafe_experiment_id": ""}, "url": "https:\/\/s.ytimg.com\/yts\/swfbin\/player-vfleAbWFy\/watch_as3.swf"};ytplayer.load = function() {yt.player.Application.create("player-api", ytplayer.config);ytplayer.config.loaded = true;};(function() {if (!!window.yt && yt.player && yt.player.Application) {ytplayer.load();}}());</script>
+
+
+  </div>
+
+  <div class="clear"></div>
+</div>
+<div id="content" class="  content-alignment      yt-card
+">    <div id="watch7-container" class="">
+    <div id="watch7-main-container">
+      <div id="watch7-main" class="clearfix">
+        <div id="watch7-content" class="watch-content " itemscope="" itemid="" itemtype="http://schema.org/VideoObject">
+              <link itemprop="url" href="http://www.youtube.com/watch?v=RDedl-FtfcU">
+    <meta itemprop="name" content="Lesson 12 I2C External EEPROM Part 2">
+    <meta itemprop="description" content="In this video we will be looking at how to code this with the CCS C compiler.">
+    <meta itemprop="paid" content="False">
+
+      <meta itemprop="channelId" content="UCWL128ZuBbV8ruKrc0lk7Iw">
+      <meta itemprop="videoId" content="RDedl-FtfcU">
+
+      <meta itemprop="duration" content="PT11M29S">
+      <meta itemprop="unlisted" content="False">
+
+        <span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <link itemprop="url" href="http://www.youtube.com/user/misperry">
+        </span>
+        <span itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <link itemprop="url" href="https://plus.google.com/116148924056361244671">
+        </span>
+
+    <link itemprop="thumbnailUrl" href="https://i.ytimg.com/vi/RDedl-FtfcU/maxresdefault.jpg">
+    <span itemprop="thumbnail" itemscope="" itemtype="http://schema.org/ImageObject">
+      <link itemprop="url" href="https://i.ytimg.com/vi/RDedl-FtfcU/maxresdefault.jpg">
+      <meta itemprop="width" content="1280">
+      <meta itemprop="height" content="720">
+    </span>
+
+      <link itemprop="embedURL" href="https://www.youtube.com/embed/RDedl-FtfcU">
+      <meta itemprop="playerType" content="HTML5 Flash">
+      <meta itemprop="width" content="960">
+      <meta itemprop="height" content="720">
+
+      <meta itemprop="isFamilyFriendly" content="True">
+      <meta itemprop="regionsAllowed" content="AD,AE,AF,AG,AI,AL,AM,AO,AQ,AR,AS,AT,AU,AW,AX,AZ,BA,BB,BD,BE,BF,BG,BH,BI,BJ,BL,BM,BN,BO,BQ,BR,BS,BT,BV,BW,BY,BZ,CA,CC,CD,CF,CG,CH,CI,CK,CL,CM,CN,CO,CR,CU,CV,CW,CX,CY,CZ,DE,DJ,DK,DM,DO,DZ,EC,EE,EG,EH,ER,ES,ET,FI,FJ,FK,FM,FO,FR,GA,GB,GD,GE,GF,GG,GH,GI,GL,GM,GN,GP,GQ,GR,GS,GT,GU,GW,GY,HK,HM,HN,HR,HT,HU,ID,IE,IL,IM,IN,IO,IQ,IR,IS,IT,JE,JM,JO,JP,KE,KG,KH,KI,KM,KN,KP,KR,KW,KY,KZ,LA,LB,LC,LI,LK,LR,LS,LT,LU,LV,LY,MA,MC,MD,ME,MF,MG,MH,MK,ML,MM,MN,MO,MP,MQ,MR,MS,MT,MU,MV,MW,MX,MY,MZ,NA,NC,NE,NF,NG,NI,NL,NO,NP,NR,NU,NZ,OM,PA,PE,PF,PG,PH,PK,PL,PM,PN,PR,PS,PT,PW,PY,QA,RE,RO,RS,RU,RW,SA,SB,SC,SD,SE,SG,SH,SI,SJ,SK,SL,SM,SN,SO,SR,SS,ST,SV,SX,SY,SZ,TC,TD,TF,TG,TH,TJ,TK,TL,TM,TN,TO,TR,TT,TV,TW,TZ,UA,UG,UM,US,UY,UZ,VA,VC,VE,VG,VI,VN,VU,WF,WS,YE,YT,ZA,ZM,ZW">
+
+                <div id="watch7-speedyg-area">
+      <div class="yt-alert yt-alert-actionable yt-alert-info hid " id="speedyg-template">  <div class="yt-alert-icon">
+    <img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" class="icon master-sprite yt-sprite">
+  </div>
+<div class="yt-alert-buttons">  <a href="https://www.google.com/get/videoqualityreport/?v=RDedl-FtfcU" class="yt-uix-button   yt-uix-sessionlink yt-uix-button-alert-info yt-uix-button-size-default" data-sessionlink="ei=v-L6U5epMJPk4QKL64C4BQ" id="speedyg-link" target="_blank"><span class="yt-uix-button-content">Find out why </span></a>
+<button class="yt-uix-button yt-uix-button-size-default yt-uix-button-close close yt-uix-close" type="button" onclick=";return false;" data-close-parent-class="yt-alert"><span class="yt-uix-button-content">Close </span></button></div><div class="yt-alert-content" role="alert">    <span class="yt-alert-vertical-trick"></span>
+    <div class="yt-alert-message">
+    </div>
+</div></div>
+    </div>
+  <div id="watch-header" class="">
+        <div id="watch7-headline" class="clearfix">
+    <h1 id="watch-headline-title" class="yt">
+      
+
+
+  
+
+
+  <span id="eow-title" class="watch-title  " dir="ltr" title="Lesson 12 I2C External EEPROM Part 2">
+    Lesson 12 I2C External EEPROM Part 2
+  </span>
+
+    </h1>
+  </div>
+
+      <div id="watch7-user-header" class=" spf-link "><a href="https://www.youtube.com/channel/UCWL128ZuBbV8ruKrc0lk7Iw" class="yt-user-photo  yt-uix-sessionlink" data-sessionlink="ei=v-L6U5epMJPk4QKL64C4BQ&amp;feature=watch">    <span class="video-thumb  yt-thumb yt-thumb-48 g-hovercard" data-ytid="UCWL128ZuBbV8ruKrc0lk7Iw">
+      <span class="yt-thumb-square">
+        <span class="yt-thumb-clip">
+          <img alt="misperry" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/photo(2).jpg" width="48" height="48">
+          <span class="vertical-align"></span>
+        </span>
+      </span>
+    </span>
+</a><div class="yt-user-info"><a href="https://www.youtube.com/channel/UCWL128ZuBbV8ruKrc0lk7Iw" class="g-hovercard yt-uix-sessionlink yt-user-name " data-sessionlink="ei=v-L6U5epMJPk4QKL64C4BQ&amp;feature=watch" dir="ltr" data-ytid="UCWL128ZuBbV8ruKrc0lk7Iw" data-name="watch">misperry</a></div><span id="watch7-subscription-container"><span class=" yt-uix-button-subscription-container with-preferences"><button class="yt-uix-button yt-uix-button-size-default yt-uix-button-subscribe-branded yt-uix-button-has-icon yt-uix-subscription-button yt-can-buffer ypc-freetrial-eligible" type="button" onclick=";return false;" aria-role="button" aria-busy="false" aria-live="polite" data-style-type="branded" data-href="https://accounts.google.com/ServiceLogin?hl=en&amp;continue=http%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26feature%3Dsubscribe%26hl%3Den%26continue_action%3DQUFFLUhqa2FmV1dhM2ozYnFPN1Q5SVZRWmhVSjBneTIzZ3xBQ3Jtc0trNjZMeGRvekM3MHI5Q1dERi0yVklxLWdNZU5xdkFLd3J6RzFsdXBiSloxWlVUV29yYWJCNXNhZW1wWDdBd2FOYmtQTGNlcjZXUlliUVBudVNGaERnZDd5bW9TNDlUSXRQRGpGclpmUG81QzVONDVISjhqSDZiMi1XQ1NWLWpXbDl5QW9KOUdudm55TGRrUHdJeXY4Qk9RMVlxMFM1Q250NTcwMmpBYXl2ZGdwWlVDY0ttekdjN0hHd2V2U01DeUU0cTJzVUw%253D%26next%3D%252Fchannel%252FUCWL128ZuBbV8ruKrc0lk7Iw&amp;passive=true&amp;service=youtube&amp;uilel=3" data-channel-external-id="UCWL128ZuBbV8ruKrc0lk7Iw" data-sessionlink="ved=CAEQmys&amp;ei=v-L6U5epMJPk4QKL64C4BQ&amp;feature=watch"><span class="yt-uix-button-icon-wrapper"><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" class="yt-uix-button-icon yt-uix-button-icon-subscribe yt-sprite"></span><span class="yt-uix-button-content"><span class="subscribe-label" aria-label="Subscribe">Subscribe</span><span class="subscribed-label" aria-label="Unsubscribe">Subscribed</span><span class="unsubscribe-label" aria-label="Unsubscribe">Unsubscribe</span> </span></button><button class="yt-uix-button yt-uix-button-size-default yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon yt-uix-subscription-preferences-button" type="button" onclick=";return false;" aria-label="Subscription preferences" aria-role="button" aria-busy="false" aria-live="polite" data-channel-external-id="UCWL128ZuBbV8ruKrc0lk7Iw"><span class="yt-uix-button-icon-wrapper"><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" class="yt-uix-button-icon yt-uix-button-icon-subscription-preferences yt-sprite"></span></button><span class="yt-subscription-button-subscriber-count-branded-horizontal" title="2,281">2,281</span>  <span class="yt-subscription-button-disabled-mask" title=""></span>
+  
+  <div class="yt-uix-overlay " data-overlay-style="primary" data-overlay-shape="tiny">
+    
+        <div class="yt-dialog hid ">
+    <div class="yt-dialog-base">
+      <span class="yt-dialog-align"></span>
+      <div class="yt-dialog-fg">
+        <div class="yt-dialog-fg-content">
+            <div class="yt-dialog-header">
+                <h2 class="yt-dialog-title">
+                        Subscription preferences
+
+
+                </h2>
+            </div>
+          <div class="yt-dialog-loading">
+              <div class="yt-dialog-waiting-content">
+    <div class="yt-spinner-img"></div><div class="yt-dialog-waiting-text">Loading...</div>
+  </div>
+
+          </div>
+          <div class="yt-dialog-content">
+              <div class="subscription-preferences-overlay-content-container">
+    <div class="subscription-preferences-overlay-loading ">
+        <p class="yt-spinner">
+      <img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" title="Loading icon" class="yt-spinner-img yt-sprite">
+
+    <span class="yt-spinner-message">
+Loading...
+    </span>
+  </p>
+
+    </div>
+    <div class="subscription-preferences-overlay-content">
+    </div>
+  </div>
+
+          </div>
+          <div class="yt-dialog-working">
+              <div class="yt-dialog-working-overlay"></div>
+  <div class="yt-dialog-working-bubble">
+    <div class="yt-dialog-waiting-content">
+      <div class="yt-spinner-img"></div><div class="yt-dialog-waiting-text">Working...</div>
+    </div>
+  </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  </div>
+
+</span></span><div id="watch7-views-info"><div class="watch-view-count">4,799</div>
+  <div class="video-extras-sparkbars">
+    <div class="video-extras-sparkbar-likes" style="width: 100.0%"></div>
+    <div class="video-extras-sparkbar-dislikes" style="width: 0.0%"></div>
+  </div>
+    <span class="video-extras-likes-dislikes">
+        <img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" title="Like" class="icon-watch-stats-like yt-sprite">
+  <span class="likes-count">24</span>
+
+      &nbsp;&nbsp;&nbsp;
+        <img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" title="Dislike" class="icon-watch-stats-dislike yt-sprite">
+  <span class="dislikes-count">0</span>
+
+    </span>
+</div></div>
+  </div>
+        <div id="watch7-action-buttons" class="watch-action-buttons clearfix">
+    <div id="watch7-sentiment-actions">
+      
+
+
+
+<span id="watch-like-dislike-buttons" class="yt-uix-button-group " data-button-toggle-group="optional"><span class="yt-uix-clickcard"><button class="yt-uix-button yt-uix-button-size-default yt-uix-button-opacity yt-uix-button-has-icon yt-uix-clickcard-target yt-uix-tooltip" type="button" onclick=";return false;" id="watch-like" title="" data-force-position="true" data-position="bottomright" data-like-tooltip="I like this" data-unlike-tooltip="Unlike" data-orientation="vertical" data-button-toggle="true"><span class="yt-uix-button-icon-wrapper"><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" class="yt-uix-button-icon yt-uix-button-icon-watch-like yt-sprite"></span><span class="yt-uix-button-content">Like </span></button>  <div class="watch7-hovercard yt-uix-clickcard-content">
+    <h3 class="watch7-hovercard-header">Like this video?</h3>
+    <div class="watch7-hovercard-message">
+      Sign in to make your opinion count.
+    </div>
+    <div class="watch7-hovercard-account-line">
+      <a href="https://accounts.google.com/ServiceLogin?hl=en&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Fapp%3Ddesktop%26action_handle_signin%3Dtrue%26hl%3Den%26next%3D%252Fwatch%253Fv%253DRDedl-FtfcU%26feature%3D__FEATURE__&passive=true&service=youtube&uilel=3" class="yt-uix-button   yt-uix-sessionlink yt-uix-button-primary yt-uix-button-size-default" data-sessionlink="ei=v-L6U5epMJPk4QKL64C4BQ"><span class="yt-uix-button-content">Sign in </span></a>
+    </div>
+  </div>
+</span><span class="yt-uix-clickcard"><button class="yt-uix-button yt-uix-button-size-default yt-uix-button-opacity yt-uix-button-empty yt-uix-button-has-icon yt-uix-clickcard-target yt-uix-tooltip" type="button" onclick=";return false;" id="watch-dislike" title="I dislike this" data-force-position="true" data-position="bottomright" data-orientation="vertical" data-button-toggle="true"><span class="yt-uix-button-icon-wrapper"><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" title="I dislike this" class="yt-uix-button-icon yt-uix-button-icon-watch-dislike yt-sprite"></span></button>  <div class="watch7-hovercard yt-uix-clickcard-content">
+    <h3 class="watch7-hovercard-header">Don't like this video?</h3>
+    <div class="watch7-hovercard-message">
+      Sign in to make your opinion count.
+    </div>
+    <div class="watch7-hovercard-account-line">
+      <a href="https://accounts.google.com/ServiceLogin?hl=en&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Fapp%3Ddesktop%26action_handle_signin%3Dtrue%26hl%3Den%26next%3D%252Fwatch%253Fv%253DRDedl-FtfcU%26feature%3D__FEATURE__&passive=true&service=youtube&uilel=3" class="yt-uix-button   yt-uix-sessionlink yt-uix-button-primary yt-uix-button-size-default" data-sessionlink="ei=v-L6U5epMJPk4QKL64C4BQ"><span class="yt-uix-button-content">Sign in </span></a>
+    </div>
+  </div>
+</span></span>
+    </div>
+    <div id="watch7-secondary-actions" class="watch-secondary-actions yt-uix-button-group" data-button-toggle-group="required">
+      <span><button class="yt-uix-button yt-uix-button-size-default yt-uix-button-text action-panel-trigger  yt-uix-button-toggled yt-uix-tooltip" type="button" onclick=";return false;" title="" data-trigger-for="action-panel-details" data-button-toggle="true"><span class="yt-uix-button-content">About </span></button></span>
+        <span><button class="yt-uix-button yt-uix-button-size-default yt-uix-button-text action-panel-trigger   yt-uix-tooltip" type="button" onclick=";return false;" title="" data-trigger-for="action-panel-share" data-button-toggle="true"><span class="yt-uix-button-content">Share </span></button></span>
+
+      <span class="yt-uix-clickcard"><button class="yt-uix-button yt-uix-button-size-default yt-uix-button-text action-panel-trigger addto-button  yt-uix-clickcard-target yt-uix-tooltip" type="button" onclick=";return false;" title="" data-upsell="playlist" data-trigger-for="action-panel-none-addto" data-position="bottomleft" data-orientation="vertical" data-button-toggle="true"><span class="yt-uix-button-content">Add to </span></button>  <div class="watch7-hovercard yt-uix-clickcard-content">
+    <h3 class="watch7-hovercard-header">Want to watch this again later?</h3>
+    <div class="watch7-hovercard-message">
+      Sign in to add this video to a playlist.
+    </div>
+    <div class="watch7-hovercard-account-line">
+      <a href="https://accounts.google.com/ServiceLogin?hl=en&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Fapp%3Ddesktop%26action_handle_signin%3Dtrue%26hl%3Den%26next%3D%252Fwatch%253Fv%253DRDedl-FtfcU%26feature%3D__FEATURE__&passive=true&service=youtube&uilel=3" class="yt-uix-button   yt-uix-sessionlink yt-uix-button-primary yt-uix-button-size-default" data-sessionlink="ei=v-L6U5epMJPk4QKL64C4BQ"><span class="yt-uix-button-content">Sign in </span></a>
+    </div>
+  </div>
+</span>
+
+      
+    <span><button class="yt-uix-button yt-uix-button-size-default yt-uix-button-text yt-uix-button-empty yt-uix-button-has-icon action-panel-trigger   yt-uix-tooltip" type="button" onclick=";return false;" title="Statistics" data-trigger-for="action-panel-stats" data-button-toggle="true"><span class="yt-uix-button-icon-wrapper"><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" title="Statistics" class="yt-uix-button-icon yt-uix-button-icon-action-panel-stats yt-sprite"></span></button></span>
+
+  <span><button class="yt-uix-button yt-uix-button-size-default yt-uix-button-text yt-uix-button-empty yt-uix-button-has-icon action-panel-trigger   yt-uix-tooltip" type="button" onclick=";return false;" title="Report" data-trigger-for="action-panel-report" data-button-toggle="true"><span class="yt-uix-button-icon-wrapper"><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" title="Report" class="yt-uix-button-icon yt-uix-button-icon-action-panel-report yt-sprite"></span></button></span>
+
+    </div>
+  </div>
+
+        <div id="watch7-action-panels" class="watch-action-panels yt-uix-button-panel">
+      <div id="action-panel-details" class="action-panel-content      yt-uix-expander yt-uix-expander-collapsed" data-panel-loaded="true">
+    <div id="watch-description" class="yt-uix-button-panel">
+      <div id="watch-description-content">
+        <div id="watch-description-clip">
+          <p id="watch-uploader-info">
+              <strong>Uploaded on Sep 26, 2011</strong>
+          </p>
+          <div id="watch-description-text">
+            <p id="eow-description">In this video we will be looking at how to code this with the CCS C compiler.</p>
+          </div>
+              <div id="watch-description-extras">
+    <ul class="watch-extras-section">
+          <li class="watch-meta-item yt-uix-expander-body">
+    <h4 class="title">
+      Category
+    </h4>
+    <ul class="content watch-info-tag-list">
+        <li><a href="https://www.youtube.com/education" class=" yt-uix-sessionlink     spf-link " data-sessionlink="ei=v-L6U5epMJPk4QKL64C4BQ">Education</a></li>
+    </ul>
+  </li>
+
+          <li class="watch-meta-item yt-uix-expander-body">
+    <h4 class="title">
+      License
+    </h4>
+    <ul class="content watch-info-tag-list">
+        <li>Standard YouTube License</li>
+    </ul>
+  </li>
+
+    </ul>
+  </div>
+
+        </div>
+      </div>
+            <div class="toggle-wrapper yt-uix-expander-head">
+      <div class="yt-uix-expander-collapsed-body">
+        <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-text toggle-button" type="button" onclick=";return false;"><span class="yt-uix-button-content">Show more </span></button>
+      </div>
+      <div class="yt-uix-expander-body">
+        <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-text toggle-button" type="button" onclick=";return false;"><span class="yt-uix-button-content">Show less </span></button>
+      </div>
+    </div>
+
+    </div>
+  </div>
+
+      <div id="action-panel-share" class="action-panel-content hid">
+      <div id="watch-actions-share-loading">
+    <div class="action-panel-loading">
+        <p class="yt-spinner">
+      <img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" title="Loading icon" class="yt-spinner-img yt-sprite">
+
+    <span class="yt-spinner-message">
+Loading...
+    </span>
+  </p>
+
+    </div>
+  </div>
+  <div id="watch-actions-share-panel"></div>
+
+  </div>
+
+        <div id="action-panel-addto" class="action-panel-content hid" data-auth-required="true">
+    <div class="action-panel-loading">
+        <p class="yt-spinner">
+      <img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" title="Loading icon" class="yt-spinner-img yt-sprite">
+
+    <span class="yt-spinner-message">
+Loading...
+    </span>
+  </p>
+
+    </div>
+  </div>
+
+      <div id="action-panel-stats" class="action-panel-content hid">
+    <div class="action-panel-loading">
+        <p class="yt-spinner">
+      <img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" title="Loading icon" class="yt-spinner-img yt-sprite">
+
+    <span class="yt-spinner-message">
+Loading...
+    </span>
+  </p>
+
+    </div>
+  </div>
+
+      <div id="action-panel-report" class="action-panel-content hid" data-auth-required="true">
+    <div class="action-panel-loading">
+        <p class="yt-spinner">
+      <img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" title="Loading icon" class="yt-spinner-img yt-sprite">
+
+    <span class="yt-spinner-message">
+Loading...
+    </span>
+  </p>
+
+    </div>
+  </div>
+
+      <div id="action-panel-login" class="action-panel-content hid">
+    <div class="action-panel-login">
+      <a href="https://accounts.google.com/ServiceLogin?hl=en&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Fapp%3Ddesktop%26action_handle_signin%3Dtrue%26hl%3Den%26next%3D%252Fwatch%253Fv%253DRDedl-FtfcU%26feature%3D__FEATURE__&passive=true&service=youtube&uilel=3" class="yt-uix-button   yt-uix-sessionlink yt-uix-button-default yt-uix-button-size-default" data-sessionlink="ei=v-L6U5epMJPk4QKL64C4BQ"><span class="yt-uix-button-content">Sign in </span></a>
+    </div>
+  </div>
+
+  <div id="action-panel-ratings-disabled" class="action-panel-content hid">
+      <div id="watch-actions-ratings-disabled">
+    <em>Ratings have been disabled for this video.</em>
+  </div>
+
+  </div>
+
+  <div id="action-panel-rental-required" class="action-panel-content hid">
+      <div id="watch-actions-rental-required">
+    <strong>Rating is available when the video has been rented.</strong>
+  </div>
+
+  </div>
+
+  <div id="action-panel-error" class="action-panel-content hid">
+    <div class="action-panel-error">
+      This feature is not available right now. Please try again later.
+    </div>
+  </div>
+
+    <div id="watch7-action-panel-footer">
+      <hr class="yt-horizontal-rule ">
+    </div>
+  </div>
+
+
+          <div class="cmt_iframe_holder" data-href="http://www.youtube.com/watch?v=RDedl-FtfcU" data-viewtype="FILTERED" style="display: none;"></div>
+
+  <div id="watch-discussion" class="scrolldetect" data-scrolldetect-callback="comments-delay-load">
+              
+  
+  <div class="comments-iframe-container">
+    <div id="comments-test-iframe" style="text-indent: 0px; margin: 0px; padding: 0px; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 816px; height: 1173px; background: transparent;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 816px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 1173px; max-width: 815px;" tabindex="0" vspace="0" width="100%" id="I0_1408950978649" name="I0_1408950978649" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/comments.htm" data-gapiattached="true" title="Comment on this"></iframe></div>
+    <div id="distiller-spinner" class="action-panel-loading hid" style="display: none;">
+        <p class="yt-spinner">
+      <img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" title="Loading icon" class="yt-spinner-img yt-sprite">
+
+    <span class="yt-spinner-message">
+Loading...
+    </span>
+  </p>
+
+    </div>
+  </div>
+
+
+  </div>
+
+
+        </div>
+        <div id="watch7-sidebar" class="watch-sidebar">
+                <div id="watch7-sidebar-playlist">
+      
+    </div>
+
+
+  <div id="watch7-sidebar-contents" class="watch-sidebar-gutter     yt-uix-expander yt-uix-expander-collapsed">
+    <div id="watch7-sidebar-offer">
+      
+    </div>
+
+      <div id="watch7-sidebar-ads">
+                <div id="watch-channel-brand-div" class="">
+      <div id="watch-channel-brand-div-text">
+Advertisement
+      </div>
+      <div id="google_companion_ad_div" style="visibility: visible;"><iframe id="google_ads_frame1" name="google_ads_frame1" width="undefined" height="250" frameborder="0" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/ads.htm" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true"></iframe></div>
+    </div>
+
+
+      </div>
+
+    <div id="watch7-sidebar-modules">
+                <div class="watch-sidebar-section">
+    <div class="watch-sidebar-body">
+      <ul id="watch-related" class="video-list">
+          <li class="video-list-item related-list-item">  <a href="https://www.youtube.com/watch?v=nd2irnS-FU0" class=" related-video spf-link  yt-uix-sessionlink" data-sessionlink="ved=CAYQzRooAA&amp;ei=v-L6U5epMJPk4QKL64C4BQ&amp;feature=relmfu"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" data-vid="nd2irnS-FU0"><img alt="" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/default.jpg" aria-hidden="true" data-thumb="//i.ytimg.com/vi/nd2irnS-FU0/default.jpg" width="120" height="90" data-group-key="thumb-group-0"><span class="video-time">5:45</span>
+
+  <button class="yt-uix-button yt-uix-button-size-small yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon addto-button video-actions spf-nolink hide-until-delayloaded addto-watch-later-button-sign-in yt-uix-tooltip" type="button" onclick=";return false;" title="Watch Later" role="button" data-button-menu-id="shared-addto-watch-later-login" data-video-ids="nd2irnS-FU0"><span class="yt-uix-button-icon-wrapper"><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" title="Watch Later" class="yt-uix-button-icon yt-uix-button-icon-addto yt-sprite"></span><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" class="yt-uix-button-arrow yt-sprite"></button>
+</span>  <span dir="ltr" class="title" title="Lesson 12 I2C External EEPROM Part 1">
+    Lesson 12 I2C External EEPROM Part 1
+  </span>
+    <span class="stat attribution">
+      <span class="g-hovercard" data-ytid="UCWL128ZuBbV8ruKrc0lk7Iw" data-name="relmfu">
+        by <b><span class=" g-hovercard" data-ytid="UCWL128ZuBbV8ruKrc0lk7Iw">misperry</span></b>
+      </span>
+    </span>
+    <span class="stat view-count">8,309 views</span>
+</a>
+</li><li class="video-list-item related-list-item">  <a href="https://www.youtube.com/watch?v=7yRoR7w82SA" class=" related-video spf-link  yt-uix-sessionlink" data-sessionlink="ved=CAcQzRooAQ&amp;ei=v-L6U5epMJPk4QKL64C4BQ&amp;feature=related"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" data-vid="7yRoR7w82SA"><img alt="" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/default(1).jpg" aria-hidden="true" data-thumb="//i.ytimg.com/vi/7yRoR7w82SA/default.jpg" width="120" height="90" data-group-key="thumb-group-0"><span class="video-time">48:33</span>
+
+  <button class="yt-uix-button yt-uix-button-size-small yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon addto-button video-actions spf-nolink hide-until-delayloaded addto-watch-later-button-sign-in yt-uix-tooltip" type="button" onclick=";return false;" title="Watch Later" role="button" data-button-menu-id="shared-addto-watch-later-login" data-video-ids="7yRoR7w82SA"><span class="yt-uix-button-icon-wrapper"><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" title="Watch Later" class="yt-uix-button-icon yt-uix-button-icon-addto yt-sprite"></span><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" class="yt-uix-button-arrow yt-sprite"></button>
+</span>  <span dir="ltr" class="title" title="#28 -- TWI  (I2C)">
+    #28 -- TWI  (I2C)
+  </span>
+    <span class="stat attribution">
+      <span class="g-hovercard" data-ytid="UCgpQgWLXEZWSplxs1eB9Gvw" data-name="related">
+        by <b><span class=" g-hovercard" data-ytid="UCgpQgWLXEZWSplxs1eB9Gvw">Bruce Land</span></b>
+      </span>
+    </span>
+    <span class="stat view-count">12,871 views</span>
+</a>
+</li><li class="video-list-item related-list-item">  <a href="https://www.youtube.com/watch?v=skkyudHHSWY" class=" related-video spf-link  yt-uix-sessionlink" data-sessionlink="ved=CAgQzRooAg&amp;ei=v-L6U5epMJPk4QKL64C4BQ&amp;feature=related"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" data-vid="skkyudHHSWY"><img alt="" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/default(2).jpg" aria-hidden="true" data-thumb="//i.ytimg.com/vi/skkyudHHSWY/default.jpg" width="120" height="90" data-group-key="thumb-group-0"><span class="video-time">25:31</span>
+
+  <button class="yt-uix-button yt-uix-button-size-small yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon addto-button video-actions spf-nolink hide-until-delayloaded addto-watch-later-button-sign-in yt-uix-tooltip" type="button" onclick=";return false;" title="Watch Later" role="button" data-button-menu-id="shared-addto-watch-later-login" data-video-ids="skkyudHHSWY"><span class="yt-uix-button-icon-wrapper"><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" title="Watch Later" class="yt-uix-button-icon yt-uix-button-icon-addto yt-sprite"></span><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" class="yt-uix-button-arrow yt-sprite"></button>
+</span>  <span dir="ltr" class="title" title="I2C - Bus Master - Step 1">
+    I2C - Bus Master - Step 1
+  </span>
+    <span class="stat attribution">
+      <span class="g-hovercard" data-ytid="UClyERS7Or_c8BzO945OafxQ" data-name="related">
+        by <b><span class=" g-hovercard" data-ytid="UClyERS7Or_c8BzO945OafxQ">Tom Briggs</span></b>
+      </span>
+    </span>
+    <span class="stat view-count">4,304 views</span>
+</a>
+</li><li class="video-list-item related-list-item">  <a href="https://www.youtube.com/watch?v=TGOvgiPD-ac" class=" related-video spf-link  yt-uix-sessionlink" data-sessionlink="ved=CAkQzRooAw&amp;ei=v-L6U5epMJPk4QKL64C4BQ&amp;feature=related"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" data-vid="TGOvgiPD-ac"><img alt="" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/default.webp" aria-hidden="true" data-thumb="//i.ytimg.com/vi_webp/TGOvgiPD-ac/default.webp" width="120" height="90" data-group-key="thumb-group-0"><span class="video-time">10:43</span>
+
+  <button class="yt-uix-button yt-uix-button-size-small yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon addto-button video-actions spf-nolink hide-until-delayloaded addto-watch-later-button-sign-in yt-uix-tooltip" type="button" onclick=";return false;" title="Watch Later" role="button" data-button-menu-id="shared-addto-watch-later-login" data-video-ids="TGOvgiPD-ac"><span class="yt-uix-button-icon-wrapper"><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" title="Watch Later" class="yt-uix-button-icon yt-uix-button-icon-addto yt-sprite"></span><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" class="yt-uix-button-arrow yt-sprite"></button>
+</span>  <span dir="ltr" class="title" title="I2C EEPROM with the Arduino Part 1">
+    I2C EEPROM with the Arduino Part 1
+  </span>
+    <span class="stat attribution">
+      <span class="g-hovercard" data-ytid="UC42d7zFnWU0dYVk_M0JED6w" data-name="related">
+        by <b><span class=" g-hovercard" data-ytid="UC42d7zFnWU0dYVk_M0JED6w">Kevin Darrah</span></b>
+      </span>
+    </span>
+    <span class="stat view-count">12,010 views</span>
+</a>
+</li><li class="video-list-item related-list-item">  <a href="https://www.youtube.com/watch?v=J3nuIL2dBak" class=" related-video spf-link  yt-uix-sessionlink" data-sessionlink="ved=CAoQzRooBA&amp;ei=v-L6U5epMJPk4QKL64C4BQ&amp;feature=related"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" data-vid="J3nuIL2dBak"><img alt="" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/default(3).jpg" aria-hidden="true" data-thumb="//i.ytimg.com/vi/J3nuIL2dBak/default.jpg" width="120" height="90" data-group-key="thumb-group-0"><span class="video-time">18:11</span>
+
+  <button class="yt-uix-button yt-uix-button-size-small yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon addto-button video-actions spf-nolink hide-until-delayloaded addto-watch-later-button-sign-in yt-uix-tooltip" type="button" onclick=";return false;" title="Watch Later" role="button" data-button-menu-id="shared-addto-watch-later-login" data-video-ids="J3nuIL2dBak"><span class="yt-uix-button-icon-wrapper"><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" title="Watch Later" class="yt-uix-button-icon yt-uix-button-icon-addto yt-sprite"></span><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" class="yt-uix-button-arrow yt-sprite"></button>
+</span>  <span dir="ltr" class="title" title="Arduino Tutorial #8: I2C Communication">
+    Arduino Tutorial #8: I2C Communication
+  </span>
+    <span class="stat attribution">
+      <span class="g-hovercard" data-ytid="UCL1w3L33s0phNYGuvMLS-Eg" data-name="related">
+        by <b><span class=" g-hovercard" data-ytid="UCL1w3L33s0phNYGuvMLS-Eg">humanHardDrive</span></b>
+      </span>
+    </span>
+    <span class="stat view-count">38,738 views</span>
+</a>
+</li><li class="video-list-item related-list-item">  <a href="https://www.youtube.com/watch?v=wGt2v54zqAk" class=" related-video spf-link  yt-uix-sessionlink" data-sessionlink="ved=CAsQzRooBQ&amp;ei=v-L6U5epMJPk4QKL64C4BQ&amp;feature=related"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" data-vid="wGt2v54zqAk"><img alt="" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/default(4).jpg" aria-hidden="true" data-thumb="//i.ytimg.com/vi/wGt2v54zqAk/default.jpg" width="120" height="90" data-group-key="thumb-group-0"><span class="video-time">9:37</span>
+
+  <button class="yt-uix-button yt-uix-button-size-small yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon addto-button video-actions spf-nolink hide-until-delayloaded addto-watch-later-button-sign-in yt-uix-tooltip" type="button" onclick=";return false;" title="Watch Later" role="button" data-button-menu-id="shared-addto-watch-later-login" data-video-ids="wGt2v54zqAk"><span class="yt-uix-button-icon-wrapper"><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" title="Watch Later" class="yt-uix-button-icon yt-uix-button-icon-addto yt-sprite"></span><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" class="yt-uix-button-arrow yt-sprite"></button>
+</span>  <span dir="ltr" class="title" title="I2C Tutorial 1">
+    I2C Tutorial 1
+  </span>
+    <span class="stat attribution">
+      <span class="g-hovercard" data-ytid="UCch1w0P2Ks3wSZLoh8IJeng" data-name="related">
+        by <b><span class=" g-hovercard" data-ytid="UCch1w0P2Ks3wSZLoh8IJeng">HamRadio2008</span></b>
+      </span>
+    </span>
+    <span class="stat view-count">46,316 views</span>
+</a>
+</li><li class="video-list-item related-list-item"><a href="https://www.youtube.com/watch?v=64vVI5kgbCo&list=PL4DE4A7AD9EE36E77" class="related-playlist yt-pl-thumb-link  spf-link  yt-uix-sessionlink" data-sessionlink="ved=CAwQzhooBg&amp;ei=v-L6U5epMJPk4QKL64C4BQ&amp;feature=rellist">
+  <span class="yt-pl-thumb  is-small">
+      
+      <span class="video-thumb  yt-thumb yt-thumb-120">
+      <span class="yt-thumb-default">
+        <span class="yt-thumb-clip">
+          <img alt="" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/default(5).jpg" aria-hidden="true" data-thumb="//i.ytimg.com/vi/64vVI5kgbCo/default.jpg" width="120" data-group-key="thumb-group-0">
+          <span class="vertical-align"></span>
+        </span>
+      </span>
+    </span>
+
+
+
+      <span class="sidebar">
+        <span class="yt-pl-sidebar-content yt-valign">
+          <span class="yt-valign-container">
+                <span class="formatted-video-count-label">
+      <b>38</b> videos
+    </span>
+
+            <img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" class="yt-pl-icon yt-pl-icon-reg yt-sprite">
+          </span>
+        </span>
+      </span>
+        <span class="yt-pl-thumb-overlay">
+          <span class="yt-pl-thumb-overlay-content">
+            <img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" class="play-icon yt-sprite">
+            <span class="yt-pl-thumb-overlay-text">
+Play all
+            </span>
+          </span>
+        </span>
+  </span>
+<span dir="ltr" class="title" title="Tutorial Programação Em C para PIC">Tutorial Programação Em C para PIC</span><span class="stat attribution">by <b><span class=" g-hovercard" data-ytid="UCZYk4Slnz6ARfiYf5sX78Vg">MrAppleBR</span></b></span></a></li><li class="video-list-item related-list-item">  <a href="https://www.youtube.com/watch?v=UmCoAiqebak" class=" related-video spf-link  yt-uix-sessionlink" data-sessionlink="ved=CA0QzRooBw&amp;ei=v-L6U5epMJPk4QKL64C4BQ&amp;feature=related"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" data-vid="UmCoAiqebak"><img alt="" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/default(6).webp" aria-hidden="true" data-thumb="//i.ytimg.com/vi_webp/UmCoAiqebak/default.webp" width="120" height="90" data-group-key="thumb-group-0"><span class="video-time">28:16</span>
+
+  <button class="yt-uix-button yt-uix-button-size-small yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon addto-button video-actions spf-nolink hide-until-delayloaded addto-watch-later-button-sign-in yt-uix-tooltip" type="button" onclick=";return false;" title="Watch Later" role="button" data-button-menu-id="shared-addto-watch-later-login" data-video-ids="UmCoAiqebak"><span class="yt-uix-button-icon-wrapper"><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" title="Watch Later" class="yt-uix-button-icon yt-uix-button-icon-addto yt-sprite"></span><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" class="yt-uix-button-arrow yt-sprite"></button>
+</span>  <span dir="ltr" class="title" title="How to work with I2C &quot;Two Wire Interface&quot; Devices!">
+    How to work with I2C "Two Wire Interface" Devices!
+  </span>
+    <span class="stat attribution">
+      <span class="g-hovercard" data-ytid="UC42d7zFnWU0dYVk_M0JED6w" data-name="related">
+        by <b><span class=" g-hovercard" data-ytid="UC42d7zFnWU0dYVk_M0JED6w">Kevin Darrah</span></b>
+      </span>
+    </span>
+    <span class="stat view-count">36,149 views</span>
+</a>
+</li><li class="video-list-item related-list-item">  <a href="https://www.youtube.com/watch?v=8C2zk6B-eLU" class=" related-video spf-link  yt-uix-sessionlink" data-sessionlink="ved=CA4QzRooCA&amp;ei=v-L6U5epMJPk4QKL64C4BQ&amp;feature=related"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" data-vid="8C2zk6B-eLU"><img alt="" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/default(7).jpg" aria-hidden="true" data-thumb="//i.ytimg.com/vi/8C2zk6B-eLU/default.jpg" width="120" height="90" data-group-key="thumb-group-0"><span class="video-time">47:28</span>
+
+  <button class="yt-uix-button yt-uix-button-size-small yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon addto-button video-actions spf-nolink hide-until-delayloaded addto-watch-later-button-sign-in yt-uix-tooltip" type="button" onclick=";return false;" title="Watch Later" role="button" data-button-menu-id="shared-addto-watch-later-login" data-video-ids="8C2zk6B-eLU"><span class="yt-uix-button-icon-wrapper"><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" title="Watch Later" class="yt-uix-button-icon yt-uix-button-icon-addto yt-sprite"></span><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" class="yt-uix-button-arrow yt-sprite"></button>
+</span>  <span dir="ltr" class="title" title="Beaglebone: An I2C Tutorial - Interfacing to a BMA180 Accelerometer">
+    Beaglebone: An I2C Tutorial - Interfacing to a BMA180 Accelerometer
+  </span>
+    <span class="stat attribution">
+      <span class="g-hovercard" data-ytid="UCf_sAmhBw7Tj7-2ujmLFoQg" data-name="related">
+        by <b><span class=" g-hovercard" data-ytid="UCf_sAmhBw7Tj7-2ujmLFoQg">Derek Molloy</span></b>
+      </span>
+    </span>
+    <span class="stat view-count">42,792 views</span>
+</a>
+</li><li class="video-list-item related-list-item">  <a href="https://www.youtube.com/watch?v=6LMthwJ6sLQ" class=" related-video spf-link  yt-uix-sessionlink" data-sessionlink="ved=CA8QzRooCQ&amp;ei=v-L6U5epMJPk4QKL64C4BQ&amp;feature=related"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" data-vid="6LMthwJ6sLQ"><img alt="" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/default(8).jpg" aria-hidden="true" data-thumb="//i.ytimg.com/vi/6LMthwJ6sLQ/default.jpg" width="120" height="90" data-group-key="thumb-group-0"><span class="video-time">24:01</span>
+
+  <button class="yt-uix-button yt-uix-button-size-small yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon addto-button video-actions spf-nolink hide-until-delayloaded addto-watch-later-button-sign-in yt-uix-tooltip" type="button" onclick=";return false;" title="Watch Later" role="button" data-button-menu-id="shared-addto-watch-later-login" data-video-ids="6LMthwJ6sLQ"><span class="yt-uix-button-icon-wrapper"><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" title="Watch Later" class="yt-uix-button-icon yt-uix-button-icon-addto yt-sprite"></span><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" class="yt-uix-button-arrow yt-sprite"></button>
+</span>  <span dir="ltr" class="title" title="Curso Avanzado de programación Lenguaje C compilador CCS (Capitulo 1) Vídeo 1">
+    Curso Avanzado de programación Lenguaje C compilador CCS (Capitulo 1) Vídeo 1
+  </span>
+    <span class="stat attribution">
+      <span class="g-hovercard" data-ytid="UCod701GwwgNiEa2oG-zVN7A" data-name="related">
+        by <b><span class=" g-hovercard" data-ytid="UCod701GwwgNiEa2oG-zVN7A">Francisco Garcia</span></b>
+      </span>
+    </span>
+    <span class="stat view-count">8,167 views</span>
+</a>
+</li><li class="video-list-item related-list-item">  <a href="https://www.youtube.com/watch?v=BLz2Rynxfq4" class=" related-video spf-link  yt-uix-sessionlink" data-sessionlink="ved=CBAQzRooCg&amp;ei=v-L6U5epMJPk4QKL64C4BQ&amp;feature=related"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" data-vid="BLz2Rynxfq4"><img alt="" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/default(9).webp" aria-hidden="true" data-thumb="//i.ytimg.com/vi_webp/BLz2Rynxfq4/default.webp" width="120" height="90" data-group-key="thumb-group-0"><span class="video-time">5:15</span>
+
+  <button class="yt-uix-button yt-uix-button-size-small yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon addto-button video-actions spf-nolink hide-until-delayloaded addto-watch-later-button-sign-in yt-uix-tooltip" type="button" onclick=";return false;" title="Watch Later" role="button" data-button-menu-id="shared-addto-watch-later-login" data-video-ids="BLz2Rynxfq4"><span class="yt-uix-button-icon-wrapper"><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" title="Watch Later" class="yt-uix-button-icon yt-uix-button-icon-addto yt-sprite"></span><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" class="yt-uix-button-arrow yt-sprite"></button>
+</span>  <span dir="ltr" class="title" title="DIY Capacitance touch button with PIC and Frequency Change">
+    DIY Capacitance touch button with PIC and Frequency Change
+  </span>
+    <span class="stat attribution">
+      <span class="g-hovercard" data-ytid="UCNH0a2xuMMZec8ok61GzVeA" data-name="related">
+        by <b><span class=" g-hovercard" data-ytid="UCNH0a2xuMMZec8ok61GzVeA">pcbheaven</span></b>
+      </span>
+    </span>
+    <span class="stat view-count">19,008 views</span>
+</a>
+</li><li class="video-list-item related-list-item">  <a href="https://www.youtube.com/watch?v=6f-oz0p_6VY" class=" related-video spf-link  yt-uix-sessionlink" data-sessionlink="ved=CBEQzRooCw&amp;ei=v-L6U5epMJPk4QKL64C4BQ&amp;feature=related"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" data-vid="6f-oz0p_6VY"><img alt="" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" aria-hidden="true" data-thumb="//i.ytimg.com/vi/6f-oz0p_6VY/default.jpg" width="120" height="90" data-group-key="thumb-group-1"><span class="video-time">7:29</span>
+
+  <button class="yt-uix-button yt-uix-button-size-small yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon addto-button video-actions spf-nolink hide-until-delayloaded addto-watch-later-button-sign-in yt-uix-tooltip" type="button" onclick=";return false;" title="Watch Later" role="button" data-button-menu-id="shared-addto-watch-later-login" data-video-ids="6f-oz0p_6VY"><span class="yt-uix-button-icon-wrapper"><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" title="Watch Later" class="yt-uix-button-icon yt-uix-button-icon-addto yt-sprite"></span><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" class="yt-uix-button-arrow yt-sprite"></button>
+</span>  <span dir="ltr" class="title" title="I2C EEPROM with the Arduino Part 2">
+    I2C EEPROM with the Arduino Part 2
+  </span>
+    <span class="stat attribution">
+      <span class="g-hovercard" data-ytid="UC42d7zFnWU0dYVk_M0JED6w" data-name="related">
+        by <b><span class=" g-hovercard" data-ytid="UC42d7zFnWU0dYVk_M0JED6w">Kevin Darrah</span></b>
+      </span>
+    </span>
+    <span class="stat view-count">7,393 views</span>
+</a>
+</li><li class="video-list-item related-list-item">  <a href="https://www.youtube.com/watch?v=XnV-u8ExBFE" class=" related-video spf-link  yt-uix-sessionlink" data-sessionlink="ved=CBIQzRooDA&amp;ei=v-L6U5epMJPk4QKL64C4BQ&amp;feature=related"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" data-vid="XnV-u8ExBFE"><img alt="" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" aria-hidden="true" data-thumb="//i.ytimg.com/vi/XnV-u8ExBFE/default.jpg" width="120" height="90" data-group-key="thumb-group-1"><span class="video-time">1:30</span>
+
+  <button class="yt-uix-button yt-uix-button-size-small yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon addto-button video-actions spf-nolink hide-until-delayloaded addto-watch-later-button-sign-in yt-uix-tooltip" type="button" onclick=";return false;" title="Watch Later" role="button" data-button-menu-id="shared-addto-watch-later-login" data-video-ids="XnV-u8ExBFE"><span class="yt-uix-button-icon-wrapper"><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" title="Watch Later" class="yt-uix-button-icon yt-uix-button-icon-addto yt-sprite"></span><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" class="yt-uix-button-arrow yt-sprite"></button>
+</span>  <span dir="ltr" class="title" title="Exp No 6: Read/Write EEPROM">
+    Exp No 6: Read/Write EEPROM
+  </span>
+    <span class="stat attribution">
+      <span class="g-hovercard" data-ytid="UCgv2Nnf6KHBRi1wJww0427Q" data-name="related">
+        by <b><span class=" g-hovercard" data-ytid="UCgv2Nnf6KHBRi1wJww0427Q">Micro Guru</span></b>
+      </span>
+    </span>
+    <span class="stat view-count">10,719 views</span>
+</a>
+</li><li class="video-list-item related-list-item">  <a href="https://www.youtube.com/watch?v=4Wriu7VByF8" class=" related-video spf-link  yt-uix-sessionlink" data-sessionlink="ved=CBMQzRooDQ&amp;ei=v-L6U5epMJPk4QKL64C4BQ&amp;feature=related"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" data-vid="4Wriu7VByF8"><img alt="" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" aria-hidden="true" data-thumb="//i.ytimg.com/vi/4Wriu7VByF8/default.jpg" width="120" height="90" data-group-key="thumb-group-1"><span class="video-time">18:02</span>
+
+  <button class="yt-uix-button yt-uix-button-size-small yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon addto-button video-actions spf-nolink hide-until-delayloaded addto-watch-later-button-sign-in yt-uix-tooltip" type="button" onclick=";return false;" title="Watch Later" role="button" data-button-menu-id="shared-addto-watch-later-login" data-video-ids="4Wriu7VByF8"><span class="yt-uix-button-icon-wrapper"><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" title="Watch Later" class="yt-uix-button-icon yt-uix-button-icon-addto yt-sprite"></span><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" class="yt-uix-button-arrow yt-sprite"></button>
+</span>  <span dir="ltr" class="title" title="Tutorial PIC en C, Timer, Código (CCS) 2/3">
+    Tutorial PIC en C, Timer, Código (CCS) 2/3
+  </span>
+    <span class="stat attribution">
+      <span class="g-hovercard" data-ytid="UC-sYiyzPbjIGW8wMye9tbIw" data-name="related">
+        by <b><span class=" g-hovercard" data-ytid="UC-sYiyzPbjIGW8wMye9tbIw">TutoElectro</span></b>
+      </span>
+    </span>
+    <span class="stat view-count">26,349 views</span>
+</a>
+</li><li class="video-list-item related-list-item">  <a href="https://www.youtube.com/watch?v=8niuwe52HjY" class=" related-video spf-link  yt-uix-sessionlink" data-sessionlink="ved=CBQQzRooDg&amp;ei=v-L6U5epMJPk4QKL64C4BQ&amp;feature=related"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" data-vid="8niuwe52HjY"><img alt="" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" aria-hidden="true" data-thumb="//i.ytimg.com/vi_webp/8niuwe52HjY/default.webp" width="120" height="90" data-group-key="thumb-group-1"><span class="video-time">27:00</span>
+
+  <button class="yt-uix-button yt-uix-button-size-small yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon addto-button video-actions spf-nolink hide-until-delayloaded addto-watch-later-button-sign-in yt-uix-tooltip" type="button" onclick=";return false;" title="Watch Later" role="button" data-button-menu-id="shared-addto-watch-later-login" data-video-ids="8niuwe52HjY"><span class="yt-uix-button-icon-wrapper"><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" title="Watch Later" class="yt-uix-button-icon yt-uix-button-icon-addto yt-sprite"></span><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" class="yt-uix-button-arrow yt-sprite"></button>
+</span>  <span dir="ltr" class="title" title="Cap 6. Comunicación I2C">
+    Cap 6. Comunicación I2C
+  </span>
+    <span class="stat attribution">
+      <span class="g-hovercard" data-ytid="UC1JwyHMTi1iUds3ZGWj3WNw" data-name="related">
+        by <b><span class=" g-hovercard" data-ytid="UC1JwyHMTi1iUds3ZGWj3WNw">David Álvarez medina</span></b>
+      </span>
+    </span>
+    <span class="stat view-count">9,557 views</span>
+</a>
+</li><li class="video-list-item related-list-item">  <a href="https://www.youtube.com/watch?v=iBX0dHSUFbs" class=" related-video spf-link  yt-uix-sessionlink" data-sessionlink="ved=CBUQzRooDw&amp;ei=v-L6U5epMJPk4QKL64C4BQ&amp;feature=related"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" data-vid="iBX0dHSUFbs"><img alt="" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" aria-hidden="true" data-thumb="//i.ytimg.com/vi_webp/iBX0dHSUFbs/default.webp" width="120" height="90" data-group-key="thumb-group-1"><span class="video-time">14:49</span>
+
+  <button class="yt-uix-button yt-uix-button-size-small yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon addto-button video-actions spf-nolink hide-until-delayloaded addto-watch-later-button-sign-in yt-uix-tooltip" type="button" onclick=";return false;" title="Watch Later" role="button" data-button-menu-id="shared-addto-watch-later-login" data-video-ids="iBX0dHSUFbs"><span class="yt-uix-button-icon-wrapper"><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" title="Watch Later" class="yt-uix-button-icon yt-uix-button-icon-addto yt-sprite"></span><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" class="yt-uix-button-arrow yt-sprite"></button>
+</span>  <span dir="ltr" class="title" title="How to Use a Rom Programmer">
+    How to Use a Rom Programmer
+  </span>
+    <span class="stat attribution">
+      <span class="g-hovercard" data-ytid="UCW60lU_8YIAy3uP2L17eHDw" data-name="related">
+        by <b><span class=" g-hovercard" data-ytid="UCW60lU_8YIAy3uP2L17eHDw">TerryxMasters</span></b>
+      </span>
+    </span>
+    <span class="stat view-count">47,316 views</span>
+</a>
+</li><li class="video-list-item related-list-item">  <a href="https://www.youtube.com/watch?v=y-OjbFHB4t8" class=" related-video spf-link  yt-uix-sessionlink" data-sessionlink="ved=CBYQzRooEA&amp;ei=v-L6U5epMJPk4QKL64C4BQ&amp;feature=related"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" data-vid="y-OjbFHB4t8"><img alt="" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" aria-hidden="true" data-thumb="//i.ytimg.com/vi/y-OjbFHB4t8/default.jpg" width="120" height="90" data-group-key="thumb-group-2"><span class="video-time">2:58</span>
+
+  <button class="yt-uix-button yt-uix-button-size-small yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon addto-button video-actions spf-nolink hide-until-delayloaded addto-watch-later-button-sign-in yt-uix-tooltip" type="button" onclick=";return false;" title="Watch Later" role="button" data-button-menu-id="shared-addto-watch-later-login" data-video-ids="y-OjbFHB4t8"><span class="yt-uix-button-icon-wrapper"><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" title="Watch Later" class="yt-uix-button-icon yt-uix-button-icon-addto yt-sprite"></span><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" class="yt-uix-button-arrow yt-sprite"></button>
+</span>  <span dir="ltr" class="title" title="Tenet Technetronics - Introduction to I2C Protocol using Arduino...">
+    Tenet Technetronics - Introduction to I2C Protocol using Arduino...
+  </span>
+    <span class="stat attribution">
+      <span class="g-hovercard" data-ytid="UCyRZXnQeh8xgmgDYxQfN8eA" data-name="related">
+        by <b><span class=" g-hovercard" data-ytid="UCyRZXnQeh8xgmgDYxQfN8eA">Tenet Technetronics</span></b>
+      </span>
+    </span>
+    <span class="stat view-count">3,692 views</span>
+</a>
+</li><li class="video-list-item related-list-item">  <a href="https://www.youtube.com/watch?v=ujc6pjftZ_w" class=" related-video spf-link  yt-uix-sessionlink" data-sessionlink="ved=CBcQzRooEQ&amp;ei=v-L6U5epMJPk4QKL64C4BQ&amp;feature=watch-vrec"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" data-vid="ujc6pjftZ_w"><img alt="" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" aria-hidden="true" data-thumb="//i.ytimg.com/vi_webp/ujc6pjftZ_w/default.webp" width="120" height="90" data-group-key="thumb-group-2"><span class="video-time">2:17</span>
+
+  <button class="yt-uix-button yt-uix-button-size-small yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon addto-button video-actions spf-nolink hide-until-delayloaded addto-watch-later-button-sign-in yt-uix-tooltip" type="button" onclick=";return false;" title="Watch Later" role="button" data-button-menu-id="shared-addto-watch-later-login" data-video-ids="ujc6pjftZ_w"><span class="yt-uix-button-icon-wrapper"><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" title="Watch Later" class="yt-uix-button-icon yt-uix-button-icon-addto yt-sprite"></span><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" class="yt-uix-button-arrow yt-sprite"></button>
+</span>  <span dir="ltr" class="title" title="Hall Effect WSS or Wheel Speed Sensor">
+    Hall Effect WSS or Wheel Speed Sensor
+  </span>
+    <span class="stat attribution">
+      <span class="g-hovercard" data-ytid="UCQ3LBcZNzPIAJv1ktEB8Y6g" data-name="watch-vrec">
+        by <b><span class=" g-hovercard" data-ytid="UCQ3LBcZNzPIAJv1ktEB8Y6g">ADPTraining</span></b>
+      </span>
+    </span>
+    <span class="stat view-count">Recommended for you</span>
+</a>
+</li><li class="video-list-item related-list-item">  <a href="https://www.youtube.com/watch?v=aP4FL9yf8VE" class=" related-video spf-link  yt-uix-sessionlink" data-sessionlink="ved=CBgQzRooEg&amp;ei=v-L6U5epMJPk4QKL64C4BQ&amp;feature=related"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" data-vid="aP4FL9yf8VE"><img alt="" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" aria-hidden="true" data-thumb="//i.ytimg.com/vi_webp/aP4FL9yf8VE/default.webp" width="120" height="90" data-group-key="thumb-group-2"><span class="video-time">15:18</span>
+
+  <button class="yt-uix-button yt-uix-button-size-small yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon addto-button video-actions spf-nolink hide-until-delayloaded addto-watch-later-button-sign-in yt-uix-tooltip" type="button" onclick=";return false;" title="Watch Later" role="button" data-button-menu-id="shared-addto-watch-later-login" data-video-ids="aP4FL9yf8VE"><span class="yt-uix-button-icon-wrapper"><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" title="Watch Later" class="yt-uix-button-icon yt-uix-button-icon-addto yt-sprite"></span><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" class="yt-uix-button-arrow yt-sprite"></button>
+</span>  <span dir="ltr" class="title" title="LCD, MikroC Pro, and ISIS Proteus (Included Code)">
+    LCD, MikroC Pro, and ISIS Proteus (Included Code)
+  </span>
+    <span class="stat attribution">
+      <span class="g-hovercard" data-ytid="UC-NQ6dQN9TOv3C_uxNqnfTg" data-name="related">
+        by <b><span class=" g-hovercard" data-ytid="UC-NQ6dQN9TOv3C_uxNqnfTg">Bandar</span></b>
+      </span>
+    </span>
+    <span class="stat view-count">149,261 views</span>
+</a>
+</li><li class="video-list-item related-list-item">  <a href="https://www.youtube.com/watch?v=LToDmIY6j2s" class=" related-video spf-link  yt-uix-sessionlink" data-sessionlink="ved=CBkQzRooEw&amp;ei=v-L6U5epMJPk4QKL64C4BQ&amp;feature=related"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" data-vid="LToDmIY6j2s"><img alt="" src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" aria-hidden="true" data-thumb="//i.ytimg.com/vi_webp/LToDmIY6j2s/default.webp" width="120" height="90" data-group-key="thumb-group-2"><span class="video-time">0:57</span>
+
+  <button class="yt-uix-button yt-uix-button-size-small yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon addto-button video-actions spf-nolink hide-until-delayloaded addto-watch-later-button-sign-in yt-uix-tooltip" type="button" onclick=";return false;" title="Watch Later" role="button" data-button-menu-id="shared-addto-watch-later-login" data-video-ids="LToDmIY6j2s"><span class="yt-uix-button-icon-wrapper"><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" title="Watch Later" class="yt-uix-button-icon yt-uix-button-icon-addto yt-sprite"></span><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" class="yt-uix-button-arrow yt-sprite"></button>
+</span>  <span dir="ltr" class="title" title="Gear Indicator Using Arduino/TFT Module">
+    Gear Indicator Using Arduino/TFT Module
+  </span>
+    <span class="stat attribution">
+      <span class="g-hovercard" data-ytid="UCwCweduR-ntYpQnXlmxVt8Q" data-name="related">
+        by <b><span class=" g-hovercard" data-ytid="UCwCweduR-ntYpQnXlmxVt8Q">skismprism</span></b>
+      </span>
+    </span>
+    <span class="stat view-count">109,138 views</span>
+</a>
+</li>
+      </ul>
+    </div>   </div> 
+
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div id="watch7-hidden-extras">
+        <div style="visibility: hidden; height: 0px; padding: 0px; overflow: hidden;">
+      <img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/gen_204" border="0" width="1" height="1">
+  </div>
+
+    </div>
+  </div>
+
+</div></div></div></div><ul class="html5-context-menu yt-uix-button-menu" aria-hidden="true" style="display: none;"><li><span class="yt-uix-button-menu-item html5-context-menu-copy-video-url">Get video URL</span></li><li><span class="yt-uix-button-menu-item html5-context-menu-copy-video-url-at-current-time">Get video URL at current time</span></li><li><span class="yt-uix-button-menu-item html5-context-menu-copy-embed-html">Get embed code</span></li><li><span class="yt-uix-button-menu-item html5-context-menu-report-playback-issue">Report playback issue</span></li><li><span class="yt-uix-button-menu-item html5-context-menu-copy-debug-info">Get debug info</span></li><li><span class="yt-uix-button-menu-item html5-context-menu-show-video-info">Stats for nerds</span></li><li><a class="yt-uix-button-menu-item html5-context-menu-link" target="_blank" href="https://www.youtube.com/html5">About the HTML5 player</a></li></ul>  <div id="footer-container" class="yt-base-gutter"><div id="footer"><div id="footer-main"><div id="footer-logo"><a href="https://www.youtube.com/" title="YouTube home"><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" class="footer-logo-icon yt-sprite"></a></div>  <ul class="pickers yt-uix-button-group" data-button-toggle-group="optional">
+      <li>
+            <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-default yt-uix-button-has-icon" type="button" onclick=";return false;" id="yt-picker-language-button" data-picker-key="language" data-picker-position="footer" data-button-action="yt.www.picker.load" data-button-menu-id="arrow-display" data-button-toggle="true"><span class="yt-uix-button-icon-wrapper"><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" class="yt-uix-button-icon yt-uix-button-icon-footer-language yt-sprite"></span><span class="yt-uix-button-content">  <span class="yt-picker-button-label">
+Language:
+  </span>
+  English
+ </span><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" class="yt-uix-button-arrow yt-sprite"></button>
+
+
+      </li>
+      <li>
+            <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-default" type="button" onclick=";return false;" id="yt-picker-country-button" data-picker-key="country" data-picker-position="footer" data-button-action="yt.www.picker.load" data-button-menu-id="arrow-display" data-button-toggle="true"><span class="yt-uix-button-content">  <span class="yt-picker-button-label">
+Country:
+  </span>
+  Australia
+ </span><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" class="yt-uix-button-arrow yt-sprite"></button>
+
+
+      </li>
+      <li>
+            <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-default" type="button" onclick=";return false;" id="yt-picker-safetymode-button" data-picker-key="safetymode" data-picker-position="footer" data-button-action="yt.www.picker.load" data-button-menu-id="arrow-display" data-button-toggle="true"><span class="yt-uix-button-content">  <span class="yt-picker-button-label">
+Safety:
+  </span>
+Off
+ </span><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" class="yt-uix-button-arrow yt-sprite"></button>
+
+
+      </li>
+  </ul>
+      <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-default yt-uix-button-has-icon yt-uix-button-reverse yt-google-help-link inq-no-click " type="button" onclick=";return false;" data-ghelp-anchor="google-help" data-ghelp-tracking-param="" id="google-help"><span class="yt-uix-button-icon-wrapper"><img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" class="yt-uix-button-icon yt-uix-button-icon-questionmark yt-sprite"></span><span class="yt-uix-button-content">Help
+ </span></button>
+      <div id="yt-picker-language-footer" class="yt-picker" style="display: none">
+      <p class="yt-spinner">
+      <img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" title="Loading icon" class="yt-spinner-img yt-sprite">
+
+    <span class="yt-spinner-message">
+Loading...
+    </span>
+  </p>
+
+  </div>
+
+      <div id="yt-picker-country-footer" class="yt-picker" style="display: none">
+      <p class="yt-spinner">
+      <img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" title="Loading icon" class="yt-spinner-img yt-sprite">
+
+    <span class="yt-spinner-message">
+Loading...
+    </span>
+  </p>
+
+  </div>
+
+      <div id="yt-picker-safetymode-footer" class="yt-picker" style="display: none">
+      <p class="yt-spinner">
+      <img src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/pixel-vfl3z5WfW.gif" title="Loading icon" class="yt-spinner-img yt-sprite">
+
+    <span class="yt-spinner-message">
+Loading...
+    </span>
+  </p>
+
+  </div>
+
+</div><div id="footer-links"><ul id="footer-links-primary">  <li><a href="https://www.youtube.com/yt/about/">About</a></li>
+  <li><a href="https://www.youtube.com/yt/press/">Press &amp; Blogs</a></li>
+  <li><a href="https://www.youtube.com/yt/copyright/">Copyright</a></li>
+  <li><a href="https://www.youtube.com/yt/creators/">Creators &amp; Partners</a></li>
+  <li><a href="https://www.youtube.com/yt/advertise/">Advertising</a></li>
+  <li><a href="https://www.youtube.com/yt/dev/">Developers</a></li>
+  <li><a href="https://plus.google.com/+youtube" dir="ltr">+YouTube</a></li>
+</ul><ul id="footer-links-secondary">  <li><a href="https://www.youtube.com/t/terms">Terms</a></li>
+  <li><a href="https://www.google.com/intl/en/policies/privacy/">Privacy</a></li>
+  <li><a href="https://www.youtube.com/yt/policyandsafety/">
+Policy &amp; Safety
+  </a></li>
+  <li><a href="https://support.google.com/youtube/?hl=en" onclick="return yt.www.feedback.start(59);" class="reportbug">Send feedback</a></li>
+  <li><a href="https://www.youtube.com/testtube">Try something new!</a></li>
+  <li></li>
+</ul></div></div></div>
+
+
+      <div class="yt-dialog hid " id="feed-privacy-lb">
+    <div class="yt-dialog-base">
+      <span class="yt-dialog-align"></span>
+      <div class="yt-dialog-fg">
+        <div class="yt-dialog-fg-content">
+          <div class="yt-dialog-loading">
+              <div class="yt-dialog-waiting-content">
+    <div class="yt-spinner-img"></div><div class="yt-dialog-waiting-text">Loading...</div>
+  </div>
+
+          </div>
+          <div class="yt-dialog-content">
+              <div id="feed-privacy-dialog">
+  </div>
+
+          </div>
+          <div class="yt-dialog-working">
+              <div class="yt-dialog-working-overlay"></div>
+  <div class="yt-dialog-working-bubble">
+    <div class="yt-dialog-waiting-content">
+      <div class="yt-spinner-img"></div><div class="yt-dialog-waiting-text">Working...</div>
+    </div>
+  </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="hid">    <div id="shared-addto-watch-later-login" class="hid">
+      <a href="https://accounts.google.com/ServiceLogin?hl=en&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Fapp%3Ddesktop%26action_handle_signin%3Dtrue%26hl%3Den%26next%3D%252Fwatch%253Fv%253DRDedl-FtfcU%26feature%3Dplaylist&passive=true&service=youtube&uilel=3" class="sign-in-link">Sign in</a> to add this to Watch Later
+
+    </div>
+  <div id="yt-uix-videoactionmenu-menu" class="yt-ui-menu-content">
+    <div class="hide-on-create-pl-panel">
+      <h3>
+Add to
+      </h3>
+    </div>
+    <div class="add-to-widget">
+    </div>
+  </div>
+</div>  <script>var ytspf = ytspf || {};ytspf.enabled = false;</script>  <script src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/spf.js" type="text/javascript" name="spf" class="js-httpssytimgcomytsjsbinspfvfli47usBspfjs"></script>
+  <script src="./Lesson 12 I2C External EEPROM Part 2 - YouTube_files/base.js" name="www/base" class="js-httpssytimgcomytsjsbinwwwen_USvflkBnX2Rbasejs"></script>
+<script>spf.script.path({'www/': '//s.ytimg.com/yts/jsbin/www-en_US-vflkBnX2R/'});var ytdepmap = {"www/base": null, "www/common": "www/base", "www/watch": "www/common", "www/videomanager": "www/common", "www/subscriptionmanager": "www/common", "www/results_starwars": "www/common", "www/results_star_trek": "www/common", "www/results": "www/common", "www/results_harlemshake": "www/common", "www/promo_join_network": "www/common", "www/legomap": "www/common", "www/feed": "www/common", "www/experiments": "www/common", "www/downloadreports": "www/common", "www/dashboard": "www/common", "www/channels": "www/common", "www/channels_accountupload": "www/common", "www/watch_webdrivertorso": "www/watch", "www/watch_videoshelf": "www/watch", "www/watch_transcript": "www/watch", "www/watch_speedyg": "www/watch", "www/watch_promos": "www/watch", "www/watch_missilecommand": "www/watch", "www/watch_live": "www/watch", "www/watch_editor": "www/watch", "www/watch_edit": "www/watch", "www/watch_commentsrealtime": "www/watch", "www/watch_commentsmoderation": "www/watch", "www/watch_autoplayrenderer": "www/watch", "www/vm_coverrevshare": "www/videomanager", "www/my_videos": "www/videomanager", "www/ct_advancedsearch": "www/videomanager", "www/channels_edit": "www/channels"};spf.script.declare(ytdepmap);</script><script>if (window.ytcsi) {window.ytcsi.tick("je", null, '');}</script>      <script>
+    yt.setConfig({
+      'VIDEO_ID': "RDedl-FtfcU",
+      'THUMB_NON_DELAY_LOAD_COUNT': 0,
+      'THUMB_LOADER_PAUSE_MS': 0,
+      'THUMB_LOADER_GROUP_PX': 400,
+      'THUMB_LOADER_IGNORE_FOLD': false,
+      'WAIT_TO_DELAYLOAD_FRAME_CSS': true,
+      'IS_UNAVAILABLE_PAGE': false,
+      'DROPDOWN_ARROW_URL': "https:\/\/s.ytimg.com\/yts\/img\/pixel-vfl3z5WfW.gif",
+
+      'JS_PAGE_MODULES': [
+        'www/watch',
+          'www/watch_speedyg',
+        ''       ],
+
+
+
+      'REPORTVIDEO_JS': "\/\/s.ytimg.com\/yts\/jsbin\/www-reportvideo-vflmqGsFw\/www-reportvideo.js",
+      'REPORTVIDEO_CSS': "\/\/s.ytimg.com\/yts\/cssbin\/www-watch-reportvideo-webp-vfleWQhlv.css",
+
+
+
+
+      'WATCH_MISSILECOMMAND_JS': "\/\/s.ytimg.com\/yts\/jsbin\/www-watch-missilecommand-vflKHj7q8\/www-watch-missilecommand.js",
+      'WATCH_MISSILECOMMAND_CSS': "\/\/s.ytimg.com\/yts\/cssbin\/www-watch-missile-command-webp-vfl9eaIzr.css",
+
+      'ENABLE_AUTO_LARGE': true    });
+
+
+    yt.setConfig({'EMBED_HTML_TEMPLATE': "\u003ciframe width=\"__width__\" height=\"__height__\" src=\"__url__\" frameborder=\"0\" allowfullscreen\u003e\u003c\/iframe\u003e",'EMBED_HTML_URL': "\/\/www.youtube.com\/embed\/__videoid__",'FLASH_UPGRADE': "\u003cdiv class=\"yt-alert yt-alert-default yt-alert-error  yt-alert-player\"\u003e  \u003cdiv class=\"yt-alert-icon\"\u003e\n    \u003cimg s\u0072c=\"https:\/\/s.ytimg.com\/yts\/img\/pixel-vfl3z5WfW.gif\" class=\"icon master-sprite yt-sprite\"\u003e\n  \u003c\/div\u003e\n\u003cdiv class=\"yt-alert-buttons\"\u003e\u003c\/div\u003e\u003cdiv class=\"yt-alert-content\" role=\"alert\"\u003e    \u003cspan class=\"yt-alert-vertical-trick\"\u003e\u003c\/span\u003e\n    \u003cdiv class=\"yt-alert-message\"\u003e\n            You need to upgrade your Adobe Flash Player to watch this video. \u003cbr\u003e \u003ca href=\"http:\/\/get.adobe.com\/flashplayer\/\"\u003eDownload it from Adobe.\u003c\/a\u003e\n    \u003c\/div\u003e\n\u003c\/div\u003e\u003c\/div\u003e",'PLAYER_FALLBACK': "The Adobe Flash Player or an HTML5 supported browser is required for video playback. \u003cbr\u003e \u003ca href=\"http:\/\/get.adobe.com\/flashplayer\/\"\u003eGet the latest Flash Player\u003c\/a\u003e \u003cbr\u003e \u003ca href=\"\/html5\"\u003eLearn more about upgrading to an HTML5 browser\u003c\/a\u003e",'QUICKTIME_FALLBACK': "The Adobe Flash Player or QuickTime is required for video playback. \u003cbr\u003e \u003ca href=\"http:\/\/get.adobe.com\/flashplayer\/\"\u003eGet the latest Flash Player\u003c\/a\u003e \u003cbr\u003e \u003ca href=\"http:\/\/www.apple.com\/quicktime\/download\/\"\u003eGet the latest version of QuickTime\u003c\/a\u003e"});
+
+    yt.setConfig({
+      'TIMING_WFF': true,
+      'YPC_CAN_RATE_VIDEO': true,
+
+
+
+
+
+
+        'RELATED_PLAYER_ARGS': {"rvs": "author=misperry\u0026session_data=feature%3Dendscreen\u0026title=Lesson+12+I2C+External+EEPROM+Part+1\u0026length_seconds=345\u0026id=nd2irnS-FU0,author=Bruce+Land\u0026session_data=feature%3Dendscreen\u0026title=%2328+--+TWI++%28I2C%29\u0026length_seconds=2913\u0026id=7yRoR7w82SA,author=Tom+Briggs\u0026session_data=feature%3Dendscreen\u0026title=I2C+-+Bus+Master+-+Step+1\u0026length_seconds=1531\u0026id=skkyudHHSWY,author=Kevin+Darrah\u0026iurlmq_webp=%2F%2Fi.ytimg.com%2Fvi_webp%2FTGOvgiPD-ac%2Fmqdefault.webp\u0026length_seconds=643\u0026title=I2C+EEPROM+with+the+Arduino+Part+1\u0026iurlhq_webp=%2F%2Fi.ytimg.com%2Fvi_webp%2FTGOvgiPD-ac%2Fhqdefault.webp\u0026session_data=feature%3Dendscreen\u0026id=TGOvgiPD-ac,author=humanHardDrive\u0026session_data=feature%3Dendscreen\u0026title=Arduino+Tutorial+%238%3A+I2C+Communication\u0026length_seconds=1091\u0026id=J3nuIL2dBak,author=HamRadio2008\u0026session_data=feature%3Dendscreen\u0026title=I2C+Tutorial+1\u0026length_seconds=577\u0026id=wGt2v54zqAk,thumbnail_ids=64vVI5kgbCo\u0026video_id=64vVI5kgbCo\u0026playlist_title=Tutorial+Programa%C3%A7%C3%A3o+Em+C+para+PIC\u0026playlist_length=38\u0026session_data=feature%3Dendscreen\u0026list=PL4DE4A7AD9EE36E77,author=Kevin+Darrah\u0026iurlmq_webp=%2F%2Fi.ytimg.com%2Fvi_webp%2FUmCoAiqebak%2Fmqdefault.webp\u0026length_seconds=1696\u0026title=How+to+work+with+I2C+%22Two+Wire+Interface%22+Devices%21\u0026iurlhq_webp=%2F%2Fi.ytimg.com%2Fvi_webp%2FUmCoAiqebak%2Fhqdefault.webp\u0026session_data=feature%3Dendscreen\u0026id=UmCoAiqebak,author=Derek+Molloy\u0026session_data=feature%3Dendscreen\u0026title=Beaglebone%3A+An+I2C+Tutorial+-+Interfacing+to+a+BMA180+Accelerometer\u0026length_seconds=2848\u0026id=8C2zk6B-eLU,author=Francisco+Garcia\u0026session_data=feature%3Dendscreen\u0026title=Curso+Avanzado+de+programaci%C3%B3n+Lenguaje+C+compilador+CCS+%28Capitulo+1%29+V%C3%ADdeo+1\u0026length_seconds=1441\u0026id=6LMthwJ6sLQ,author=pcbheaven\u0026iurlmq_webp=%2F%2Fi.ytimg.com%2Fvi_webp%2FBLz2Rynxfq4%2Fmqdefault.webp\u0026length_seconds=315\u0026title=DIY+Capacitance+touch+button+with+PIC+and+Frequency+Change\u0026iurlhq_webp=%2F%2Fi.ytimg.com%2Fvi_webp%2FBLz2Rynxfq4%2Fhqdefault.webp\u0026session_data=feature%3Dendscreen\u0026id=BLz2Rynxfq4,author=Kevin+Darrah\u0026session_data=feature%3Dendscreen\u0026title=I2C+EEPROM+with+the+Arduino+Part+2\u0026length_seconds=449\u0026id=6f-oz0p_6VY"},
+
+
+
+
+          'BG_P': "ZavG2SLEP0E3CmFJ2mvp2GHf3IZo5U+qon2AqlpT7EmkPnryawuaDso5F+4+VEVU+j3mlpvBBNGcErKRF5HfOXQy3eHOUzjKmfZi\/3jlyy0OZjmERS3vQA1TvY6f6ux4+LqWXciUZFQ+xVRUCoc1cINd4PeQwhALQeGv5aVJI+LCBkhhlj\/qB7TYInDfEVx4hvTSipj\/OOZJo6r9N\/5undXKhakRNBWWgRkOm0\/hRjj7Wixc5NZvw3O3TkmusQ3qyZ1lSS7nkFluuWF87k7\/PFzrGs4bk6CtO3o8ExkqaNrjERvvr+d\/qQHyY2qtFTVyg1I0BrSJ\/w8pwiDv8lQtZqQceAzwv0HDT38OwLEnNbR5DyXujnAd\/lPab4dGAsOulRZa7i6w1gwJzKisWAUfUBlkhtBrjfkcw7CPAw04UDiBs1FO7lS0bAS+KLdFpAGLMNpF+X1wNIIODtf9PEyAuU4LBusN+iE8DtYFluXsUB\/0a6eqr9YL02TUCnkljcbUdmsBdu6Qtr6DbsPJ+3j19QrJ0ncaAMqxkdj4oyKYpmFjjXELldtpea22wzfQNFVSx3EZiLKWTUVqCVNVufx48ig+1Kp\/KQsw8rfbSx+FxctKyj1pzV0N8mTnXxBNCbl5VctqvFXa6q878AdTeJF9bNMFzdHz95xqq+xn1VbRr73DeW5O46KlvQIhaOi2gV8qW1+\/lXN3E17efSWueRssMH\/O9itV+FNrWpy1HWckz4ocTrESKubj3YL3Ate9\/lxk9Qil\/VKMfoXG4W4fOr8BtVyI3CtGM0vCf03OlDifkI7RAqedLgJPtEAU7iSvgTkVK6CutEE30\/WkIXwaW7ZoULYO0DIE4s4k5qso8jJDBlS+lqyvZUZ7AZEAvbbJTD41EOrsaE+mY9mNSzb5skcVbXatx36iPwYzaT6FDJw20MkpbFvJOb+8cRIyZBZHsyuqfF6sGD5UByCWsVQVBC04W7da6qfpaVNi+gVrQq08dvOCHaDaXpMuDiWNlSkObtUOueKHfeeYpBImRNl9NadyBZfz4+2Y\/LBWEMMtRYKKrMygr52GlEKerRxLHjEckymW\/K0GBRgdDVr5ZZT2YpZs7B8R4shc788jUejYYQqmmaW03ffu48iDYwZnu3t0wZ27+9xaXTnq4Z46RvzfDoSDiBARldSNvFlSqaP2ckaUZ9vzYdOvQr4tRejTcHPfu0k7DDCKI3YiMhine4ODeCbqbugviICTNZiL43bdXrcXHxSYeE2xGO0Zj74HBvZSGNkpBY516inO7j6a5cHWS6zwAeNw1B2CbrSABBYH5L1M5q3\/Y0Q1J71SuOKhI9GZkvEkOjdfd7395OhBq2EnQZdg0INxOgsH8WPyBXWBwI2n+Xv3UV0HzDLof7aymFodsLmTrRRvK0wSYz+ZtIYAcPxygvHnrk1x6oqHufE7mi4FgJ2i4ewDw2D9uiisc9Xg3Rdd\/b3uIWEYw+ttlhrLBOATrSngic9+F55OwCNxfe0tlwwHQ46RYD9jv0Qe6zsLJyU5TdsIPzuCAc3sBZrHwMZg2Gqe6npeNahlRopU1D\/LS33kjZhsZc\/AeyrSybyZylBAJTiSNbSgVQjAxpjI7TOqqhcDkWJKCmJ7fS5nMcyV+7MzOy\/DYQQ8tKFpcC1P+zZjuXYqRgJu8ZaHtI4rTHMujjNlxugavNoPqwtEKT4+nPQqZ\/X0IY4C9Llx5XuvYFFX\/xiPMaglpEz4Z8qS5o2sDw0y\/AwiAaTWGFmFRwLs2GCok7F34nmhUUIyjoOlNtoSJjnL+NXN6BWXpoDEsmOmIx6E6I45++pkS\/xkXdyWZLsVoZQTgPsd\/cMVu\/G1mnXLdFOxoQIup0z49fTUQDBxrzKAQoJ5UrHoGW3SMmfCA\/OKioIrM9UJsGCBpRxQJFiU8IopuX6dwH1YNGbo99ws+mHFUtwM7LaT0t\/SwGqgRLk4X\/ZF8R3fdwSM1s\/x\/lqKta\/dn2620HsoIGtfx+A3OyYbpYG0aZUye5aIMNO52tCfNEtT0+J\/0sJrB4hq3kCijZ0Nc1jrdPnjoyjQ\/IE+hrsDglaWWbX+DhSiY3Coz6h+TZ7Mfp6Yn5mzjW+4z8rJJoPDPiJqF29TgJ69F6Gc1qL+sneKjWcO40W7j9SK1X6+amPjiC0ivXunqP4kp5CmKrXt0rjx9VkfYNLoHTohhBCjVXBcfH4QfsIakJGFq1m12xx1nRpkJOHOvKEE6CnTLBkfIvdm+4CgPyZ2xHbd9zBHsD+79\/1wXDcTLSCc1d3yPJnajx73jm1clK\/8kQYhVjykUhMQBtp4LknAPduGVnPf8jTcDQkUpwjrAeMvJs\/BTrrMDIfx\/uR80wojEz15eIadX6Qv+GaqfgrV6tLafpfJAo08r7PR8Dk3NyDqDyLShS7+K8i85AKTmHiANdgDKaUH\/UcCTkS83GFoornSKWvefFf\/UNmNoQ0hcV4irgjGsXsFQOMF\/is1vj3FGBmzUC9cpCG+sTrAi75fb5ckKJtsWiWoH6zqza+7S9B9ImGfI5g16xOJDSLVutNtQ7DNpjZmN50ye7xMoYwEJQo4OJQW0rnFdxD6aQsliVbbjgmG5Z0DCv8BH4Hl24I\/QP1iqDh54SMGC2UaNEKIOH4ayIZgD71T4yTgQJ0JT8bUOnWRBm\/ksyLB8AKLw7EG85pxei8M4bcRtS\/AlvUWHQBUGYIXV+XFJ6kFcfSmWtn1Vy72J6rO5XNL3Fcbft\/PqN9pYp\/0DFkqJelGCVnXv2WN9Bjy8kzFc2WFU1Zu2gv+eVmrbdSyk2AtFMXwU7Js2KvznUSLYK\/1nDcRPxYIJQZizRW5fQYjO6iwbyM\/G5PmwwpgARGHj0uFJ1rLH4X4ebxtUX2ybrD6\/RYjwAKAzryIF9BWZRLdwaNU9zGR6FJpUdC\/FqX2HVx7uMYOzsempRZZKA8zFl8N35DN6kw7172C4dR5sebBZ7AmPyqa4p\/94dBU98nZ8lryObAuq\/k2LgX\/B1LUsXMqIzaZvnxFP94gasOflaBzijvolxeMlubvhXhjq5wGXpKjL27t9V+yrV0rdGLirV\/JHqqicxoHHViGZau6+IR5lN1qp8yQpmIF0lL9fNk+q2qk2\/k6VD3RtLGNb36mlI4laLsIEjTbmcrGehSzAOuvZg13W\/mfiDjAo84uAf6tXTT4izJFVrR9KT++wtNHdicwpBzPZjPvoFBOFYrlXBfOuRDjzHsY+ywUHKSS+vuk31ch7\/GQlHxqUAPznA9\/xIu7ZW1hi3SDm4T2GgHvx\/kLsFXdLLmu8mc9jqGJJHcDghGyectCUvMyOdFvOS\/1CEZDggC44Zs69LSWI+yFzy8wst1vcPQqvQZvkfde0QOHxQGyhsi09SznoPnzKXwtqmLSZp6UIO00DiZO9tIf+ybbJydNywBHHRbn627aZUIPF2XXIbH+sQbU1epnMr2yjeYdKwdwj3bRXboH9eqr\/ktyh1SyXRzFU2IaK6YJXVR8x2mc4cQBJ7LiRlulZCwdqBsuOYbLLVaJz6gAIC3UfJecnzntBKZIqrUQTNKnlyfcaARjRfAC6KCG2HUEIePFSnkB2QtG3IpHfN4edpiO7JkgHz2n2fSXBx4U76WziKAJ0HpoGsNT5vhetuiLe3gajq6izzqEo4hava6xx7J2q5sKGbL2HqeNOWazF0ueYz2\/p3PM0cUp\/mONtWsZnzGCfdmGBofDDGsUHxd5yDt6lEnRK\/ocatoyLt0IzaAWO7g2lBp6z4NL+5MpigBWGkqVzznTfH4fuHk+2W8aIyL8lKqvl2nFnlto5NB3H\/nVnAu7cQVEjR88\/eLp1EROOrBsfhXfYXehYh93A0PyLx9OD+f1lhGyD\/+K6weHoTLCQdagAN0KWdWMpRDgKJJI3cgDLO5C8uL86Bf7VW+zJm1reS2iYJwHxvaF\/IikPcPFRDBZV5G4SSsU9xztt3Lj07Xy33nkrC+GXhxfXOqvp7Ad4G2WoHq9ySHw8bRt6g\/\/OGQZmlAets1MilOU3IEh3HrbXaJ7XC34DSppH0Ewsoy3XO75Fc9FXyYcA3HamKhO7zBVGNrC5EnrdR+SXvBCiCaxIXFZTk2NEvvaxe9dyp8emkBHovc2W7m\/vsrTfa+OpZPhAonPXvn1ugo2Fiv27ldNtmv+uaOsQ3ScA8vjHG0\/JnC4zGbHBb1yR1O7R356Foizs8WyLAnYSbT2h7mncB4s6VnckNe3sY4wZVX4vgd6Mgjosn7QtPXZcABMfI+smuIAHZNriYLcqTl9xdw24nrN4R6sUpEsaKZoM0Pc8Ck\/Bp1C8HVPBybkcH\/7AHNXFoUFuWT1NXWADZj4kzzf\/SPQDGXP+\/rSw3uqHp3pF22yVZQ4UEL363BlQ1n1WxawlLdu7iwfd\/9en9YXO56z6wigE\/a9Aqkp8H\/Ln9cTmstY5HmSnJwQP41QhkXmKYYfjeSyhAR98I5ZsrnSyDJZPNNqtxW9kVMXNnG0eIEIcwqhmiWc9zW3DQgjM8Z9ZcPItRBm\/mHaQzHicPN2IyIj9UTqBs3U1\/wl7\/FlHLn0rwyIvnA3iYezgrledg\/psOr4jzgxGIrB3EmN\/8DAnquVRU6EWzGuxDgXlxOxAZV2mIPa7bQ+YyxgJYikIp9lWtDaVfCamKgLev0XP3kU8UhHylxUCUDn19ds6B2bGbqO8IVijgv3FStsPcaMX7M8j8fWiQmCuP803fQPjtul1vli332a9mBT0yKlr6Zaxp+XJ9RY\/beJC\/NyURzvgK3D6+OC4HlWghox6VzsCQ8urhhV0rwKW5EUGzvA766NUvODQPjzd\/9+f4ZEqx9XDPX2bcgxxDqkBCCePCadKBVTzmvNrZAsQb5f6r81qpH8LlHCZ\/JLpXaNxlWrBpPekDO73SOBnxXAFTroWxCt5gHw5x5lNRwQ\/r77lAPeNRnZjMPTI2AJSYTTzacX1MnXE520H0ha5k0giEoQIRmlGdJO+bknubgOb6dC99gLrJcaPZhKMkWzKW7pT+svvSwC2HyW0MaLBFqC7eo9SJBIxJp9hIpH3v0LN5T4sigVROGaNvIVQ0sNhN1rKs02LWpM+MDQt37e2LTdbyFvJf9bNPACeyTMXZkm5I1JJzPb9ZRLWghcROmZOWQJ8cjme1aSokSYy56TE7KDA\/8E1Myo8OOFjqXYoLah4j7BPsJIl3IRgA1dnly2KkiOeaGUNoOkeSjOK8980gs\/1IBR10pJUJKK278psV0LhAp6bzJhWd9kOehXZkJW4u4NFGEjbD0wnPsULXx8Y8bMuvlcrslvWoR8CRlXTxaASQvzYjf\/iQtWUtD4Qcs6AxW2WxO78cSbajENZA2ESJlptHZh6GPYzfLfz4ZDH77CKdmyO1NpFEcKExEygteQtt9TUwbF9UqyO295OPQ7lldsG8nBMUQYu25TVnB2gUxdQq8w+bmRCMrvR2kobNJnxigSIeupi36x6b+i1eRqZwCJqIaOyGBqZssks+KXLtOvSJiFHohfI1yiazmBiznj0ubndKFN7kB0f+BccDOYKW0EKbXelkIcXmlsDD\/i6YEo9olaNXOJBZ\/9Jq1V2KklQ2Wjx7ktR0mCCKInBboAjTsFtirpjpFYmYTcs42XozF\/E1GMRy39m6UWvmNzMO4RWrFn8J\/e9a6FZ18mKFTY9GUe429q+1KMjc5V8wRGWXAnofsVnY6XXYSGI0tSFzSz32dMDT4ey3MjmvHzqjz2GcsCTnW9GpuSrmGlLn11cL\/58\/XpKbC\/zrIZ9UmD+U0EtbZEquOr3PAmZEbjV87Ix+2G9wNNkzGe7q+dVh1WSIQPZlUZ5A8NXQ\/pTCJsN7KTnGemhckGzhN+uazWOwB9d6IAe5vf6VuZFp\/A0TCuc12UfhZb99VypxXK\/aYy4\/6p3ufNFh5km4Aqc\/XE7E2XS\/qgfKbEFduPDiT1q4eCW1lFUD042x88dCSbxnLouohLMYPed1JHB+0bmfj\/tEZliEY84NJp6PbgfFwhRkBZ6VQDtwBmtX9Vgx40hu+kcKTDhetwqaODZTFB+H0lBENz9Utb\/bQoNcyAbaPOLC6lyxEfiiEJx+2Jwm6Ze23SpMCc4VTjLGPoZvHc\/bV+mW5CygRXd\/6OJqgqidsNV6er\/nvEFUii4mFJgmRt3EBU+F7NZfZInSKgRry4UCLOEJs0SB4fQQ6rS62Lj5AiX2N8xJ51Ir5jM7qT+VpdfvhByo7FgYaP70u5aR8X0LvyvLbCoJo8uQVhJQaHTdhqn1bYTemBQ8NpF5plM7kA1tpHQkxVg+kHBzZuuRQCCUkGFVkooTBvRT6TAng+hAtOvEr8GBerlXAfV3zEv6Vx\/LorZL8nodUPieEf7Jb2psFYiVTxQxrrOUIE9elLjm\/9dOpfNP7YzOG266zSqHMdrbDmUNQPELUAH9HzDyCxW\/crVxkoBXpNbMVv3XPsjc5Be1aAOc4LPGglQBLrxrlWNEj116f0ScG8srgWUKvDWUL+d47oRhU4p+0nmdDbTX902tVP5pj\/vslz1hLx9rakvEBTppT1ml6H0BdsZ6GrXsH4HpwB4mgjiHF4HaxgOmsgeC30fMMt2ftfb9skKvRhhRsMwJFZJKgwDTN\/Y51SrFn+AkJsMNV7JECrtKRSzDMlfhmdmOsxzBHlP43gjVlKQ\/mKlNpHbEHHrf14rclpDkZY5g2Ht5MJQBghhRJ4DJOv0eqs\/HpMlNwhB\/cAEgRWyls1JhOXIrM0mb5rhcf\/DTuTn68tSOmfZcLm73vxEt5RyYv2RFPASQCOtEhMdUL5RdmZ0lkbYe0qDFmj988+vhE1ghhFvgor7e5T2dMM7wtMBKp2yxxScWjyvXDvj1CMr4K3+a3xUJPrXUiHW2oGBo0UPT03kM0J7JK+Nhon7QALOa46Kvik2ouQVbU5cDmk9U4Bey6+AG3h6oN+vl604q+McY4fVD5u7X4Jr81YFWorRA1UE3o9SwXZ1fEI7q8hB7Nnhh6YdgWWJags3O6sNSh1PqvFmS4gfg8WVCYdWanoUtBLon8Mk2iT7bq6zP1FSvxfvcqD9yMmE\/fhCRHYj57OFMEmNS5QJI+jer5ylcVgUWXe8o0FXKpMakVx0zF6ImItl7IeKlOvuwX\/jL4M3N\/gfSYrcr50+hF4oeNLtxM\/oWBvQdFrGO2xYP7+APqNLV3dvTvqhQ69wo6ZU9sfVq5SRt4PhbI1z+6ioYIXwZ4QRg2h5aAC4Mmwp9Kdx03bECV4qIvmUSb3g7d+dGKfTTd3KBaK+pjIgNLkZ8qIpxVCc2WpSERMUIZfaEQu7rdflcU7LmUtqxu7ORJKEm2QdZL3+jaWf8oIlhAqtNi2bpPfVEmLBpllqZlQFSJFty\/G\/u+8DIxAvZ8vthwvkSwS92ypzZHFkmhhBzJYmazsQV5kMZjuPEJdMpAALJUGdEXnqomlAACStgFTly7jylXpsIoMet6JQ4lFQSerE4Zfq9HlNXA3eWw5Og\/7NUmp1tEJMZveL75Q9MgIJCe1ZA6s39K0ZX2nlhCn8inpNvJgcaBszKz11yU9Kk4gxYke2MdcB4L6zVb6+L1lWojQeBAUeOzlue5P1jf+Q1\/8bAWWbVjhRPs8P1\/lOYxRPr7OnE18J16fYat4qqyxMjvoTqFn7ABlZ1N32bJcWKJGvikG\/tuhNkfl2gD0F4fySE91GENPKNFxa12blYzpFgViObZzK5Wd9gOpj+9oAl\/fL+I+MO1ciceA01iNEvEPViDMdC8F6Ttt1prkjMRm4K0YX2s8A+hOkH0KRWUCICsQBpML0PEvdIRsX8clYbcyYBL5kgwiQyVjt2A+OY+QVHQpbs55f+bCS79NBduF8RKwN20+KIK6q9psqc0VNm5MvU7XHGwxiTO3r9i3yNpBDN5VuvRszx+T09\/mSLTi0Q4AIKiaUf\/gZTKo5Eoh0UsLRJaiKR438W5Fa1SFOptLHj+sVJ4xRemI6w2jKYBudcLSaQrO6eOY2SnWBhlY7hRrRIuK9WwPbK9dkv25iVkpk+i1gNvhISGbHxtbVnlatou6MzwcS+BBEUKT1UlesymG8R5hClkOyEZeVj\/nbnRTzAI7vJVubbTBFrVmHvkfx4rxmIXGyB\/+NdGjNmQtl+CDGOtOtbj3V6r7fQvrAZQXoMg6kRBkWKi61+5ogf\/JiZ96UIVDZHAcjOloE2e2+d1pNwk4pKNcCHBt8btKtisBf1iTZrxDc3gRL+vNN+bWLONSWKPWTCWKBQCdsGUmbsyU5hLcuTHgPsLqBIgIEn\/GRzdmzGpl9VIPikXaZ7yNxmvy9d1Exp6AxssF+ZxRC98fYEStL0LMgB\/PtT5W+07JUJJtL92qNvm39pUWsOLucSkGFCVUrOjqWfJAycsix31fqxfPKU3pSWjMtNOWZohcn4\/0CMPlhPPBY0FV4nIwPOHLXCFwMg43HjDz\/Rm88joRemYXO2nsMmtZcA+8p056QVOk7OfIHkinttU58jQLXrgScr+7R0XgyhIF9v6nHxUOI2VKyWxxTd+P85SGwTObt\/uWOZZjsGLSVGQAPFKDTiXGyr7cQld3YG+dvSy\/M4u\/2pk9gG0RBU90KefSE9VupLrtpF19wkDb4ZA0yWYWe2OcOFlJuIvfSHs4Nq9YFTdi7rjpXjsXW91deMmGE8Wv3vEgW8EGVpOskHUd9RxDGAXCqX5eKTsWgnTeEG0mkNoTouiNHrwUugDDrxRdY4wMECg+fURHeVdp6Gkv5OaSYziFppiEKWdW\/1vJEFlG1rkeoovaJ6MUip3xDgAuZV4n3zxqiqEXLnd6EWLOnK4vij3vYIknRMquN4VVJGLuYLT7agHutYkP\/NH075FIqFhMnkUeulHEAivS9oD4O27FpKL0hLlrfooKeIi6aZah3lW9W91tJSP1cdMwz\/vF+H2iEkCOvTqtXwRUt36rvnXcbeytksgv1ultkKc+KKWODGPSOkY0hh+wFNiLrtYaE2i0J4KVhMKJFXsKBqq8Mejn\/oMw5s6RNuT0am4vBdeDo\/ckRYhBNv8kkZJwmlT6sVJ9EdAlVLhuVCGvHENNfEU\/3g5I",
+          'BG_IU': "\/\/www.google.com\/js\/bg\/-Vvtx4nI8SHe_WYPalc1ijR-UNJ9GZaWikvdqm7tI20.js",
+
+      'HL_LOCALE': "en_US",
+      'TTS_URL': null,
+      'JS_DELAY_LOAD': 0,
+      'LIST_AUTO_PLAY_VALUE': 1,
+      'SHUFFLE_VALUE': 0,
+      'SKIP_RELATED_ADS': false,
+      'SKIP_TO_NEXT_VIDEO': false,
+      'SPF_PREFETCH': false,
+      'SPF_PREFETCH_MAX': 0,
+      'SPF_PREBUFFER': false,
+      'SPF_PREBUFFER_MAX': 0,
+      'RESUME_COOKIE_NAME': null,
+      'LIST_END_TIME': null,
+      'CONVERSION_CONFIG_DICT': {},
+      'RESOLUTION_TRACKING_ENABLED': false,
+      'MEMORY_TRACKING_ENABLED': false,
+      'ADBLOCK_TRACKING_ENABLED': false,
+      'NAVIGATION_TRACKING_ENABLED': false,
+      'WATCH_LEGAL_TEXT_ENABLE_AUTOSCROLL': true,
+      'SHARE_ON_VIDEO_END': true,
+      'SHARE_ON_VIDEO_START': false,
+      'ADS_DATA': {"pyv_vars": {"iframe_json": "{\"google_ad_type\": \"text\", \"google_max_num_ads\": 1, \"google_ad_host_tier_id\": \"3735379\", \"google_language\": \"en\", \"google_ad_block\": \"3\", \"google_loeid\": \"900504,931331,941376,946023,952805\", \"google_page_url\": \"http:\\\/\\\/www.youtube.com\\\/video\\\/RDedl-FtfcU\", \"google_only_pyv_ads\": true, \"google_ad_client\": \"ca-pub-6219811747049371\", \"google_ad_output\": \"js\", \"google_ad_channel\": \"PyvWatchInRelated+PyvYTWatch+PyvWatchNoAdX+pw+non_lpw+yt_mpvid_IqCYtHuyPTjawlzj+yt_cid_915150+ivp+yt_no_ap+ytdevice_1+yt_no_cp+afv_user_id_WL128ZuBbV8ruKrc0lk7Iw+afv_user_misperry\", \"google_lact\": -1, \"google_ad_host\": \"ca-host-pub-7935412804062303\", \"google_video_doc_id\": \"yt_RDedl-FtfcU\"}"}, "show_pyv": true, "show_afc": false, "check_status": false, "show_instream": false, "show_afv": true, "afc_vars": {"ad_client": "ca-pub-6219811747049371", "format": "300x250_as", "lact": -1, "ad_host_tier_id": "3735379", "ad_type": "image", "video_doc_id": "yt_RDedl-FtfcU", "ad_block": "2", "language": "en", "ad_channel": "yt_mpvid_IqCYtHuyPTjawlzj+yt_cid_915150+ivp+yt_no_ap+ytdevice_1+yt_no_cp+afv_user_id_WL128ZuBbV8ruKrc0lk7Iw+afv_user_misperry+ytel_detailpage+ytps_default+0854550287+Vertical_5+Vertical_12+Vertical_30+Vertical_434+Vertical_717+afc_on_page", "ad_host": "ca-host-pub-7935412804062303", "alternate_ad_url": "http:\/\/www.youtube.com\/ad_frame?id=watch-channel-brand-div"}, "afv_vars": {"google_ad_channel": "yt_mpvid_IqCYtHuyPTjawlzj+yt_cid_915150+ivp+yt_no_ap+ytdevice_1+yt_no_cp+afv_user_id_WL128ZuBbV8ruKrc0lk7Iw+afv_user_misperry+ytel_detailpage+ytps_default+0854550288+Vertical_5+Vertical_12+Vertical_30+Vertical_434+Vertical_717", "google_ad_height": "250", "google_ad_type": "image", "google_yt_pt": "", "google_lact": -1, "google_ad_format": "300x250_as", "google_ad_host": "ca-host-pub-7935412804062303", "google_ad_host_tier_id": "3735379", "google_language": "en", "google_ad_block": "2", "google_loeid": "900504,931331,941376,946023,952805", "google_video_doc_id": "yt_RDedl-FtfcU", "google_alternate_ad_url": "http:\/\/www.youtube.com\/ad_frame?id=watch-channel-brand-div", "google_page_url": "http:\/\/www.youtube.com\/video\/RDedl-FtfcU", "google_ad_client": "ca-pub-6219811747049371"}, "use_gut": true, "log_pyv": false, "gut_vars": {"tag": "\/4061\/ytpwmpu\/main_915150"}},
+      'PLAYBACK_ID': "AAUBbvZrPRhNad2m",
+      'SHARE_CAPTION': null,
+      'SHARE_REFERER': "",
+      'PLAYLIST_INDEX': null
+    });
+
+    yt.setMsg({
+      'LOADING': "Loading..."    });
+
+      yt.setMsg('SPEEDYG_INFO', "Experiencing interruptions?");
+      yt.setConfig('SPEEDYG_PING', null);
+
+      yt.setMsg({
+    'UNBLOCK_USER': "Are you sure you want to unblock this user?",
+    'BLOCK_USER': "Are you sure you want to block this user?"
+  });
+  yt.setConfig('BLOCK_USER_AJAX_XSRF', 'QUFFLUhqbkh0VjFPSXBsV2NQVXZ4ckJtQldoM0ZRMHBBQXxBQ3Jtc0ttMWdpbGpsNVIzYzZNMGJFX0V5Y2w3dnd5YktCckQ0TW1yVmIzdUJFZWgzZ3lRRkp6YUppNG8ya09DOUF6MndtQ2ZLYTMtekRnQXhNSXFMOFcwbV8tQ1lINm95Yzl3R1BLVUpYMXgwSmpGOElHT2JsZ0pCTlNmaGZhQXU1TDBMVGdpOUUwYnpHMm4yb0laQUhQay1xQW1qME43QlE=');
+
+
+    
+
+
+
+
+
+
+
+    
+
+      yt.setConfig({
+    'GUIDED_HELP_LOCALE': "en_US",
+    'GUIDED_HELP_ENVIRONMENT': "prod"
+  });
+
+
+      
+      yt.setConfig('DISTILLER_CONFIG', {"channel_id": "UCWL128ZuBbV8ruKrc0lk7Iw", "video_id": "RDedl-FtfcU", "query": "http:\/\/www.youtube.com\/watch?v=RDedl-FtfcU", "page_size": null, "host_override": "https:\/\/plus.googleapis.com", "reauth": false, "signin_url": "https:\/\/accounts.google.com\/ServiceLogin?hl=en\u0026continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Fapp%3Ddesktop%26action_handle_signin%3Dtrue%26hl%3Den%26next%3D%252Fwatch%253Fv%253DRDedl-FtfcU%26feature%3Dcomments\u0026passive=true\u0026service=youtube\u0026uilel=3", "privacy_setting": "PUBLIC", "owner_id": "WL128ZuBbV8ruKrc0lk7Iw"});
+
+
+  </script>
+
+
+<script>yt.setConfig({'EVENT_ID': "v-L6U5epMJPk4QKL64C4BQ",'PAGE_NAME': "watch",'LOGGED_IN': false,'SESSION_INDEX': null,'FORMATS_FILE_SIZE_JS': ["%s B", "%s KB", "%s MB", "%s GB", "%s TB"],'DELEGATED_SESSION_ID': null,'GAPI_HOST': "https:\/\/apis.google.com",'GAPI_HINT_PARAMS': "m;\/_\/scs\/abc-static\/_\/js\/k=gapi.gapi.en.2sP0CjtIlu8.O\/m=__features__\/rt=j\/d=1\/rs=AItRSTPAl9CJYAU1Iw9xoBtn71D0VhQI4Q",'GAPI_LOCALE': "en_US",'ONE_PICK_URL': "",'UNIVERSAL_HOVERCARDS': true,'VISITOR_DATA': "Cgtsa2tkWUlMRlpHSQ%3D%3D",'APIARY_HOST': "",'APIARY_HOST_FIRSTPARTY': "",'INNERTUBE_CONTEXT_HL': "en",'INNERTUBE_CONTEXT_GL': "AU",'INNERTUBE_CONTEXT_CLIENT_VERSION': "20140819",'INNERTUBE_API_KEY': "AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8",'INNERTUBE_API_VERSION': "v1",'GOOGLEPLUS_HOST': "https:\/\/plus.google.com",'PAGEFRAME_JS': "\/\/s.ytimg.com\/yts\/jsbin\/www-pageframe-vflcTxAJ2\/www-pageframe.js",'JS_COMMON_MODULE': "\/\/s.ytimg.com\/yts\/jsbin\/www-en_US-vflkBnX2R\/common.js",'PAGE_FRAME_DELAYLOADED_CSS': "\/\/s.ytimg.com\/yts\/cssbin\/www-pageframedelayloaded-webp-vfl5mjFbl.css",'GUIDE_DELAY_LOAD': true,'GUIDE_DELAYLOADED_CSS': "\/\/s.ytimg.com\/yts\/cssbin\/www-guide-webp-vflmjiplJ.css",'GUIDED_HELP_CREATOR_STUDIO_ENABLED': true,'GUIDED_HELP_SELECT_CONTENT_OWNER_ENABLED': false,'PREFETCH_CSS_RESOURCES' : ["\/\/s.ytimg.com\/yts\/cssbin\/www-player-webp-vfl0H026n.css",''         ],'PREFETCH_JS_RESOURCES': ["\/\/s.ytimg.com\/yts\/jsbin\/html5player-en_US-vfll1XmaE\/html5player.js",''         ],'SAFETY_MODE_PENDING': false,'LOCAL_DATE_TIME_CONFIG': {"shortWeekdays": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], "formatShortDate": "MMM d, yyyy", "formatWeekdayShortTime": "EE h:mm a", "formatLongDate": "MMMM d, yyyy h:mm a", "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], "formatLongDateOnly": "MMMM d, yyyy", "amPms": ["AM", "PM"], "shortMonths": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], "weekdays": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]},'PAGE_CL': 73848705,'PAGE_BUILD_TIMESTAMP': "Thu Aug 21 16:18:23 2014 (1408663103)",'PLAYER_PERSISTENCE_REFACTOR': true,'FEEDBACK_BUCKET_ID': "Watch",'FEEDBACK_LOCALE_LANGUAGE': "en",'FEEDBACK_LOCALE_EXTRAS': {"accept_language": "en-US,en;q=0.8", "is_branded": "", "is_partner": "", "guide_subs": "NA", "experiments": "900504,901608,902022,902408,906001,911507,912714,912719,912725,912909,913308,916928,916929,918119,918121,919389,920609,921420,921603,921910,921911,922237,922804,922927,923024,925011,927006,927622,927626,927881,927891,929237,929507,929509,929940,929943,929947,930812,930819,931017,931020,931025,931331,931339,931341,931943,931983,934024,934030,934032,934113,935670,935707,937217,937422,937424,937817,937818,937911,938006,938302,938632,938639,938683,938685,938703,938705,939201,939954,939956,940641,940918,941376,941412,941414,941816,941817,943301,943407,943410,944702,945117,945401,945827,946023,947204,947503,949001,949302,951601,952805", "logged_in": false}});  yt.setConfig({
+    'GUIDED_HELP_LOCALE': "en_US",
+    'GUIDED_HELP_ENVIRONMENT': "prod"
+  });
+yt.setConfig('SPF_SEARCH_BOX', true);yt.setMsg({'MASTHEAD_NOTIFICATIONS_LABEL': {"other": "# unread notifications.", "case1": "1 unread notification.", "case0": "0 unread notifications."},'ADDTO_WATCH_LATER': "Watch Later",'ADDTO_WATCH_LATER_ADDED': "Added",'ADDTO_WATCH_LATER_ERROR': "Error",'ADDTO_WATCH_QUEUE': "Watch Queue",'ADDTO_WATCH_QUEUE_ADDED': "Added",'ADDTO_WATCH_QUEUE_ERROR': "Error",'ADDTO_TV_QUEUE': "TV Queue"});    yt.setConfig({
+    'XSRF_TOKEN': "QUFFLUhqbkh0VjFPSXBsV2NQVXZ4ckJtQldoM0ZRMHBBQXxBQ3Jtc0ttMWdpbGpsNVIzYzZNMGJFX0V5Y2w3dnd5YktCckQ0TW1yVmIzdUJFZWgzZ3lRRkp6YUppNG8ya09DOUF6MndtQ2ZLYTMtekRnQXhNSXFMOFcwbV8tQ1lINm95Yzl3R1BLVUpYMXgwSmpGOElHT2JsZ0pCTlNmaGZhQXU1TDBMVGdpOUUwYnpHMm4yb0laQUhQay1xQW1qME43QlE=",
+    'XSRF_REDIRECT_TOKEN': "s9uHCCtoEp50o7xlBmZPQijxXnt8MTQwOTAzNzM3NkAxNDA4OTUwOTc2",
+    'XSRF_FIELD_NAME': "session_token"
+  });
+
+  yt.setConfig('FEED_PRIVACY_CSS_URL', "\/\/s.ytimg.com\/yts\/cssbin\/www-feedprivacydialog-webp-vflQiKs-Z.css");
+
+  yt.setConfig('FEED_PRIVACY_LIGHTBOX_ENABLED', true);
+yt.setConfig({'SBOX_JS_URL': "\/\/s.ytimg.com\/yts\/jsbin\/www-searchbox-vfl-5WbLb\/www-searchbox.js",'SBOX_SETTINGS': {"PSUGGEST_TOKEN": null, "PQ": "", "EXPERIMENT_ID": -1, "REQUEST_DOMAIN": "au", "HAS_ON_SCREEN_KEYBOARD": false, "SESSION_INDEX": null, "REQUEST_LANGUAGE": "en"},'SBOX_LABELS': {"SUGGESTION_DISMISS_LABEL": "Dismiss", "SUGGESTION_DISMISSED_LABEL": "Suggestion dismissed"}});  yt.setConfig({
+    'YPC_LOADER_ENABLED': true,
+    'YPC_LOADER_CONFIGS': "\/ypc_config_ajax",
+    'YPC_LOADER_JS': "\/\/s.ytimg.com\/yts\/jsbin\/www-ypc-vfl-MMy_q\/www-ypc.js",
+    'YPC_LOADER_CSS': "\/\/s.ytimg.com\/yts\/cssbin\/www-ypc-webp-vflJF6j8S.css",
+    'YPC_LOADER_CALLBACKS': ['yt.www.ypc.checkout.init', 'yt.www.ypc.subscription.init']
+  });
+  yt.setConfig('GOOGLE_HELP_CONTEXT', "watch");
+ytcsi.span('st', 257);yt.setConfig({'TIMING_ACTION': "watch,watch7ad_html5",'TIMING_INFO': {"yt_li": 0, "yt_ad_pr": 0, "ei": "v-L6U5epMJPk4QKL64C4BQ", "yt_ad": 1, "yt_ad_an": "afv,dclk", "e": "900504,902408,927622,931331,931983,934024,934030,941376,946023,952805", "yt_pl": 0, "yt_ref": "watch", "yt_lt": "cold", "yt_spf": 0}});  yt.setConfig({
+    'XSRF_TOKEN': "QUFFLUhqbkh0VjFPSXBsV2NQVXZ4ckJtQldoM0ZRMHBBQXxBQ3Jtc0ttMWdpbGpsNVIzYzZNMGJFX0V5Y2w3dnd5YktCckQ0TW1yVmIzdUJFZWgzZ3lRRkp6YUppNG8ya09DOUF6MndtQ2ZLYTMtekRnQXhNSXFMOFcwbV8tQ1lINm95Yzl3R1BLVUpYMXgwSmpGOElHT2JsZ0pCTlNmaGZhQXU1TDBMVGdpOUUwYnpHMm4yb0laQUhQay1xQW1qME43QlE=",
+    'XSRF_REDIRECT_TOKEN': "s9uHCCtoEp50o7xlBmZPQijxXnt8MTQwOTAzNzM3NkAxNDA4OTUwOTc2",
+    'XSRF_FIELD_NAME': "session_token"
+  });
+  yt.setConfig('THUMB_DELAY_LOAD_BUFFER', 0);
+if (window.ytcsi) {window.ytcsi.tick("jl", null, '');}</script>
+
+
+<iframe frameborder="0" src="javascript:""" style="border: 0px; vertical-align: bottom; display: none;"></iframe><iframe id="google_osd_static_frame_5694521972909" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;"></iframe></body></html>
